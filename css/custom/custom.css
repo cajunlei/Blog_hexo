@@ -1,0 +1,358 @@
+@charset "UTF-8";
+body, button {
+  font-family: LXGWFont !important;
+  font-weight: 500;
+}
+
+strong {
+  color: #e47b6c;
+}
+
+ol.toc {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#pagination.pagination-post,
+.relatedPosts > .relatedPosts-list > div,
+.aside-list > .aside-list-item > a,
+.article-sort-item img,
+.book img,
+#post img {
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #909090;
+}
+
+#page-header #site-title {
+  font-size: 5em;
+  letter-spacing: .5em !important;
+}
+
+#page-header #site-info #site-title {
+  font-size: 5em;
+  letter-spacing: .2em !important;
+}
+
+#aside-content .card-info .author-info__name {
+  font-weight: bold;
+  font-size: 1.75em;
+  letter-spacing: .5em;
+}
+
+#aside-content > .card-widget.card-info {
+  background: linear-gradient(-45deg, var(--blue), #031764, #150136, #67044d);
+  background-size: 400%;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.05);
+  animation: gradient 15s ease infinite;
+  position: relative;
+  color: var(--white);
+}
+
+#aside-content .site-data > a .headline,
+#aside-content .site-data > a .length-num {
+  color: var(--white);
+}
+
+#aside-content #card-toc .toc-content {
+  width: 100%;
+  max-height: 25rem;
+  margin: 1px !important;
+}
+
+#aside-content #card-toc .toc-content > * {
+  margin: 0 15px 0px 5px !important;
+}
+
+#aside-content .card-background {
+  margin: 0 10px !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+#aside-content .card-background #hexo_electric_clock {
+  padding: 10px !important;
+}
+
+#aside-content .card-background #hexo_electric_clock #card-clock-clockdate,
+#aside-content .card-background #hexo_electric_clock .card-clock-humidity,
+#aside-content .card-background #hexo_electric_clock #card-clock-time,
+#aside-content .card-background #hexo_electric_clock #card-clock-dackorlight {
+  font-family: LED !important;
+}
+
+#aside-content .card-background #hexo_electric_clock .card-clock-weather,
+#aside-content .card-background #hexo_electric_clock .card-clock-windDir,
+#aside-content .card-background #hexo_electric_clock .card-clock-location {
+  font-family: LXGWFont !important;
+}
+
+#aside-content .card-background #hexo_electric_clock .card-clock-weather {
+  letter-spacing: -2px !important;
+}
+
+#aside-content .card-background #hexo_electric_clock .card-clock-time {
+  font-size: 3rem !important;
+  letter-spacing: 5px !important;
+  line-height: normal !important;
+  margin: .5rem 0 !important;
+}
+
+/* 分类标签归档页增加文章索引start */
+.article-sort-item-title {
+  font-size: 1.2rem;
+}
+
+.article-meta-wrap,
+.article-sort-item-time {
+  font-size: .9rem;
+}
+
+.article-sort-item-index {
+  opacity: 0.5;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+}
+
+span.article-sort-item-tags {
+  padding-right: 1em;
+}
+
+span.article-sort-item-tags i,
+span.article-sort-item-tags span {
+  padding-right: .5em;
+}
+
+span.article-sort-item-tags span {
+  padding-left: .5em;
+}
+
+span.article-sort-item-categories {
+  padding-right: 1em;
+}
+
+span.article-sort-item-categories i {
+  padding-right: .5em;
+}
+
+/* 分类标签归档页增加文章索引end */
+#content-inner #recent-posts .recent-post-item {
+  height: 16em;
+}
+
+#content-inner #pagination .page-number.current {
+  box-sizing: border-box;
+  margin: 0 6px;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 8px;
+  box-shadow: var(--card-box-shadow);
+  transition: all 0.3s;
+  background: var(--blue);
+  color: var(--white);
+}
+
+#post .post-copyright {
+  border-radius: 8px;
+}
+
+#post .post-copyright:hover {
+  background-color: #dcefff;
+}
+
+[data-theme='dark'] #post .post-copyright:hover {
+  background-color: #2c2c2c;
+}
+
+.post-reward .reward-button {
+  border-radius: 12px;
+  font-size: 1.2em;
+}
+
+.post-reward .reward-main .reward-all {
+  border-radius: 12px;
+  box-shadow: 0 0 20px #bbb;
+}
+
+.post-reward .reward-main .reward-all .reward-item {
+  padding: 0 16px;
+}
+
+#footer #footer-wrap {
+  padding: 20px 0;
+}
+
+#footer #footer-wrap .copyright a i.fa {
+  animation: flash 3s ease infinite;
+  color: #ff0000;
+}
+
+hr {
+  border-width: 2px !important;
+  border-style: dashed hidden !important;
+  border-color: var(--fuchsine) !important;
+  padding: 1px 0 !important;
+  width: calc(100% - 4px);
+}
+
+hr:before {
+  color: var(--fuchsine) !important;
+}
+
+#article-container p .img-alt .is-center {
+  margin-top: -3px !important;
+}
+
+#article-container p .img-alt .is-center::before {
+  content: "▲ ";
+}
+
+#rightside > div > button, #rightside > div > a {
+  border-radius: var(--fillet);
+}
+
+button#go-up #percent {
+  display: none;
+  font-weight: bold;
+  font-size: 15px !important;
+}
+
+button#go-up span {
+  font-size: 12px !important;
+  margin-right: -1px;
+}
+
+button#go-up:hover i {
+  display: block !important;
+}
+
+button#go-up:hover #percent {
+  display: none !important;
+}
+
+#rightside > div > a.icon-V.hidden {
+  display: none;
+}
+
+#error-wrap {
+  top: 40%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+  transform: translate(0, -50%);
+}
+
+#error-wrap .error-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  height: 18rem;
+  transition: all .3s ease 0s;
+  box-shadow: none !important;
+  border-radius: 12px;
+  background: #fff !important;
+}
+
+#error-wrap .error-content .error-img {
+  flex: 1 1 0%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: #307af6;
+  background-position: center center;
+  background-size: cover;
+}
+
+#error-wrap .error-content .error-info {
+  flex: 1 1 0%;
+  padding: .5rem;
+  text-align: center;
+  font-size: 14px;
+  font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+
+#error-wrap .error-content .error-info .error_title {
+  margin-top: -3rem !important;
+  font-size: 9em;
+  padding-top: 0;
+  padding-left: 0 !important;
+}
+
+#error-wrap .error-content .error-info .error_subtitle {
+  margin-top: -3.5rem;
+  word-break: break-word;
+  font-size: 1.6em;
+  -webkit-line-clamp: 2;
+}
+
+#error-wrap .error-content .error-info a {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .3rem 1.5rem;
+  background: #3f3f3f;
+  color: #fff;
+}
+
+#error-wrap .error-content .error-info a i {
+  padding-right: .3rem;
+}
+
+#body-wrap.error .aside-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  bottom: 0px;
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  overflow: scroll;
+}
+
+#body-wrap.error .aside-list .aside-list-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#body-wrap.error .aside-list .aside-list-item {
+  padding: 0.5rem;
+}
+
+#body-wrap.error .aside-list .aside-list-item img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#body-wrap.error .aside-list .aside-list-item .thumbnail {
+  overflow: hidden;
+  width: 230px;
+  height: 143px;
+  background: #fff;
+  display: flex;
+}
+
+#body-wrap.error .aside-list .aside-list-item .content .title {
+  overflow: hidden;
+  display: -webkit-box;
+  line-height: 1.5;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+  padding-top: 0.5rem;
+}
+
+#body-wrap.error .aside-list .aside-list-item .content time {
+  display: none;
+}

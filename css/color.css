@@ -1,0 +1,13 @@
+:root {
+  --fillet: 15px;
+  --global-bg: var(--white);
+  --btn-bg: var(--blue);
+  --white: #fff;
+  --black: #000;
+  --blue: #4759e6;
+  --fuchsine: #ef3982;
+  --orange: #ff7242;
+}
+[data-theme="dark"]:root {
+  --global-bg: var(--black);
+}
