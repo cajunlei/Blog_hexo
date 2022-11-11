@@ -82,7 +82,7 @@ function page_title() {
 }
 // 页面标题end
 
-// 51la统计啊start
+// 51la统计start
 fetch('https://v6-widget.51.la/v6/Js0bWTKg5ezX8WPE/quote.js').then(res => res.text()).then((data) => {
     let title = ['最近活跃访客 :', '今日人数 :', '今日访问 :', '昨日人数 :', '昨日访问 :', '本月访问 :', '总访问量 :']
     let num = data.match(/(?<=<\/span><span>).*?(?=<\/span><\/p>)/g)
@@ -90,4 +90,4 @@ fetch('https://v6-widget.51.la/v6/Js0bWTKg5ezX8WPE/quote.js').then(res => res.te
     // 示例：[1, 3, 2, 4, 5] 显示 ['今日人数', '昨日人数', '今日访问', '昨日访问', '本月访问']，不显示 最近活跃访客(0) 和 总访问量(6)
     for (let i = 0; i < order.length; i++) { document.querySelectorAll('#statistic')[0].innerHTML += '<div class="webinfo-item"><div class="item-name">' + title[order[i]] + '</div><div class="item-count">' + num[order[i]] + '</div></div>' }
 });
-// 51la统计啊end
+// 51la统计end
