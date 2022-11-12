@@ -232,8 +232,8 @@ hr {
 
 // 文章图片Alt属性增加前缀start
 #article-container {
-  p .img-alt .is-center {
-    margin-top: -3px !important;
+  p .img-alt.is-center {
+    margin-top: -2px !important;
     &::before {
       content: "▲ ";
     }

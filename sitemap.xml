@@ -56,6 +56,24 @@
   </url>
   
   <url>
+    <loc>https://ll.sc.cn/friends/index.html</loc>
+    
+    <lastmod>2022-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ll.sc.cn/posts/e6ac/</loc>
+    
+    <lastmod>2022-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ll.sc.cn/about/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
@@ -92,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://ll.sc.cn/friends/index.html</loc>
+    <loc>https://ll.sc.cn/china-map/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -101,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://ll.sc.cn/china-map/index.html</loc>
+    <loc>https://ll.sc.cn/posts/21cfbf15/</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -227,15 +245,6 @@
   </url>
   
   <url>
-    <loc>https://ll.sc.cn/posts/21cfbf15/</loc>
-    
-    <lastmod>2022-11-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ll.sc.cn/Gallery/index.html</loc>
     
     <lastmod>2022-11-12</lastmod>
@@ -264,6 +273,15 @@
   
   <url>
     <loc>https://ll.sc.cn/Gallery/wallpaper/index.html</loc>
+    
+    <lastmod>2022-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ll.sc.cn/posts/6eca/</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -461,7 +479,7 @@
   </url>
   
   <url>
-    <loc>https://ll.sc.cn/posts/7d9b/</loc>
+    <loc>https://ll.sc.cn/posts/b1e0/</loc>
     
     <lastmod>2022-10-13</lastmod>
     
@@ -1135,6 +1153,20 @@
   
   <url>
     <loc>https://ll.sc.cn/tags/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2022-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ll.sc.cn/tags/MongoDB/</loc>
+    <lastmod>2022-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ll.sc.cn/tags/Twikoo%E8%AF%84%E8%AE%BA/</loc>
     <lastmod>2022-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

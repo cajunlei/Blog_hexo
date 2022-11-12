@@ -203,11 +203,11 @@ hr:before {
   color: var(--fuchsine) !important;
 }
 
-#article-container p .img-alt .is-center {
-  margin-top: -3px !important;
+#article-container p .img-alt.is-center {
+  margin-top: -2px !important;
 }
 
-#article-container p .img-alt .is-center::before {
+#article-container p .img-alt.is-center::before {
   content: "▲ ";
 }
 
