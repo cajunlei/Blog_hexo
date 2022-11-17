@@ -1,5 +1,13 @@
 @media screen and (max-width: 768px) {
-  #nav #menus {
+  #nav #menus,
+  #nav a#travellings,
+  #nav a#foreverblog,
+  .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index,
+  .article-sort-item-tags,
+  #aside-content,
+  #footer #footer-wrap .framework-info,
+  #recent-posts .post_cover.left,
+  #recent-posts .post_cover.right {
     display: none !important;
   }
   #nav .nav-group #blog_name {
@@ -9,13 +17,7 @@
     text-align: center !important;
   }
   #content-inner #recent-posts .recent-post-item {
-    height: 20em !important;
-  }
-  .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index {
-    display: none;
-  }
-  #aside-content {
-    display: none !important;
+    max-height: 20em !important;
   }
   #page-header #site-info #site-title {
     font-size: 1.5em;
@@ -30,5 +32,15 @@
   }
   #footer #footer-wrap {
     padding: 10px 0;
+  }
+  .article-sort-item-title {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    height: 2.4rem;
+    text-overflow:ellipsis;
+  }
+  .article-sort-item-categories,
+  .article-sort-item-time {
+    line-height: 1rem;
   }
 }
