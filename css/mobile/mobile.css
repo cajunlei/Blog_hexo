@@ -6,6 +6,7 @@
   .article-sort-item-tags,
   #aside-content,
   #footer #footer-wrap .framework-info,
+  #footer #footer-wrap .runtimeshow,
   #recent-posts .post_cover.left,
   #recent-posts .post_cover.right {
     display: none !important;
