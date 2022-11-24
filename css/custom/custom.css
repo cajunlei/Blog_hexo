@@ -97,7 +97,6 @@ ol.toc {
   margin: .5rem 0 !important;
 }
 
-/* 分类标签归档页增加文章索引start */
 .article-sort-item-title {
   font-size: 1.2rem;
 }
@@ -138,7 +137,14 @@ span.article-sort-item-categories i {
   padding-right: .5em;
 }
 
-/* 分类标签归档页增加文章索引end */
+#recent-posts > .recent-post-item > .recent-post-info > .article-meta-wrap > .tags:before {
+  content: none !important;
+}
+
+nav#pagination {
+  justify-content: center;
+}
+
 #content-inner #recent-posts .recent-post-item {
   height: 16em;
 }
@@ -209,10 +215,6 @@ hr:before {
 
 #article-container p .img-alt.is-center::before {
   content: "▲ ";
-}
-
-#rightside > div > button, #rightside > div > a {
-  border-radius: var(--fillet);
 }
 
 button#go-up #percent {

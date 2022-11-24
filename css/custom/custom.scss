@@ -11,7 +11,6 @@ ol.toc {
 	font-size: 14px;
 }
 // 文本样式end
-
 // 图片圆角样式start
 #pagination.pagination-post,
 .relatedPosts > .relatedPosts-list > div,
@@ -104,7 +103,7 @@ ol.toc {
   // 时钟LED end
 }
 
-/* 分类标签归档页增加文章索引start */
+// 分类标签归档页增加文章索引start
 .article-sort-item-title {
   font-size: 1.2rem;
 }
@@ -137,8 +136,15 @@ span.article-sort-item-categories {
     padding-right: .5em;
   }
 }
-/* 分类标签归档页增加文章索引end */
-
+// 分类标签归档页增加文章索引end
+// 文章双栏布局微调start
+#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {
+  content: none !important;
+}
+nav#pagination {
+  justify-content: center;
+}
+// 文章双栏布局微调end
 // 翻页按钮start
 #content-inner {
   #recent-posts {
@@ -160,7 +166,6 @@ span.article-sort-item-categories {
   }
 }
 // 翻页按钮end
-
 // 版权声明start
 #post {
   .post-copyright {
@@ -180,7 +185,6 @@ span.article-sort-item-categories {
   }
 }
 // 版权声明end
-
 // 打赏样式start
 .post-reward {
   .reward-button {
@@ -198,7 +202,6 @@ span.article-sort-item-categories {
   }
 }
 // 打赏样式end
-
 // footer 中间小心心start
 #footer {
   #footer-wrap {
@@ -210,7 +213,6 @@ span.article-sort-item-categories {
   }
 }
 // footer 中间小心心end
-
 // 水平分隔线图标start
 hr {
   border-width: 2px !important;
@@ -240,11 +242,12 @@ hr {
   }
 }
 // 文章图片Alt属性增加前缀end
-
-#rightside > div > button, #rightside > div > a {
-  border-radius: var(--fillet);
-}
-
+// 首页文章图片圆角start
+// #rightside > div > button,
+// #rightside > div > a {
+//   border-radius: var(--fillet);
+// }
+// 首页文章图片圆角end
 // 返回顶部显示网页阅读进度start
 button#go-up {
   // 返回顶部
@@ -268,13 +271,11 @@ button#go-up {
   }
 }
 // 返回顶部显示网页阅读进度end
-
 // 隐藏右下角深浅色模式start
 #rightside > div > a.icon-V.hidden {
   display: none;
 }
 // 隐藏右下角深浅色模式end
-
 // 404页面start
 #error-wrap {
   top: 40%;
