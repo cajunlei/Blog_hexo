@@ -5,13 +5,13 @@
 <meta property="og:site_name" content="雷雷的个人博客">
 <meta property="og:description" content="留言板">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2022/11/18/VfgRSOMPdpmNx4a.webp">
+<meta property="og:image" content="https://s2.loli.net/2022/11/18/obWJp352Ee17NUv.webp">
 <meta property="article:published_time" content="2019-04-14T10:30:38.000Z">
-<meta property="article:modified_time" content="2022-11-24T05:19:51.315Z">
+<meta property="article:modified_time" content="2022-11-25T06:49:09.270Z">
 <meta property="article:author" content="守正">
 <meta property="article:tag" content="雷雷,博客,雷雷博客,雷雷的博客,雷雷屋头,雷相君,守正,hexo,Blog,Cajun">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2022/11/18/VfgRSOMPdpmNx4a.webp"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://ll.sc.cn/board/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//sdk.51.la"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+<meta name="twitter:image" content="https://s2.loli.net/2022/11/18/obWJp352Ee17NUv.webp"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://ll.sc.cn/board/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//sdk.51.la"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?37eb9d4da1f3a0120c43a02428b8f5cf";
@@ -64,7 +64,7 @@ gtag('config', 'G-YDZ8Y5S8EF');
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2022-11-24 13:19:51'
+  postUpdate: '2022-11-25 14:49:09'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -135,26 +135,11 @@ gtag('config', 'G-YDZ8Y5S8EF');
       }
       const t = saveToLocal.get('theme')
     
-          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-
-          if (t === undefined) {
-            if (isLightMode) activateLightMode()
-            else if (isDarkMode) activateDarkMode()
-            else if (isNotSpecified || hasNoSupport) {
-              const now = new Date()
-              const hour = now.getHours()
-              const isNight = hour <= 6 || hour >= 18
-              isNight ? activateDarkMode() : activateLightMode()
-            }
-            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-              if (saveToLocal.get('theme') === undefined) {
-                e.matches ? activateDarkMode() : activateLightMode()
-              }
-            })
-          } else if (t === 'light') activateLightMode()
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 7 || hour >= 19
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
           else activateDarkMode()
         
       const asideStatus = saveToLocal.get('aside-status')

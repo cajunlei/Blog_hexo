@@ -1,13 +1,49 @@
 :root {
+  --yingying: #f9d3e3;
+  --lianban: #ea517f;
+}
+
+:root {
+  --forecolor: var(--lianban);
+  --backcolor: var(--yingying);
   --fillet: 15px;
-  --global-bg: var(--white);
-  --btn-bg: var(--blue);
+  --font-color: var(--black);
+  --global-bg: var(--backcolor);
+  --btn-bg: var(--forecolor);
+  --btn-hover-color: var(--forecolor);
+  --light-grey: var(--white);
   --white: #fff;
   --black: #000;
-  --blue: #4759e6;
   --fuchsine: #ef3982;
   --orange: #ff7242;
 }
+
 [data-theme="dark"]:root {
   --global-bg: var(--black);
+  --font-color: var(--white);
 }
+
+
+/* 
+松石songshi: #75c1c4;
+星灰xinghui: #b2bbbe;
+
+品绿pinlv: #00828b
+海棠haitang: #f03752
+
+玄青xuanqing: #3d3b4f
+黄丹huangdan: #e6755f
+
+水绿shuilv: #8db799
+小红xiaohong: #e6755f
+
+盈盈yingying: #f9d3e3
+莲瓣lianban: #ea517f
+
+碧蓝bilan: #3eede7
+粉红fenhong: ffb3a7
+
+青莲: #801dae
+桃红: #f091a1
+
+ */

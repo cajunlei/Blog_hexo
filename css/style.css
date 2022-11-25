@@ -52,7 +52,7 @@ li.card-archive-list-item {
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:hover,
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a:hover {
   color: var(--white);
-  background-color: var(--blue);
+  background-color: var(--forecolor);
   box-shadow: 0 8px 12px -3px rgba(66, 89, 239, 0.137);
   border-radius: 8px;
   padding-left: 0.5rem;

@@ -32,7 +32,7 @@
   border-radius: 15px;
   transition: 0.1s;
   color: var(--white) !important;
-  background: var(--blue) !important;
+  background: var(--forecolor) !important;
 }
 
 #page-header #nav .nav-group #blog_name a#site-name:hover > a {
@@ -89,7 +89,7 @@
 
 #page-header #nav #menus #page_name > a:hover {
   color: var(--white) !important;
-  background: var(--blue) !important;
+  background: var(--forecolor) !important;
   border-radius: var(--fillet);
 }
 
@@ -121,7 +121,7 @@
   border-radius: 15px;
   transition: 0.1s;
   color: var(--white) !important;
-  background: var(--blue) !important;
+  background: var(--forecolor) !important;
 }
 
 #page-header #nav #menus .menus_items .menus_item:hover > a {
@@ -131,7 +131,7 @@
 #page-header #nav #menus .menus_items .menus_item ul.menus_item_child {
   padding: 8px 12px;
   border-radius: 15px;
-  border: 1px solid var(--blue);
+  border: 1px solid var(--forecolor);
 }
 
 #page-header #nav #menus .menus_items .menus_item ul.menus_item_child li {
@@ -140,7 +140,7 @@
 }
 
 #page-header #nav #menus .menus_items .menus_item ul.menus_item_child li:hover {
-  background: var(--blue) !important;
+  background: var(--forecolor) !important;
 }
 
 #page-header #nav #menus .menus_items .menus_item ul.menus_item_child li:hover a.site-page.child {
@@ -179,7 +179,7 @@
 }
 
 #page-header #nav #nav-right a.site-page:hover {
-  background: var(--blue) !important;
+  background: var(--forecolor) !important;
 }
 
 #page-header #nav #nav-right a.site-page:hover svg path {
@@ -195,23 +195,27 @@
 }
 
 #page-header.full_page #nav #nav-right a.site-page svg path, #page-header.not-home-page #nav #nav-right a.site-page svg path, #page-header.post-bg #nav #nav-right a.site-page svg path {
-  fill: #eee;
+  fill: var(--white);
 }
 
 #page-header.full_page.nav-fixed #nav #nav-right a.site-page svg path, #page-header.not-home-page.nav-fixed #nav #nav-right a.site-page svg path, #page-header.post-bg.nav-fixed #nav #nav-right a.site-page svg path {
-  fill: #4b4948;
+  fill: var(--font-color);
 }
 
 #page-header.not-home-page.nav-fixed #nav #nav-right a.site-page svg path {
-  fill: #4b4948;
+  fill: var(--font-color);
 }
 
 #page-header.not-top-img #nav #nav-right a.site-page svg path {
-  fill: #4c4948;
+  fill: var(--font-color);
 }
 
 #page-header.not-top-img.nav-fixed #nav #nav-right a.site-page svg path {
-  fill: #4b4948;
+  fill: var(--font-color);
+}
+
+#page-header.full_page #nav, #page-header.not-home-page #nav, #page-header.post-bg #nav, #page-header.not-home-page #nav, #page-header.not-top-img #nav {
+  background: none;
 }
 
 #page-header.full_page.nav-fixed #page_name, #page-header.not-home-page.nav-fixed #page_name, #page-header.post-bg.nav-fixed #page_name, #page-header.not-home-page.nav-fixed #page_name, #page-header.not-top-img.nav-fixed #page_name {
@@ -244,12 +248,4 @@
 
 #page-header.nav-visible #nav {
   transform: none;
-}
-
-[data-theme='dark'] #page-header.full_page #nav #nav-right a.site-page svg path, [data-theme='dark'] #page-header.not-home-page #nav #nav-right a.site-page svg path, [data-theme='dark'] #page-header.not-top-img #nav #nav-right a.site-page svg path, [data-theme='dark'] #page-header.post-bg #nav #nav-right a.site-page svg path {
-  fill: rgba(255, 255, 255, 0.7);
-}
-
-[data-theme='dark'] #page-header.full_page.nav-fixed #nav #nav-right a.site-page svg path, [data-theme='dark'] #page-header.not-home-page.nav-fixed #nav #nav-right a.site-page svg path, [data-theme='dark'] #page-header.not-top-img.nav-fixed #nav #nav-right a.site-page svg path, [data-theme='dark'] #page-header.post-bg.nav-fixed #nav #nav-right a.site-page svg path {
-  fill: rgba(255, 255, 255, 0.7);
 }

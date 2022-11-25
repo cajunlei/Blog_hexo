@@ -1,26 +1,53 @@
 // 文本样式start
-body, button {
-	font-family: LXGWFont !important;
-	font-weight: 500;
+body,
+button {
+  font-family: LXGWFont !important;
+  font-weight: 500;
 }
+
 strong {
   color: #e47b6c;
 }
+
 ol.toc {
-	font-weight: 400;
-	font-size: 14px;
+  font-weight: 400;
+  font-size: 14px;
 }
+
+#article-container.post-content h1:before,
+#article-container.post-content h2:before,
+#article-container.post-content h3:before,
+#article-container.post-content h4:before,
+#article-container.post-content h5:before,
+#article-container.post-content h6:before {
+  color: var(--backcolor) !important;
+}
+
+#article-container.post-content h1:hover:before,
+#article-container.post-content h2:hover:before,
+#article-container.post-content h3:hover:before,
+#article-container.post-content h4:hover:before,
+#article-container.post-content h5:hover:before,
+#article-container.post-content h6:hover:before {
+  color: var(--forecolor) !important;
+}
+
+a {
+  color: var(--text-highlight-color);
+}
+
 // 文本样式end
 // 图片圆角样式start
 #pagination.pagination-post,
-.relatedPosts > .relatedPosts-list > div,
-.aside-list > .aside-list-item > a,
+.relatedPosts>.relatedPosts-list>div,
+.aside-list>.aside-list-item>a,
 .article-sort-item img,
 .book img,
 #post img {
   border-radius: 8px;
   box-shadow: 2px 2px 5px #909090;
 }
+
 // 图片圆角样式end
 // 主页标题样式start
 #page-header {
@@ -28,14 +55,17 @@ ol.toc {
     font-size: 5em;
     letter-spacing: .5em !important;
   }
+
   #site-info #site-title {
     font-size: 5em;
     letter-spacing: .2em !important;
   }
 }
+
 // 主页标题样式end
 // 侧栏
 #aside-content {
+
   // 头像名字样式start
   .card-info {
     .author-info__name {
@@ -44,20 +74,23 @@ ol.toc {
       letter-spacing: .5em;
     }
   }
+
   // 头像名字样式end
   // 个人卡片渐变色
-  &> .card-widget.card-info {
-    background: linear-gradient(-45deg, var(--blue), #031764, #150136, #67044d);
+  &>.card-widget.card-info {
+    background: linear-gradient(-45deg, var(--forecolor), #031764, #150136, #67044d);
     background-size: 400%;
     box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.05);
     animation: gradient 15s ease infinite;
     position: relative;
     color: var(--white);
   }
-  .site-data > a .headline,
-  .site-data > a .length-num {
+
+  .site-data>a .headline,
+  .site-data>a .length-num {
     color: var(--white);
   }
+
   // 个人卡片渐变色
   // 目录start
   #card-toc {
@@ -65,33 +98,48 @@ ol.toc {
       width: 100%;
       max-height: 25rem;
       margin: 1px !important;
-      & > * {
+
+      &>* {
         margin: 0 15px 0px 5px !important;
       }
+
+      .toc-link.active {
+        background: var(--forecolor) !important;
+      }
+    }
+
+    .toc-percentage {
+      color: var(--forecolor) !important;
     }
   }
+
   // 目录end
   // 时钟LED start
   .card-background {
     margin: 0 10px !important;
     box-shadow: none !important;
     background-color: transparent !important;
+
     #hexo_electric_clock {
       padding: 10px !important;
+
       #card-clock-clockdate,
       .card-clock-humidity,
       #card-clock-time,
       #card-clock-dackorlight {
         font-family: LED !important;
       }
+
       .card-clock-weather,
       .card-clock-windDir,
       .card-clock-location {
         font-family: LXGWFont !important;
       }
+
       .card-clock-weather {
         letter-spacing: -2px !important;
       }
+
       .card-clock-time {
         font-size: 3rem !important;
         letter-spacing: 5px !important;
@@ -100,17 +148,118 @@ ol.toc {
       }
     }
   }
+
   // 时钟LED end
+  // 归档 --> 边框
+  .card-archives ul.card-archive-list>.card-archive-list-item a {
+    border-color: var(--forecolor) !important;
+    // 归档 --> 日期
+    span.card-archive-list-date {
+      opacity: 1;
+    }
+  }
+  // 分类 --> 边框
+  .card-categories ul.card-category-list>.card-category-list-item a {
+    border-color: var(--forecolor) !important;
+  }
+
+  // 侧边栏的左上角图标
+  .item-headline i {
+    color: var(--forecolor) !important;
+  }
 }
 
 // 分类标签归档页增加文章索引start
+// 归档页面颜色start
+.article-sort-title {
+
+  &:before {
+    border-color: var(--forecolor) !important;
+  }
+
+  &:after {
+    background: var(--backcolor);
+  }
+}
+
+.article-sort,
+.article-sort-item.year:before,
+.article-sort-item:before {
+  border-color: var(--backcolor) !important;
+}
+
+.article-sort-item.year:hover:before,
+.article-sort-item:hover:before {
+  border-color: var(--forecolor) !important;
+}
+
+// 归档页面颜色end
+// 分类页面颜色start
+.list-beauty li:before,
+.category-lists ul li:before,
+#algolia-search .search-dialog .ais-Hits-list li:before {
+  border-color: var(--backcolor) !important;
+}
+
+.list-beauty li:hover:before,
+.category-lists ul li:hover:before,
+#algolia-search .search-dialog .ais-Hits-list li:hover:before {
+  border-color: var(--forecolor) !important;
+}
+
+// 分类页面颜色end
+// 标签云颜色start
+.tag-cloud-list a:hover {
+  color: var(--forecolor) !important;
+}
+
+// 标签云颜色end
+// 关于页面颜色start
+#article-container .timeline .timeline-item .item-circle:before,
+#article-container .timeline {
+  border-color: var(--backcolor) !important;
+}
+
+#article-container .timeline .timeline-item.headline .timeline-item-title .item-circle::before,
+#article-container .timeline .timeline-item .item-circle:hover:before {
+  border-color: var(--forecolor) !important;
+}
+
+// 关于页面颜色end
+// 搜索界面颜色start
+.search-dialog .search-nav {
+  color: var(--forecolor) !important;
+}
+
+#algolia-search .search-dialog .ais-SearchBox input {
+  border-color: var(--forecolor) !important;
+}
+
+// 搜索界面颜色end
+// 友链界面颜色start
+.flink-list>a:hover:before {
+  background-color: var(--forecolor) !important;
+}
+
+// 友链界面颜色end
+
+// 滚动条颜色start
+*::-webkit-scrollbar-thumb {
+  background: var(--forecolor);
+}
+
+// 滚动条颜色end
+
+
 .article-sort-item-title {
   font-size: 1.2rem;
 }
+
 .article-meta-wrap,
 .article-sort-item-time {
   font-size: .9rem;
 }
+
 .article-sort-item-index {
   opacity: 0.5;
   position: absolute;
@@ -120,30 +269,38 @@ ol.toc {
   font-size: 2.5rem;
   line-height: 1.5rem;
 }
+
 span.article-sort-item-tags {
   padding-right: 1em;
+
   i,
   span {
     padding-right: .5em;
   }
+
   span {
     padding-left: .5em;
   }
 }
+
 span.article-sort-item-categories {
   padding-right: 1em;
+
   i {
     padding-right: .5em;
   }
 }
+
 // 分类标签归档页增加文章索引end
 // 文章双栏布局微调start
-#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {
+#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags:before {
   content: none !important;
 }
+
 nav#pagination {
   justify-content: center;
 }
+
 // 文章双栏布局微调end
 // 翻页按钮start
 #content-inner {
@@ -152,6 +309,7 @@ nav#pagination {
       height: 16em;
     }
   }
+
   #pagination .page-number.current {
     box-sizing: border-box;
     margin: 0 6px;
@@ -161,20 +319,32 @@ nav#pagination {
     border-radius: 8px;
     box-shadow: var(--card-box-shadow);
     transition: all 0.3s;
-    background: var(--blue);
+    background: var(--forecolor);
     color: var(--white);
   }
 }
+
 // 翻页按钮end
 // 版权声明start
 #post {
   .post-copyright {
     border-radius: 8px;
+    border-color: var(--forecolor) !important;
+
+    &::before {
+      color: var(--forecolor) !important;
+    }
+
     &:hover {
-      background-color: #dcefff;
+      background-color: var(--backcolor);
+    }
+
+    .post-copyright-meta {
+      color: var(--forecolor) !important;
     }
   }
 }
+
 [data-theme='dark'] {
   #post {
     .post-copyright {
@@ -184,34 +354,51 @@ nav#pagination {
     }
   }
 }
+
 // 版权声明end
+
+#post .tag_share .post-meta__tags {
+  color: var(--forecolor);
+  border-color: var(--forecolor) !important;
+
+  &:hover {
+    background-color: var(--forecolor);
+    color: var(--white);
+  }
+}
+
 // 打赏样式start
 .post-reward {
   .reward-button {
     border-radius: 12px;
     font-size: 1.2em;
   }
+
   .reward-main {
     .reward-all {
       border-radius: 12px;
       box-shadow: 0 0 20px #bbb;
+
       .reward-item {
         padding: 0 16px;
       }
     }
   }
 }
+
 // 打赏样式end
 // footer 中间小心心start
 #footer {
   #footer-wrap {
     padding: 20px 0;
+
     .copyright a i.fa {
       animation: flash 3s ease infinite;
       color: #ff0000;
     }
   }
 }
+
 // footer 中间小心心end
 // 水平分隔线图标start
 hr {
@@ -220,10 +407,12 @@ hr {
   border-color: var(--fuchsine) !important;
   padding: 1px 0 !important;
   width: calc(100% - 4px);
+
   &:before {
     color: var(--fuchsine) !important;
   }
 }
+
 // 水平分隔线图标end
 
 // 隐藏原有分类start
@@ -236,11 +425,13 @@ hr {
 #article-container {
   p .img-alt.is-center {
     margin-top: -2px !important;
+
     &::before {
       content: "▲ ";
     }
   }
 }
+
 // 文章图片Alt属性增加前缀end
 // 首页文章图片圆角start
 // #rightside > div > button,
@@ -250,31 +441,37 @@ hr {
 // 首页文章图片圆角end
 // 返回顶部显示网页阅读进度start
 button#go-up {
+
   // 返回顶部
   #percent {
     display: none;
     font-weight: bold;
     font-size: 15px !important;
   }
+
   span {
-    font-size: 12px!important;
+    font-size: 12px !important;
     margin-right: -1px;
   }
+
   // 鼠标滑动到按钮上时显示返回顶部图标
   &:hover {
     i {
       display: block !important;
     }
+
     #percent {
       display: none !important;
     }
   }
 }
+
 // 返回顶部显示网页阅读进度end
 // 隐藏右下角深浅色模式start
-#rightside > div > a.icon-V.hidden {
+#rightside>div>a.icon-V.hidden {
   display: none;
 }
+
 // 隐藏右下角深浅色模式end
 // 404页面start
 #error-wrap {
@@ -285,7 +482,8 @@ button#go-up {
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 1000px;
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
+
   .error-content {
     display: flex;
     flex-direction: row;
@@ -294,9 +492,10 @@ button#go-up {
     margin: 0 1rem;
     height: 18rem;
     transition: all .3s ease 0s;
-    box-shadow: none!important;
+    box-shadow: none !important;
     border-radius: 12px;
     background: #fff !important;
+
     .error-img {
       flex: 1 1 0%;
       height: 100%;
@@ -306,30 +505,35 @@ button#go-up {
       background-position: center center;
       background-size: cover;
     }
+
     .error-info {
       flex: 1 1 0%;
       padding: .5rem;
       text-align: center;
       font-size: 14px;
-      font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+
       .error_title {
-        margin-top: -3rem!important;
+        margin-top: -3rem !important;
         font-size: 9em;
         padding-top: 0;
-        padding-left: 0!important;
+        padding-left: 0 !important;
       }
+
       .error_subtitle {
         margin-top: -3.5rem;
         word-break: break-word;
         font-size: 1.6em;
         -webkit-line-clamp: 2;
       }
+
       a {
         display: inline-block;
         margin-top: .5rem;
         padding: .3rem 1.5rem;
         background: #3f3f3f;
         color: #fff;
+
         i {
           padding-right: .3rem;
         }
@@ -337,6 +541,7 @@ button#go-up {
     }
   }
 }
+
 #body-wrap {
   &.error {
     .aside-list {
@@ -348,6 +553,7 @@ button#go-up {
       padding: 1rem;
       width: 100%;
       overflow: scroll;
+
       .aside-list-group {
         display: flex;
         flex-direction: row;
@@ -355,13 +561,16 @@ button#go-up {
         max-width: 1200px;
         margin: 0 auto;
       }
+
       .aside-list-item {
         padding: 0.5rem;
+
         img {
           width: 100%;
           object-fit: cover;
           border-radius: 12px;
         }
+
         .thumbnail {
           overflow: hidden;
           width: 230px;
@@ -369,6 +578,7 @@ button#go-up {
           background: #fff;
           display: flex;
         }
+
         .content {
           .title {
             overflow: hidden;
@@ -379,6 +589,7 @@ button#go-up {
             align-content: center;
             padding-top: 0.5rem;
           }
+
           time {
             display: none;
           }
@@ -387,4 +598,5 @@ button#go-up {
     }
   }
 }
+
 // 404页面end
