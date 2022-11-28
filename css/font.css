@@ -1,8 +1,4 @@
 /* 导航+标题start */
-/* @font-face {
-  font-family:sloganFont;
-  src: url(https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/slogan.woff2) format('woff2')
-} */
 @font-face {
   font-family:titleFont;
   src: url(https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/title.woff2) format('woff2')
@@ -14,12 +10,6 @@
   src: url(https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/LXGWWenKaiMono-Regular.woff2) format('woff2')
 }
 /* 霞露文楷等宽end */
-/* 时钟LED start */
-@font-face {
-  font-family:LED;
-  src: url(/fonts/UniDreamLED-Regular.woff2) format('woff2')
-}
-/* 时钟LED end */
 /* 文章链接末尾小图标start */
 @font-face {
   font-family: 'iconfont';  /* Project id 3027393 */
