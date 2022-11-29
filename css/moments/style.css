@@ -1,0 +1,156 @@
+#page h1.page-title {
+  display: none;
+}
+
+#page #article-container #moments .top {
+  position: relative;
+}
+
+#page #article-container #moments .top #background {
+  height: 300px;
+  overflow: hidden;
+  display: grid;
+}
+
+#page #article-container #moments .top #background img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#page #article-container #moments .top #background p {
+  font-size: 1.5rem;
+  margin: 0;
+  color: white;
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+}
+
+#page #article-container #moments .top #background #top-left {
+  left: 1.5rem;
+}
+
+#page #article-container #moments .top #background #top-right {
+  right: 1.5rem;
+}
+
+#page #article-container #moments .top .avatar {
+  position: absolute;
+  right: 1.5rem;
+  top: 235px;
+}
+
+#page #article-container #moments .top .avatar #avatar {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 1rem 0 0;
+  display: inline-block;
+}
+
+#page #article-container #moments .top .avatar img {
+  width: 100px;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#page #article-container #moments .spacing {
+  height: 5rem;
+}
+
+#page #article-container #moments .one-comment {
+  margin: 1.5rem;
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-areas: "left right";
+  grid-gap: 1rem;
+}
+
+#page #article-container #moments .one-comment .left {
+  grid-area: left;
+}
+
+#page #article-container #moments .one-comment .left img {
+  border-radius: 6px;
+}
+
+#page #article-container #moments .one-comment .right {
+  grid-area: right;
+}
+
+#page #article-container #moments .one-comment .right p {
+  margin: 0;
+}
+
+#page #article-container #moments .one-comment .right .comment {
+  margin: 0;
+}
+
+#page #article-container #moments .one-comment .right .comment p {
+  line-height: 1.5rem;
+}
+
+#page #article-container #moments .one-comment .right .comment .author {
+  color: var(--forecolor);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+#page #article-container #moments .one-comment .right .images {
+  padding: 0;
+  margin: .5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+
+#page #article-container #moments .one-comment .right .images a {
+  background: black;
+  display: grid;
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+}
+
+#page #article-container #moments .one-comment .right .images a img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#page #article-container #moments .one-comment .right .images a:after {
+  content: none;
+}
+
+#page #article-container #moments .one-comment .right .images a:before {
+  content: "";
+  display: block;
+  grid-area: 1 / 1;
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+}
+
+#page #article-container #moments .one-comment .right .add {
+  font-size: 0.9rem;
+  color: var(--forecolor);
+  margin-top: .5rem;
+}
+
+#page #article-container #moments .one-comment .right .time {
+  font-size: 0.9rem;
+  margin-bottom: .5rem;
+}
+
+#page #article-container #moments .one-comment + hr {
+  border-top: 1px dashed rgba(0, 0, 0, 0.15);
+}

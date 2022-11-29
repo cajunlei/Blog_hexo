@@ -1,0 +1,50 @@
+main {
+  &#content-inner {
+    padding: 0;
+  }
+  #page {
+    padding: 0;
+    #post-comment {
+      padding: 1.5rem;
+    }
+  }
+  #article-container #moments {
+    .top {
+      #background {
+        height: 200px !important;
+        #top-left {
+          left: 1rem;
+        }
+        #top-right {
+          right: 1rem;
+        }
+      }
+      .avatar {
+        right: 1rem;
+        top: 140px !important;
+        img {
+          width: 80px;
+        }
+      }
+    }
+    .spacing {
+      height: 2.5rem !important;
+    }
+    .one-comment {
+      margin: 1rem;
+      grid-template-columns: 50px auto;
+      grid-gap: .6rem;
+      .right {
+        .comment {
+          .author {
+            font-size: 1.2rem;
+            margin-bottom: .5rem;
+          }
+          .add {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+#content-inner {
+  a.link {
+    width: 48% !important;
+    .right {
+      margin-left: 72px !important;
+      .name {
+        font-size: 0.9rem;
+        line-height: 1rem;
+        max-height: 2.5rem;
+      }
+      .info {
+        display: none;
+      }
+    }
+  }
+}

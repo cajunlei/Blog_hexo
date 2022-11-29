@@ -1,16 +1,3 @@
-/* 侧栏归档样式start */
-@media screen and (min-width: 1300px) {
-  #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:hover,
-  #aside-content .card-categories ul.card-category-list > .card-category-list-item a:hover {
-    transform: scale(1.03);
-  }
-  #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:active,
-  #aside-content .card-categories ul.card-category-list > .card-category-list-item a:active {
-    transform: scale(0.97);
-  }
-}
-/* 侧栏归档样式end */
-
 /* 顶部小进度条start */
 .pace {
   pointer-events: none;

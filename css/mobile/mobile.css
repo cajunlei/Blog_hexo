@@ -1,47 +1,106 @@
-@media screen and (max-width: 768px) {
-  #nav #menus,
-  #nav a#travellings,
-  #nav a#foreverblog,
-  .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index,
-  .article-sort-item-tags,
-  #aside-content,
-  #footer #footer-wrap .framework-info,
-  #footer #footer-wrap .runtimeshow,
-  #recent-posts .post_cover.left,
-  #recent-posts .post_cover.right {
-    display: none !important;
-  }
-  #nav .nav-group #blog_name {
-    font-size: 1.2em !important;
-  }
-  #sidebar-menus .menus_items .menus_item .site-page > i {
-    text-align: center !important;
-  }
-  #content-inner #recent-posts .recent-post-item {
-    max-height: 20em !important;
-  }
-  #page-header #site-info #site-title {
-    font-size: 1.5em;
-    letter-spacing: 2px !important;
-  }
-  #page-header #site-info #site-subtitle {
-    font-size: 1em;
-  }
-  #page-header #page-site-info #site-title {
-    font-size: 2em;
-    letter-spacing: 2px !important;
-  }
-  #footer #footer-wrap {
-    padding: 10px 0;
-  }
-  .article-sort-item-title {
-    font-size: 1rem;
-    line-height: 1.2rem;
-    height: 2.4rem;
-    text-overflow:ellipsis;
-  }
-  .article-sort-item-categories,
-  .article-sort-item-time {
-    line-height: 1rem;
-  }
+:root {
+  --global-font-size: 16px !important;
+}
+
+#nav #menus,
+#nav a#travellings,
+#nav a#foreverblog,
+.article-sort .article-sort-item .article-sort-item-info .article-sort-item-index,
+.article-sort-item-tags,
+#aside-content,
+#footer #footer-wrap .framework-info,
+#footer #footer-wrap .runtimeshow,
+#recent-posts .post_cover.left,
+#recent-posts .post_cover.right {
+  display: none !important;
+}
+
+#nav .nav-group #blog_name {
+  font-size: 1.2em !important;
+}
+
+#sidebar-menus .menus_items .menus_item .site-page > i {
+  text-align: center !important;
+}
+
+#content-inner #recent-posts .recent-post-item {
+  max-height: 20em !important;
+}
+
+#page-header #site-info #site-title {
+  font-size: 1.5em;
+  letter-spacing: 2px !important;
+}
+
+#page-header #site-info #site-subtitle {
+  font-size: 1em;
+}
+
+#page-header #page-site-info #site-title {
+  font-size: 2em;
+  letter-spacing: 2px !important;
+}
+
+#footer #footer-wrap {
+  padding: 10px 0;
+}
+
+.article-sort-item-title {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  height: 2.4rem;
+  text-overflow: ellipsis;
+}
+
+.article-sort-item-categories,
+.article-sort-item-time {
+  line-height: 1rem;
+}
+
+main #page > .tag-cloud-list a {
+  margin: 0;
+}
+
+main #page > .category-lists .category-list {
+  padding: 0;
+}
+
+main #page > .category-lists .category-list .category-list-item {
+  font-size: 1.2rem;
+  padding: .5rem .75rem;
+  padding-left: 1rem;
+  margin: 6px;
+}
+
+main #page > .category-lists .category-list .category-list-item .category-list-count {
+  font-size: 1rem;
+  line-height: 1.2;
+  min-width: 1.5rem;
+  margin-left: .5em;
+  top: -1px;
+}
+
+main#content-inner #archive .article-sort .article-sort-item {
+  margin: .75rem 0;
+}
+
+main#content-inner #archive .article-sort .article-sort-item::before {
+  left: calc(-10px - 17px);
+}
+
+main#content-inner #archive .article-sort .article-sort-item .article-sort-item-info {
+  padding: 0 .5rem;
+}
+
+main#content-inner #archive .article-sort .article-sort-item .article-sort-item-info .article-sort-item-title {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+main#content-inner #archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap {
+  font-size: .9rem;
+}
+
+main#content-inner #archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap .article-sort-item-time {
+  line-height: 1rem;
 }

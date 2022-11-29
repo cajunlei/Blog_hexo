@@ -1,0 +1,126 @@
+:root {
+	--global-font-size: 16px !important;
+}
+// 品牌栏
+#nav #menus,
+#nav a#travellings,
+#nav a#foreverblog,
+.article-sort .article-sort-item .article-sort-item-info .article-sort-item-index,
+.article-sort-item-tags,
+// 侧边栏
+#aside-content,
+// 页脚
+#footer #footer-wrap .framework-info,
+#footer #footer-wrap .runtimeshow,
+// 首页文章图片
+#recent-posts .post_cover.left,
+#recent-posts .post_cover.right {
+  display: none !important;
+}
+#nav {
+  .nav-group {
+    // 顶栏标题
+    #blog_name {
+      font-size: 1.2em !important;
+    }
+  }
+}
+#sidebar-menus {
+  .menus_items {
+    .menus_item {
+      .site-page {
+        & > i {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
+#content-inner {
+  #recent-posts {
+    .recent-post-item {
+      max-height: 20em !important;
+    }
+  }
+}
+#page-header {
+  #site-info {
+    #site-title {
+      font-size: 1.5em;
+      letter-spacing: 2px !important;
+    }
+    #site-subtitle {
+      font-size: 1em;
+    }
+  }
+  #page-site-info {
+    #site-title {
+      font-size: 2em;
+      letter-spacing: 2px !important;
+    }
+  }
+}
+// 页脚
+#footer {
+  #footer-wrap {
+    padding: 10px 0;
+  }
+}
+.article-sort-item-title {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  height: 2.4rem;
+  text-overflow: ellipsis;
+}
+.article-sort-item-categories,
+.article-sort-item-time {
+  line-height: 1rem;
+}
+main #page{
+  // 标签页间距start
+  &>.tag-cloud-list a {
+    // padding: 0;
+    margin: 0;
+  }
+  // 分类页间距start
+  &>.category-lists {
+    .category-list {
+      padding: 0;
+      .category-list-item {
+        font-size: 1.2rem;
+        padding: .5rem .75rem;
+        padding-left: 1rem;
+        margin: 6px;
+        .category-list-count {
+          font-size: 1rem;
+          line-height: 1.2;
+          min-width: 1.5rem;
+          margin-left: .5em;
+          top: -1px;
+        }
+      }
+    }
+  }
+}
+
+main#content-inner #archive .article-sort {
+  .article-sort-item {
+    margin: .75rem 0;
+    &::before {
+      left: calc(-10px - 17px);
+    }
+    .article-sort-item-info {
+      padding: 0 .5rem;
+      .article-sort-item-title {
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+      .article-meta-wrap {
+        font-size: .9rem;
+        .article-sort-item-time {
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+}

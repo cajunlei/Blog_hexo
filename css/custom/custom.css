@@ -18,7 +18,7 @@ button {
 }
 
 strong {
-  color: #e47b6c;
+  color: var(--forecolor);
 }
 
 ol.toc {
@@ -49,7 +49,7 @@ a {
 }
 
 #post a[target=_blank]:after,
-#page a[target=_blank]:after {
+main #page a[target=_blank]:after {
   font-family: iconfont;
   content: "\e627";
   color: #aaa !important;
@@ -354,7 +354,7 @@ table th, table td {
 }
 
 #archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap .article-sort-item-time {
-  font-size: 1rem;
+  font-size: inherit;
   line-height: 1.2rem;
 }
 

@@ -14,9 +14,8 @@ button {
 .post-title {
   font-size: 3rem !important;
 }
-
 strong {
-  color: #e47b6c;
+  color: var(--forecolor);
 }
 ol.toc {
   font-weight: 400;
@@ -42,7 +41,7 @@ a {
   color: var(--text-highlight-color);
 }
 #post,
-#page {
+main #page {
   a[target=_blank]:after {
     font-family: iconfont;
     content: "\e627";
@@ -50,13 +49,11 @@ a {
     margin: 0 5px;
   }
 }
-
 .post-copyright {
   a[target=_blank]:after {
     content: none !important;
   }
 }
-
 table th, table td {
   padding: .3rem 1rem;
   border: 1px solid #e8e8e8;
@@ -245,8 +242,6 @@ table th, table td {
     }
   }
   // 最新评论end
-
-
   // 侧边栏卡片的左上角图标start
   .item-headline i {
     color: var(--forecolor) !important;
@@ -355,14 +350,13 @@ table th, table td {
         }
       }
       .article-sort-item-time {
-        font-size: 1rem;
+        font-size: inherit;
         line-height: 1.2rem;
       }
     }
   }
 }
 // 分类标签归档页增加文章索引end
-
 // 分类页面start
 .category-lists {
   text-align: center;
@@ -415,7 +409,6 @@ table th, table td {
   }
 }
 // 分类页面end
-
 // 标签页面start
 .tag-cloud-list {
   a {
@@ -430,7 +423,6 @@ table th, table td {
   }
 }
 // 标签页面end
-
 // 文章双栏布局微调start
 #recent-posts>.recent-post-item {
   &>.post_cover {
