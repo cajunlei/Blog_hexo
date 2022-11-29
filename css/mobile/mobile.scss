@@ -43,6 +43,14 @@
     }
   }
 }
+#page-header.not-home-page {
+  height: 180px;
+  #page-site-info {
+    top: 90px;
+  }
+}
+
+// 首页标题、副标题
 #page-header {
   #site-info {
     #site-title {
@@ -64,6 +72,38 @@
 #footer {
   #footer-wrap {
     padding: 10px 0;
+  }
+}
+// 文章头部信息
+.post#body-wrap #page-header.post-bg {
+  height: 260px;
+  #post-info h1.post-title {
+    font-size: 1.5rem;
+  }
+}
+// 上下篇、相关推荐
+#pagination .prev-post,
+#pagination .next-post {
+  width: 50%;
+  .pagination-info {
+    padding: 1rem;
+    .prev_info,
+    .next_info {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      white-space: normal;
+    }
+  }
+}
+// 打赏
+.post-reward {
+  .reward-main {
+    .reward-all {
+      .reward-item {
+        padding: 0 8px;
+      }
+    }
   }
 }
 .article-sort-item-title {
@@ -113,7 +153,7 @@ main#content-inner #archive .article-sort {
       padding: 0 .5rem;
       .article-sort-item-title {
         font-size: 1rem;
-        line-height: 1.3rem;
+        line-height: 1.2rem;
       }
       .article-meta-wrap {
         font-size: .9rem;

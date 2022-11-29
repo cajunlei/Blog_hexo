@@ -2,17 +2,18 @@
 body,
 button {
   font-family: LXGWFont !important;
-  font-weight: 500;
+  font-weight: 400;
 }
 #pagination .prev_info,
 #pagination .next_info,
 .relatedPosts-list .title,
-.post-title {
+#post-info h1.post-title {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
-  font-weight: bold !important;
+  font-weight: bold;
 }
-.post-title {
-  font-size: 3rem !important;
+// 文章标题
+#post-info h1.post-title {
+  font-size: 3rem;
 }
 strong {
   color: var(--forecolor);
@@ -40,18 +41,12 @@ ol.toc {
 a {
   color: var(--text-highlight-color);
 }
-#post,
-main #page {
+main #article-container{
   a[target=_blank]:after {
     font-family: iconfont;
     content: "\e627";
     color: #aaa !important;
     margin: 0 5px;
-  }
-}
-.post-copyright {
-  a[target=_blank]:after {
-    content: none !important;
   }
 }
 table th, table td {
@@ -315,7 +310,7 @@ table th, table td {
 }
 // 滚动条颜色end
 // 分类标签归档页增加文章索引start
-#archive .article-sort .article-sort-item {
+.article-sort .article-sort-item {
   margin-bottom: 2rem;
   .article-sort-item-img {
     width: 5rem;
@@ -408,6 +403,15 @@ table th, table td {
     }
   }
 }
+[data-theme='dark'] .category-lists {
+  .category-list .category-list-item {
+    background-color: inherit;
+    border: 1px solid var(--forecolor);
+    &:hover {
+      background-color: var(--forecolor);
+    }
+  }
+}
 // 分类页面end
 // 标签页面start
 .tag-cloud-list {
@@ -495,11 +499,6 @@ nav#pagination {
   background: var(--forecolor);
 }
 // algolia搜索颜色end
-// 分享start
-.post_share a[target=_blank]:after {
-  content: none !important;
-}
-// 分享end
 // 打赏样式start
 .post-reward {
   .reward-button {
@@ -512,9 +511,6 @@ nav#pagination {
       box-shadow: 0 0 20px #bbb;
       .reward-item {
         padding: 0 16px;
-        a[target=_blank]:after {
-          content: none !important;
-        }
       }
     }
   }
@@ -545,6 +541,12 @@ nav#pagination {
   transform: scale(1);
   opacity: 0;
 }
+@media screen and (max-width: 600px) {
+  .relatedPosts > .relatedPosts-list > div {
+    width: calc(50% - 4px);
+  }
+}
+
 // 上下篇、相关推荐end
 // 水平分隔线图标start
 hr {

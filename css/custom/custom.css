@@ -2,19 +2,19 @@
 body,
 button {
   font-family: LXGWFont !important;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 #pagination .prev_info,
 #pagination .next_info,
 .relatedPosts-list .title,
-.post-title {
+#post-info h1.post-title {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
-.post-title {
-  font-size: 3rem !important;
+#post-info h1.post-title {
+  font-size: 3rem;
 }
 
 strong {
@@ -48,16 +48,11 @@ a {
   color: var(--text-highlight-color);
 }
 
-#post a[target=_blank]:after,
-main #page a[target=_blank]:after {
+main #article-container a[target=_blank]:after {
   font-family: iconfont;
   content: "\e627";
   color: #aaa !important;
   margin: 0 5px;
-}
-
-.post-copyright a[target=_blank]:after {
-  content: none !important;
 }
 
 table th, table td {
@@ -309,25 +304,25 @@ table th, table td {
   background: var(--forecolor);
 }
 
-#archive .article-sort .article-sort-item {
+.article-sort .article-sort-item {
   margin-bottom: 2rem;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-img {
+.article-sort .article-sort-item .article-sort-item-img {
   width: 5rem;
   height: 5rem;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-info {
+.article-sort .article-sort-item .article-sort-item-info {
   margin-left: .5rem;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-info .article-sort-item-title {
+.article-sort .article-sort-item .article-sort-item-info .article-sort-item-title {
   font-size: 1.2rem;
   line-height: 2rem;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index {
+.article-sort .article-sort-item .article-sort-item-info .article-sort-item-index {
   opacity: 0.5;
   position: absolute;
   top: 0.5rem;
@@ -337,23 +332,23 @@ table th, table td {
   line-height: 1.5rem;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap {
+.article-sort .article-sort-item .article-sort-item-info .article-meta-wrap {
   font-size: 1rem;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap i {
+.article-sort .article-sort-item .article-sort-item-info .article-meta-wrap i {
   padding-right: .5em;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap > span {
+.article-sort .article-sort-item .article-sort-item-info .article-meta-wrap > span {
   padding-right: 1em;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap .article-sort-item-tags i {
+.article-sort .article-sort-item .article-sort-item-info .article-meta-wrap .article-sort-item-tags i {
   padding-right: .5em;
 }
 
-#archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap .article-sort-item-time {
+.article-sort .article-sort-item .article-sort-item-info .article-meta-wrap .article-sort-item-time {
   font-size: inherit;
   line-height: 1.2rem;
 }
@@ -412,6 +407,15 @@ table th, table td {
 
 .category-lists .category-list .category-list-item:hover .category-list-link {
   color: var(--white);
+}
+
+[data-theme='dark'] .category-lists .category-list .category-list-item {
+  background-color: inherit;
+  border: 1px solid var(--forecolor);
+}
+
+[data-theme='dark'] .category-lists .category-list .category-list-item:hover {
+  background-color: var(--forecolor);
 }
 
 .tag-cloud-list a {
@@ -494,10 +498,6 @@ nav#pagination {
   background: var(--forecolor);
 }
 
-.post_share a[target=_blank]:after {
-  content: none !important;
-}
-
 .post-reward .reward-button {
   border-radius: 12px;
   font-size: 1.2em;
@@ -510,10 +510,6 @@ nav#pagination {
 
 .post-reward .reward-main .reward-all .reward-item {
   padding: 0 16px;
-}
-
-.post-reward .reward-main .reward-all .reward-item a[target=_blank]:after {
-  content: none !important;
 }
 
 #pagination > .prev-post .prev-cover::after,
@@ -546,6 +542,12 @@ nav#pagination {
 #pagination > .next-post:hover .next-cover {
   transform: scale(1);
   opacity: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .relatedPosts > .relatedPosts-list > div {
+    width: calc(50% - 4px);
+  }
 }
 
 hr {

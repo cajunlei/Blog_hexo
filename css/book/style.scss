@@ -1,0 +1,75 @@
+#article-container .book .book_list {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .shelfBook {
+    display: block;
+    width: 22%;
+    height: auto;
+    margin: 0 auto;
+    color: var(--forecolor);
+    text-decoration-line: none;
+    &[target=_blank]:after {
+      content: none;
+    }
+    .cover {
+      position: relative;
+      label {
+        line-height: 1.5;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        &:before {
+          color: #fff;
+          font-family: 'Courier New';
+          text-align: center;
+          position: absolute;
+          top: 35px;
+          right: 35px;
+          width: 200px;
+          height: 3rem;
+          font-size: 2rem;
+          transform-origin: bottom center;
+          transform: translate(50%, -100%) rotate(45deg) scale(0.5);
+        }
+        &.finish::before {
+          background-color: rgba(250, 89, 95, 0.9);
+          content: '读 完';
+        }
+        &.reading::before {
+          background-color: rgba(241, 199, 154, 0.9);
+          content: '在 读';
+        }
+        &.want::before {
+          background-color: rgba(83, 102, 140, 0.9);
+          content: '想 读';
+        }
+      }
+    }
+    .name {
+      text-align: center;
+      margin-top: .5em;
+      line-height: 1.3em;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .author {
+      text-align: center;
+      margin-top: .5em;
+      line-height: 1.3em;
+      font-size: .9rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .placeholder {
+    margin: 0 auto;
+    display: block;
+    width: 22%;
+    height: auto;
+  }
+}

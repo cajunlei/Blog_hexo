@@ -27,6 +27,14 @@
   max-height: 20em !important;
 }
 
+#page-header.not-home-page {
+  height: 180px;
+}
+
+#page-header.not-home-page #page-site-info {
+  top: 90px;
+}
+
 #page-header #site-info #site-title {
   font-size: 1.5em;
   letter-spacing: 2px !important;
@@ -43,6 +51,38 @@
 
 #footer #footer-wrap {
   padding: 10px 0;
+}
+
+.post#body-wrap #page-header.post-bg {
+  height: 260px;
+}
+
+.post#body-wrap #page-header.post-bg #post-info h1.post-title {
+  font-size: 1.5rem;
+}
+
+#pagination .prev-post,
+#pagination .next-post {
+  width: 50%;
+}
+
+#pagination .prev-post .pagination-info,
+#pagination .next-post .pagination-info {
+  padding: 1rem;
+}
+
+#pagination .prev-post .pagination-info .prev_info,
+#pagination .prev-post .pagination-info .next_info,
+#pagination .next-post .pagination-info .prev_info,
+#pagination .next-post .pagination-info .next_info {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+}
+
+.post-reward .reward-main .reward-all .reward-item {
+  padding: 0 8px;
 }
 
 .article-sort-item-title {
@@ -94,7 +134,7 @@ main#content-inner #archive .article-sort .article-sort-item .article-sort-item-
 
 main#content-inner #archive .article-sort .article-sort-item .article-sort-item-info .article-sort-item-title {
   font-size: 1rem;
-  line-height: 1.3rem;
+  line-height: 1.2rem;
 }
 
 main#content-inner #archive .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap {
