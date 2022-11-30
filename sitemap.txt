@@ -2,6 +2,7 @@ https://ll.sc.cn/journal/index.html
 https://ll.sc.cn/links/index.html
 https://ll.sc.cn/love/index.html
 https://ll.sc.cn/moments/index.html
+https://ll.sc.cn/movies/index.html
 https://ll.sc.cn/tags/index.html
 https://ll.sc.cn/talking/index.html
 https://ll.sc.cn/posts/0f64/
@@ -11,6 +12,7 @@ https://ll.sc.cn/book/index.html
 https://ll.sc.cn/categories/index.html
 https://ll.sc.cn/friends/index.html
 https://ll.sc.cn/china-map/index.html
+https://ll.sc.cn/posts/39b121ef/
 https://ll.sc.cn/posts/9db656e5/
 https://ll.sc.cn/posts/89757140/
 https://ll.sc.cn/posts/b37b5fe3/
@@ -26,7 +28,6 @@ https://ll.sc.cn/posts/dc584b87/
 https://ll.sc.cn/posts/98d20436/
 https://ll.sc.cn/posts/4073eda/
 https://ll.sc.cn/posts/507c070f/
-https://ll.sc.cn/posts/39b121ef/
 https://ll.sc.cn/posts/4aa8abbe/
 https://ll.sc.cn/posts/ceeb73f/
 https://ll.sc.cn/Gallery/index.html
