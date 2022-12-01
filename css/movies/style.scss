@@ -36,6 +36,7 @@ main#content-inner {
               }
             }
             .info {
+              font-size: 16px;
               position: absolute;
               left: 0;
               top: 0;
@@ -44,21 +45,21 @@ main#content-inner {
               .title {
                 font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
                 font-weight: bold;
-                font-size: 1.3rem;
+                font-size: 1.2em;
                 line-height: 1.3;
                 color: var(--forecolor);
+                padding-bottom: 8px;
               }
               .meta {
                 color: var(--blockquote-color);
+                line-height: 1;
+                padding-bottom: 6px;
                 .date {
-                  display: inline;
                   &::after {
                     content: " /";
                   }
                 }
                 .score {
-                  display: inline;
-                  transform: scale(1.1);
                   margin-left: .5rem;
                 }
                 .bigstar50,
@@ -114,8 +115,22 @@ main#content-inner {
                   background-position: 0 -150px;
                 }
               }
+              .details {
+                font-size: 15px;
+                line-height: 1.1;
+                padding-bottom: 6px;
+                color: var(--blockquote-color);
+                .language {
+                  margin-left: .5em;
+                }
+              }
               .comments {
                 line-height: 1.3;
+                display: -webkit-box;
+                overflow: hidden;
+                white-space: normal;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
               }
             }
             &:hover {
@@ -128,7 +143,6 @@ main#content-inner {
             }
           }
           .placeholder {
-            margin: 0 auto;
             display: block;
             width: 32%;
             height: auto;

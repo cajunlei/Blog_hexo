@@ -47,6 +47,7 @@ main#content-inner #page #article-container #movies .movies_list .movies_item .c
 }
 
 main#content-inner #page #article-container #movies .movies_list .movies_item .info {
+  font-size: 16px;
   position: absolute;
   left: 0;
   top: 0;
@@ -57,17 +58,16 @@ main#content-inner #page #article-container #movies .movies_list .movies_item .i
 main#content-inner #page #article-container #movies .movies_list .movies_item .info .title {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2em;
   line-height: 1.3;
   color: var(--forecolor);
+  padding-bottom: 8px;
 }
 
 main#content-inner #page #article-container #movies .movies_list .movies_item .info .meta {
   color: var(--blockquote-color);
-}
-
-main#content-inner #page #article-container #movies .movies_list .movies_item .info .meta .date {
-  display: inline;
+  line-height: 1;
+  padding-bottom: 6px;
 }
 
 main#content-inner #page #article-container #movies .movies_list .movies_item .info .meta .date::after {
@@ -75,8 +75,6 @@ main#content-inner #page #article-container #movies .movies_list .movies_item .i
 }
 
 main#content-inner #page #article-container #movies .movies_list .movies_item .info .meta .score {
-  display: inline;
-  transform: scale(1.1);
   margin-left: .5rem;
 }
 
@@ -143,8 +141,24 @@ main#content-inner #page #article-container #movies .movies_list .movies_item .i
   background-position: 0 -150px;
 }
 
+main#content-inner #page #article-container #movies .movies_list .movies_item .info .details {
+  font-size: 15px;
+  line-height: 1.1;
+  padding-bottom: 6px;
+  color: var(--blockquote-color);
+}
+
+main#content-inner #page #article-container #movies .movies_list .movies_item .info .details .language {
+  margin-left: .5em;
+}
+
 main#content-inner #page #article-container #movies .movies_list .movies_item .info .comments {
   line-height: 1.3;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 main#content-inner #page #article-container #movies .movies_list .movies_item:hover {
@@ -156,7 +170,6 @@ main#content-inner #page #article-container #movies .movies_list a[target=_blank
 }
 
 main#content-inner #page #article-container #movies .movies_list .placeholder {
-  margin: 0 auto;
   display: block;
   width: 32%;
   height: auto;

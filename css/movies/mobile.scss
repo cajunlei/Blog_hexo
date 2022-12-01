@@ -8,7 +8,6 @@ main#content-inner {
             border-radius: 8px;
             width: 48%;
             height: auto;
-
             .cover {
               position: static;
               padding: 0;
@@ -16,7 +15,6 @@ main#content-inner {
               height: 0;
               padding-bottom: 150%;
               overflow: hidden;
-
               img {
                 padding: 0;
                 width: 100%;
@@ -24,42 +22,36 @@ main#content-inner {
                 object-fit: cover;
               }
             }
-
             .info {
               position: static;
               margin: 0;
               padding: 0;
-
               .title {
                 font-size: 1rem;
                 text-align: center;
               }
-
               .meta {
                 text-align: center;
-
                 .date {
                   display: block;
                   &::after {
                     content: none;
                   }
                 }
-
                 .score {
                   display: block;
                   margin: 0 auto;
                 }
               }
             }
-
-            .comments {
-              display: none;
+            .details, .comments {
+              display: none !important;
             }
           }
         }
-
         .placeholder {
           width: 48%;
+          margin: 0 auto;
         }
       }
     }

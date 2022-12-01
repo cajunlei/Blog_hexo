@@ -49,10 +49,11 @@ main#content-inner #page #article-container #movies .movies_list .movies_item .i
   margin: 0 auto;
 }
 
-main#content-inner #page #article-container #movies .movies_list .movies_item .comments {
-  display: none;
+main#content-inner #page #article-container #movies .movies_list .movies_item .details, main#content-inner #page #article-container #movies .movies_list .movies_item .comments {
+  display: none !important;
 }
 
 main#content-inner #page #article-container #movies .placeholder {
   width: 48%;
+  margin: 0 auto;
 }
