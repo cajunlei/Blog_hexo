@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#article-container #book .book_list {
+#article-container #book .book_list .book_items {
   padding-top: 1em;
   display: flex;
   flex-direction: row;
@@ -7,24 +7,24 @@
   justify-content: space-between;
 }
 
-#article-container #book .book_list .shelfBook {
-  display: block;
+#article-container #book .book_list .book_items .book_item {
   width: 22%;
   height: auto;
   margin: 0 auto;
   color: var(--forecolor);
   text-decoration-line: none;
+  display: block;
 }
 
-#article-container #book .book_list .shelfBook[target=_blank]:after {
+#article-container #book .book_list .book_items .book_item[target=_blank]:after {
   content: none;
 }
 
-#article-container #book .book_list .shelfBook .cover {
+#article-container #book .book_list .book_items .book_item .cover {
   position: relative;
 }
 
-#article-container #book .book_list .shelfBook .cover label {
+#article-container #book .book_list .book_items .book_item .cover label {
   line-height: 1.5;
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@
   overflow: hidden;
 }
 
-#article-container #book .book_list .shelfBook .cover label:before {
+#article-container #book .book_list .book_items .book_item .cover label:before {
   color: #fff;
   font-family: 'Courier New';
   text-align: center;
@@ -48,22 +48,22 @@
   transform: translate(50%, -100%) rotate(45deg) scale(0.5);
 }
 
-#article-container #book .book_list .shelfBook .cover label.finish::before {
+#article-container #book .book_list .book_items .book_item .cover label.finish::before {
   background-color: rgba(250, 89, 95, 0.9);
   content: '读 完';
 }
 
-#article-container #book .book_list .shelfBook .cover label.reading::before {
+#article-container #book .book_list .book_items .book_item .cover label.reading::before {
   background-color: rgba(241, 199, 154, 0.9);
   content: '在 读';
 }
 
-#article-container #book .book_list .shelfBook .cover label.want::before {
+#article-container #book .book_list .book_items .book_item .cover label.want::before {
   background-color: rgba(83, 102, 140, 0.9);
   content: '想 读';
 }
 
-#article-container #book .book_list .shelfBook .name {
+#article-container #book .book_list .book_items .book_item .name {
   text-align: center;
   margin-top: .5em;
   line-height: 1.3em;
@@ -71,7 +71,7 @@
   font-weight: bold;
 }
 
-#article-container #book .book_list .shelfBook .author {
+#article-container #book .book_list .book_items .book_item .author {
   text-align: center;
   margin-top: .5em;
   line-height: 1.3em;
@@ -79,9 +79,35 @@
   margin-bottom: 1rem;
 }
 
-#article-container #book .book_list .placeholder {
+#article-container #book .book_list .book_items .placeholder {
   margin: 0 auto;
   display: block;
   width: 22%;
   height: auto;
+}
+
+#article-container #book .book_list .book_items .book-hide {
+  display: none !important;
+}
+
+#article-container #book .book_list .book_items .book-show {
+  display: block !important;
+}
+
+#article-container #book .book_list .book-pagination {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#article-container #book .book_list .book-pagination .book-button {
+  padding: .5rem 1rem;
+  background-color: var(--forecolor);
+  margin: 0 .5rem;
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+#article-container #book .book_list .book-pagination .book-button:hover {
+  text-decoration: none;
 }

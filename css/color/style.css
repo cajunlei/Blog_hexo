@@ -16,6 +16,7 @@
   --black: #000;
   --fuchsine: #ef3982;
   --orange: #ff7242;
+  --border: 1px solid var(--forecolor);
 }
 
 [data-theme="dark"]:root {

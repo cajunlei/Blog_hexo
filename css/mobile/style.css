@@ -7,11 +7,8 @@
 #nav a#foreverblog,
 .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index,
 .article-sort-item-tags,
-#aside-content,
 #footer #footer-wrap .framework-info,
-#footer #footer-wrap .runtimeshow,
-#recent-posts .post_cover.left,
-#recent-posts .post_cover.right {
+#footer #footer-wrap .runtimeshow {
   display: none !important;
 }
 
@@ -25,6 +22,19 @@
 
 #content-inner #recent-posts .recent-post-item {
   max-height: 20em !important;
+}
+
+#content-inner #recent-posts .recent-post-item .post_cover {
+  height: 160px;
+}
+
+#content-inner #recent-posts .recent-post-item .recent-post-info {
+  padding: 0 1rem;
+  margin-top: .5rem;
+}
+
+#content-inner #recent-posts .recent-post-item .recent-post-info .article-meta-wrap {
+  margin: .5rem 0;
 }
 
 #page-header.not-home-page {
@@ -83,6 +93,10 @@
 
 .post-reward .reward-main .reward-all .reward-item {
   padding: 0 8px;
+}
+
+#comment-barrage {
+  display: none !important;
 }
 
 .article-sort-item-title {

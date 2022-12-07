@@ -7,14 +7,9 @@
 #nav a#foreverblog,
 .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index,
 .article-sort-item-tags,
-// 侧边栏
-#aside-content,
 // 页脚
 #footer #footer-wrap .framework-info,
-#footer #footer-wrap .runtimeshow,
-// 首页文章图片
-#recent-posts .post_cover.left,
-#recent-posts .post_cover.right {
+#footer #footer-wrap .runtimeshow {
   display: none !important;
 }
 #nav {
@@ -40,6 +35,16 @@
   #recent-posts {
     .recent-post-item {
       max-height: 20em !important;
+      .post_cover {
+        height: 160px;
+      }
+      .recent-post-info {
+        padding: 0 1rem;
+        margin-top: .5rem;
+        .article-meta-wrap {
+          margin: .5rem 0;
+        }
+      }
     }
   }
 }
@@ -105,6 +110,10 @@
       }
     }
   }
+}
+// 热评
+#comment-barrage {
+  display: none !important;
 }
 .article-sort-item-title {
   font-size: 1rem;

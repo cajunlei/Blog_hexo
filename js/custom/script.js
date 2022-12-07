@@ -1,3 +1,33 @@
+// 分类目录条、标签目录条start
+function catalogActive() {
+    let $list = document.getElementById('catalog-list')
+    if ($list) {
+        // 鼠标滚轮滚动
+        $list.addEventListener('mousewheel', function (e) {
+            // 计算鼠标滚轮滚动的距离
+            $list.scrollLeft -= e.wheelDelta / 2
+            // 阻止浏览器默认方法
+            e.preventDefault()
+        }, false)
+
+        // 高亮当前页面对应的分类或标签
+        let $catalog = document.getElementById(decodeURIComponent(window.location.pathname))
+        $catalog.classList.add('selected')
+
+        // 滚动当前页面对应的分类或标签到中部
+        $list.scrollLeft = ($catalog.offsetLeft - $list.offsetLeft) - ($list.offsetWidth - $catalog.offsetWidth) / 2
+    }
+}
+catalogActive()
+// 分类目录条、标签目录条end
+// 切换热评start
+function switchCommentBarrage() {
+    let flag = window.localStorage.getItem('commentBarrageDisplay') // undefined || false
+    document.getElementById('comment-barrage').style.display = flag === 'false' ? 'block' : 'none'
+    // 本地缓存一天，刷新或切换页面时仍 隐藏或显示 热评。
+    window.localStorage.setItem('commentBarrageDisplay', flag === 'false' ? 'undefined' : 'false', 86400000)
+}
+// 切换热评end
 // 分享本页start
 function share() {
     let url = window.location.origin + window.location.pathname
