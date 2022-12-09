@@ -7,7 +7,7 @@ main#content-inner {
             .movies_item {
               position: static;
               border-radius: 8px;
-              width: 48%;
+              width: calc(50% - 10px);
               height: auto;
               .cover {
                 position: static;
@@ -51,7 +51,7 @@ main#content-inner {
               }
             }
             .placeholder {
-              width: 48%;
+              width: calc(50% - 10px);
               margin: 0 auto;
             }
           }

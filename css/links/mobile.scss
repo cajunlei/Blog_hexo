@@ -1,6 +1,6 @@
 #content-inner {
   a.link {
-    width: 48% !important;
+    width: calc(50% - 10px) !important;
     .right {
       margin-left: 72px !important;
       .name {

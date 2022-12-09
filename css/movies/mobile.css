@@ -1,7 +1,7 @@
 main#content-inner #page #article-container #movies .movie_list .movies_items .movies_item {
   position: static;
   border-radius: 8px;
-  width: 48%;
+  width: calc(50% - 10px);
   height: auto;
 }
 
@@ -55,7 +55,7 @@ main#content-inner #page #article-container #movies .movie_list .movies_items .m
 }
 
 main#content-inner #page #article-container #movies .movie_list .movies_items .placeholder {
-  width: 48%;
+  width: calc(50% - 10px);
   margin: 0 auto;
 }
 

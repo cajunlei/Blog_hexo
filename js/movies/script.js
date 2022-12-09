@@ -70,6 +70,4 @@ function initPagination() {
       firstpages[i].click();
   }
 }
-document.addEventListener("DOMContentLoaded", function () {
-  initPagination();
-}, false);
+initPagination();

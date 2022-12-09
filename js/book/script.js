@@ -9,7 +9,7 @@ Element.prototype.siblings = function () {
   return siblingElement;
 };
 function makePageNum(num, arr) {
-  return (num + 1) + ' / ' + (Math.ceil(arr.length / 8 === 0 ? 1 : Math.ceil(arr.length / 8)));
+  return (num + 1) + ' / ' + (Math.ceil(arr.length / 10 === 0 ? 1 : Math.ceil(arr.length / 10)));
 }
 function firstBtn() {
   let sibs = this.parentNode.siblings();
@@ -20,7 +20,7 @@ function previousBtn() {
   let sibs = this.parentNode.siblings();
   let currNum = this.parentNode.getElementsByClassName('book-pagenum')[0].innerText;
   currNum = currNum.substr(0, currNum.indexOf('/') - 1);
-  currNum = parseInt(currNum, 8) - 1;
+  currNum = parseInt(currNum, 10) - 1;
   if (currNum > 0) {
       currNum--;
   }
@@ -31,8 +31,8 @@ function nextBtn() {
   let sibs = this.parentNode.siblings();
   let currNum = this.parentNode.getElementsByClassName('book-pagenum')[0].innerText;
   currNum = currNum.substr(0, currNum.indexOf('/') - 1);
-  currNum = parseInt(currNum, 8) - 1;
-  if (currNum < Math.ceil(sibs.length / 8) - 1) {
+  currNum = parseInt(currNum, 10) - 1;
+  if (currNum < Math.ceil(sibs.length / 10) - 1) {
       currNum++;
   }
   displayPage(sibs, currNum);
@@ -40,12 +40,12 @@ function nextBtn() {
 }
 function lastBtn() {
   let sibs = this.parentNode.siblings();
-  displayPage(sibs, Math.ceil(sibs.length / 8) - 1);
-  this.parentNode.getElementsByClassName('book-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 8) - 1 === -1 ? 0 : Math.ceil(sibs.length / 8) - 1, sibs);
+  displayPage(sibs, Math.ceil(sibs.length / 10) - 1);
+  this.parentNode.getElementsByClassName('book-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 10) - 1 === -1 ? 0 : Math.ceil(sibs.length / 10) - 1, sibs);
 }
 function displayPage(arr, num) {
   for (let i = 0; i < arr.length; i++) {
-      if (Math.floor(i / 8) === num) {
+      if (Math.floor(i / 10) === num) {
           arr[i].classList.remove('book-hide');
       } else {
           arr[i].classList.add('book-hide');
@@ -66,10 +66,8 @@ function initPagination() {
       lastpages[i].onclick = lastBtn;
       //set page num
       let size = pagenums[i].parentNode.siblings().length;
-      pagenums[i].innerText = '1 / ' + (Math.ceil(size / 8) === 0 ? 1 : Math.ceil(size / 8));
+      pagenums[i].innerText = '1 / ' + (Math.ceil(size / 10) === 0 ? 1 : Math.ceil(size / 10));
       firstpages[i].click();
   }
 }
-document.addEventListener("DOMContentLoaded", function () {
-  initPagination();
-}, false);
+initPagination();

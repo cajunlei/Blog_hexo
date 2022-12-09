@@ -1,5 +1,5 @@
 #content-inner a.link {
-  width: 48% !important;
+  width: calc(50% - 10px) !important;
 }
 
 #content-inner a.link .right {

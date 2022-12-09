@@ -7,7 +7,7 @@
       justify-content: space-between;
       span.placeholder,
       a.link {
-        width: 32%;
+        width: calc(25% - 10px);
         display: inline-block;
       }
       a.link {

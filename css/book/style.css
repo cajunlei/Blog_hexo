@@ -8,7 +8,7 @@
 }
 
 #article-container #book .book_list .book_items .book_item {
-  width: 22%;
+  width: calc(20% - 20px);
   height: auto;
   margin: 0 auto;
   color: var(--forecolor);
@@ -82,7 +82,7 @@
 #article-container #book .book_list .book_items .placeholder {
   margin: 0 auto;
   display: block;
-  width: 22%;
+  width: calc(20% - 20px);
   height: auto;
 }
 

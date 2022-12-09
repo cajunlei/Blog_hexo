@@ -8,7 +8,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         .book_item {
-          width: 22%;
+          width: calc(20% - 20px);
           height: auto;
           margin: 0 auto;
           color: var(--forecolor);
@@ -72,7 +72,7 @@
         .placeholder {
           margin: 0 auto;
           display: block;
-          width: 22%;
+          width: calc(20% - 20px);
           height: auto;
         }
         .book-hide {

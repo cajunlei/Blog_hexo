@@ -23,9 +23,9 @@ main#content-inner #page #article-container #movies .movie_list .movies_items {
 }
 
 main#content-inner #page #article-container #movies .movie_list .movies_items .movies_item {
-  width: 32%;
+  width: calc(100% / 3 - 15px);
   height: calc(var(--kd) * 1.5 + 20px);
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   padding: .5rem;
   border-radius: 12px;
   color: var(--black);
@@ -176,7 +176,7 @@ main#content-inner #page #article-container #movies .movie_list .movies_items a[
 
 main#content-inner #page #article-container #movies .movie_list .movies_items .placeholder {
   display: block;
-  width: 32%;
+  width: calc(100% / 3 - 15px);
   height: auto;
 }
 
@@ -191,7 +191,6 @@ main#content-inner #page #article-container #movies .movie_list .movies_items .m
 main#content-inner #page #article-container #movies .movie_list .movies-pagination {
   font-size: 15px;
   text-align: center;
-  margin-top: 1rem;
 }
 
 main#content-inner #page #article-container #movies .movie_list .movies-pagination .movies-button {
