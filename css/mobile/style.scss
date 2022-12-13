@@ -8,10 +8,14 @@
 .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index,
 .article-sort-item-tags,
 // 页脚
-#footer #footer-wrap .framework-info,
+#footer #footer-wrap .footer-right,
 #footer #footer-wrap .runtimeshow {
   display: none !important;
 }
+#footer #footer-wrap {
+  justify-content: center;;
+}
+
 #nav {
   .nav-group {
     // 顶栏标题

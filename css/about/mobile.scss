@@ -1,0 +1,56 @@
+main#content-inner.layout.hide-aside #page {
+  padding: 0rem 1rem !important;
+
+  #article-container,
+  #post-comment {
+    padding: 1rem;
+  }
+
+  #about-page {
+    .author-img {
+      img {
+        width: 120px;
+        height: 120px;
+      }
+
+      &:before {
+        bottom: 10px;
+        right: 0px;
+      }
+    }
+
+    .author-content {
+      margin-top: 0rem;
+
+      .author-content-item {
+        width: 100% !important;
+        margin-top: 1rem;
+        padding: 1rem;
+
+        .card-content {
+          padding: 1rem;
+        }
+
+        &.personalities {
+          min-height: 230px;
+
+          .image {
+            bottom: -20%;
+          }
+        }
+
+        &.map .map-title {
+          padding: 1rem;
+        }
+
+        &.selfInfo {
+          height: -webkit-fill-available;
+        }
+      }
+
+      .author-content-item-group.column.mapAndInfo {
+        width: 100% !important;
+      }
+    }
+  }
+}

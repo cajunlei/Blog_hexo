@@ -52,7 +52,7 @@ main {
     max-width: 1200px;
   }
   // 链接小尾标
-  &#article-container {
+  #article-container {
     a[target=_blank]:after {
       font-family: iconfont;
       content: "\e627";
@@ -131,9 +131,13 @@ table td {
     height: 16em;
     &>.recent-post-info {
       padding: 0 2rem;
-      &>.article-title:hover {
-        color: var(--forecolor);
-        transform: translateX(6px);
+      &>.article-title{
+        font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+        font-weight: bold;
+        :hover {
+          color: var(--forecolor);
+          transform: translateX(6px);
+        }
       }
       &>.article-meta-wrap {
         &>.tags:before {
@@ -241,12 +245,27 @@ hr {
 // 文章正文样式end
 // footer 中间小心心start
 #footer {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+  font-weight: bold;
   #footer-wrap {
-    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 20px 15px;
+    margin: 0 auto;
+    .footer-left {
+      text-align: left;
+    }
+    .footer-right {
+      text-align: right;
+    }
     .copyright a i.fa {
       animation: flash 3s ease infinite;
       color: #ff0000;
     }
+  }
+  a:hover {
+    text-decoration: none;
   }
 }
 // footer 中间小心心end
