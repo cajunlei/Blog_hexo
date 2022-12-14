@@ -114,14 +114,19 @@ table td {
 // 标签页面start
 .tag-cloud-list {
   a {
-    padding: 0 .5rem;
-    margin: 0 .5rem;
+    border: 1px solid;
+    line-height: 1.5rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+    margin: .5rem;
   }
   a:hover {
+    font-weight: bold;
     color: var(--white) !important;
     background-color: var(--forecolor);
-    border-radius: 1rem;
-    transform: scale(1.1);
+    transform: none;
+    border-color: var(--forecolor);
   }
 }
 // 标签页面end
@@ -207,11 +212,11 @@ table td {
 hr {
   border-width: 2px !important;
   border-style: dashed hidden !important;
-  border-color: var(--fuchsine) !important;
+  border-color: var(--forecolor) !important;
   padding: 1px 0 !important;
   width: calc(100% - 4px);
   &:before {
-    color: var(--fuchsine) !important;
+    color: var(--forecolor) !important;
   }
 }
 // 水平分隔线图标end
@@ -269,29 +274,6 @@ hr {
   }
 }
 // footer 中间小心心end
-// 返回顶部显示网页阅读进度start
-button#go-up {
-  // 返回顶部
-  #percent {
-    display: none;
-    font-weight: bold;
-    font-size: 15px !important;
-  }
-  span {
-    font-size: 12px !important;
-    margin-right: -1px;
-  }
-  // 鼠标滑动到按钮上时显示返回顶部图标
-  &:hover {
-    i {
-      display: block !important;
-    }
-    #percent {
-      display: none !important;
-    }
-  }
-}
-// 返回顶部显示网页阅读进度end
 // 隐藏右下角深浅色模式start
 #rightside>div>a.icon-V.hidden {
   display: none;
