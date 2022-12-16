@@ -6349,11 +6349,11 @@ blockquote.pullquote.right {
   letter-spacing: 0.5em;
 }
 #aside-content>.card-widget.card-info {
-  background: -webkit-linear-gradient(135deg, var(--forecolor), #031764, #150136, #67044d);
-  background: -moz-linear-gradient(135deg, var(--forecolor), #031764, #150136, #67044d);
-  background: -o-linear-gradient(135deg, var(--forecolor), #031764, #150136, #67044d);
-  background: -ms-linear-gradient(135deg, var(--forecolor), #031764, #150136, #67044d);
-  background: linear-gradient(-45deg, var(--forecolor), #031764, #150136, #67044d);
+  background: -webkit-linear-gradient(135deg, var(--ll-theme), #031764, #150136, #67044d);
+  background: -moz-linear-gradient(135deg, var(--ll-theme), #031764, #150136, #67044d);
+  background: -o-linear-gradient(135deg, var(--ll-theme), #031764, #150136, #67044d);
+  background: -ms-linear-gradient(135deg, var(--ll-theme), #031764, #150136, #67044d);
+  background: linear-gradient(-45deg, var(--ll-theme), #031764, #150136, #67044d);
   background-size: 400%;
   -webkit-box-shadow: 0 0 12px 4px rgba(0,0,0,0.05);
   box-shadow: 0 0 12px 4px rgba(0,0,0,0.05);
