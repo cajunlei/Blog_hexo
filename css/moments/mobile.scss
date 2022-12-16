@@ -2,37 +2,48 @@ main {
   &#content-inner {
     padding: 0;
   }
+
   #page {
-    padding: 0;
+    padding: 0 !important;
+
     #post-comment {
       padding: 1.5rem;
     }
+
     #article-container #moments {
       .top {
         #background {
           height: 200px !important;
+
           #top-left {
             left: 1rem;
           }
+
           #top-right {
             right: 1rem;
           }
         }
+
         .avatar {
           right: 1rem;
           top: 140px !important;
+
           img {
             width: 80px;
           }
         }
       }
-      .spacing {
-        height: 2.5rem !important;
+
+      .moments_items {
+        padding: .5rem;
+        padding-top: 3rem;
       }
+
       .one-comment {
         margin: 1rem;
         grid-template-columns: 50px auto;
         grid-gap: .6rem;
+
         .right {
           .comment {
             .author {
@@ -40,9 +51,14 @@ main {
               margin-bottom: 5px;
               line-height: 1.5rem;
             }
-            .add {
-              margin-bottom: 0;
+
+            .images {
+              grid-gap: .5em;
             }
+          }
+
+          .add {
+            margin-bottom: 0;
           }
         }
       }

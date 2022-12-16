@@ -2,17 +2,20 @@ body {
   cursor: url(/img/mouse/normal.cur),
     default;
 }
+
 a,
 img {
   cursor: url(/img/mouse/link.cur),
     pointer;
 }
+
 // 文本样式start
 body,
 button {
   font-family: LXGWFont !important;
   font-weight: 400;
 }
+
 #pagination .prev_info,
 #pagination .next_info,
 .relatedPosts-list .title,
@@ -20,37 +23,69 @@ button {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
   font-weight: bold;
 }
+
 // 文章标题
 #post-info h1.post-title {
   font-size: 3rem;
 }
+
 strong {
-  color: var(--forecolor);
+  color: var(--ll-main);
 }
-#article-container.post-content h1:before,
-#article-container.post-content h2:before,
-#article-container.post-content h3:before,
-#article-container.post-content h4:before,
-#article-container.post-content h5:before,
-#article-container.post-content h6:before {
-  color: var(--backcolor) !important;
+
+#article-container.post-content {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding-left: 2rem;
+  }
+
+  h1:before,
+  h2:before,
+  h3:before,
+  h4:before,
+  h5:before,
+  h6:before {
+    color: var(--ll-main);
+    margin-left: -2rem;
+    font-size: 1.25rem;
+  }
+
+  h1:hover,
+  h2:hover,
+  h3:hover,
+  h4:hover,
+  h5:hover,
+  h6:hover {
+    transform: translateX(.5rem);
+  }
+
+  h1:hover:before,
+  h2:hover:before,
+  h3:hover:before,
+  h4:hover:before,
+  h5:hover:before,
+  h6:hover:before {
+    color: var(--ll-main);
+  }
 }
-#article-container.post-content h1:hover:before,
-#article-container.post-content h2:hover:before,
-#article-container.post-content h3:hover:before,
-#article-container.post-content h4:hover:before,
-#article-container.post-content h5:hover:before,
-#article-container.post-content h6:hover:before {
-  color: var(--forecolor) !important;
-}
+
+
 a {
   color: var(--text-highlight-color);
 }
+
 main {
+
   // 页面宽度
   &#content-inner {
     max-width: 1200px;
   }
+
   // 链接小尾标
   #article-container {
     a[target=_blank]:after {
@@ -61,11 +96,13 @@ main {
     }
   }
 }
+
 table th,
 table td {
   padding: .3rem 1rem;
   border: 1px solid #e8e8e8;
 }
+
 // 文本样式end
 // 图片圆角样式start
 #pagination.pagination-post,
@@ -77,85 +114,100 @@ table td {
   border-radius: 8px;
   box-shadow: 2px 2px 5px #909090;
 }
+
 // 图片圆角样式end
 // 关于页面颜色start
 #article-container .timeline .timeline-item .item-circle:before,
 #article-container .timeline {
   border-color: var(--backcolor) !important;
 }
+
 #article-container .timeline .timeline-item.headline .timeline-item-title .item-circle::before,
 #article-container .timeline .timeline-item .item-circle:hover:before {
   border-color: var(--forecolor) !important;
 }
+
 // 关于页面颜色end
 // 搜索界面颜色start
 #algolia-search .search-dialog {
   .search-nav {
-    color: var(--forecolor) !important;
+    color: var(--ll-main) !important;
   }
+
   .ais-SearchBox input {
-    border-color: var(--forecolor) !important;
+    border-color: var(--ll-main) !important;
   }
+
   .ais-Pagination .ais-Pagination-item--selected a {
-    background: var(--forecolor);
+    background: var(--ll-main);
   }
 }
+
 // 搜索界面颜色end
 // 友链界面颜色start
 .flink-list>a:hover:before {
-  background-color: var(--forecolor) !important;
+  background-color: var(--ll-btn-bg) !important;
 }
+
 // 友链界面颜色end
 // 滚动条颜色start
 *::-webkit-scrollbar-thumb {
-  background: var(--forecolor);
+  background: var(--ll-main);
 }
+
 // 滚动条颜色end
 // 标签页面start
 .tag-cloud-list {
   a {
     border: 1px solid;
-    line-height: 1.5rem;
-    border-radius: .5rem;
-    padding: .5rem;
     font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: .5rem;
     margin: .5rem;
+    color: var(--ll-fontcolor);
+    border-radius: .5rem;
   }
+
   a:hover {
-    font-weight: bold;
-    color: var(--white) !important;
-    background-color: var(--forecolor);
-    transform: none;
-    border-color: var(--forecolor);
+    background: var(--ll-btn-bg);
+    color: var(--ll-btn-text) !important;
+    border: var(--style-border-always);
   }
 }
+
 // 标签页面end
 // 文章双栏布局微调start
 #recent-posts {
   &>.recent-post-item {
     height: 16em;
+
     &>.recent-post-info {
       padding: 0 2rem;
-      &>.article-title{
+
+      &>.article-title {
         font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
         font-weight: bold;
+
         :hover {
-          color: var(--forecolor);
+          color: var(--ll-hovertext);
           transform: translateX(6px);
         }
       }
+
       &>.article-meta-wrap {
         &>.tags:before {
           content: none !important;
         }
+
         a:hover {
-          color: var(--forecolor);
+          color: var(--ll-hovertext);
           text-decoration: none;
         }
       }
     }
   }
 }
+
 // 文章双栏布局微调end
 
 // 打赏样式start
@@ -164,16 +216,19 @@ table td {
     border-radius: 12px;
     font-size: 1.2em;
   }
+
   .reward-main {
     .reward-all {
       border-radius: 12px;
       box-shadow: 0 0 20px #bbb;
+
       .reward-item {
         padding: 0 16px;
       }
     }
   }
 }
+
 // 打赏样式end
 // 上下篇、相关推荐start
 #pagination>.prev-post .prev-cover::after,
@@ -188,94 +243,114 @@ table td {
   width: 100%;
   height: 100%;
 }
+
 #pagination>.prev-post:hover,
 #pagination>.next-post:hover,
 .relatedPosts>.relatedPosts-list>div:hover {
-  background-color: var(--forecolor);
+  background-color: var(--ll-main);
+
   .cover {
     transform: scale(1);
     opacity: 0;
   }
 }
+
 #pagination>.prev-post:hover .prev-cover,
 #pagination>.next-post:hover .next-cover {
   transform: scale(1);
   opacity: 0;
 }
+
 @media screen and (max-width: 600px) {
   .relatedPosts>.relatedPosts-list>div {
     width: calc(50% - 4px);
   }
 }
+
 // 上下篇、相关推荐end
 // 水平分隔线图标start
 hr {
   border-width: 2px !important;
   border-style: dashed hidden !important;
-  border-color: var(--forecolor) !important;
+  border-color: var(--ll-main) !important;
   padding: 1px 0 !important;
   width: calc(100% - 4px);
+
   &:before {
-    color: var(--forecolor) !important;
+    color: var(--ll-main) !important;
   }
 }
+
 // 水平分隔线图标end
 // 文章正文样式start
 #article-container {
   p .img-alt.is-center {
     margin-top: -2px !important;
+
     &::before {
       content: "▲ ";
     }
   }
+
   #comments.tabs .nav-tabs .tab.active button {
-    border-color: var(--forecolor);
+    border-color: var(--ll-main);
   }
+
   h2#参考链接+ul>li {
     strong {
       font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
       font-weight: bold;
     }
+
     &::marker {
       font-family: iconfont;
       content: "\e623";
-      color: var(--forecolor);
+      color: var(--ll-main);
       letter-spacing: .5rem;
     }
+
     &>a {
-      color: var(--forecolor);
+      color: var(--ll-main);
     }
   }
 }
+
 // 文章正文样式end
 // footer 中间小心心start
 #footer {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
   font-weight: bold;
+
   #footer-wrap {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     padding: 20px 15px;
     margin: 0 auto;
+
     .footer-left {
       text-align: left;
     }
+
     .footer-right {
       text-align: right;
     }
+
     .copyright a i.fa {
       animation: flash 3s ease infinite;
       color: #ff0000;
     }
   }
+
   a:hover {
     text-decoration: none;
   }
 }
+
 // footer 中间小心心end
 // 隐藏右下角深浅色模式start
 #rightside>div>a.icon-V.hidden {
   display: none;
 }
+
 // 隐藏右下角深浅色模式end

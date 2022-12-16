@@ -1,32 +1,51 @@
-#page{
+[data-theme=light] {
+  --green: #9eea6a;
+}
+
+[data-theme=dark] {
+  --green: #1b1b1b;
+}
+
+main#content-inner {
+  padding: 1rem;
+}
+
+#page {
   padding-top: 1rem;
+
   h1.page-title {
     display: none;
   }
 }
+
 #journal {
   hr:before {
     content: none !important;
   }
+
   .top {
     display: flex;
     margin: 1rem auto;
+
     &+hr {
       height: 1px !important;
-      margin:  0 0 2rem 0 !important;
+      margin: 0 0 2rem 0 !important;
       border: none !important;
-      border-top: 1px dashed var(--forecolor) !important;
+      border-top: 1px dashed var(--ll-theme) !important;
     }
+
     p {
       width: 8%;
       margin-left: 0 !important;
       display: flex;
       justify-content: center;
       align-items: center;
+
       &>i::before {
         font-size: 1.6rem;
       }
     }
+
     .text {
       width: 84%;
       font-size: 1.6rem;
@@ -37,85 +56,69 @@
       align-items: center;
     }
   }
+
   h2 {
-    color: #555555;
+    color: var(--ll-gray);
     font-size: .95rem;
     text-align: center;
     font-weight: normal;
     letter-spacing: 1px;
     margin: 1rem 0;
   }
+
   .box {
     margin: 1rem;
     display: flex;
+
     &>img {
       width: 40px;
       height: 40px;
       margin-right: 1rem !important;
       border-radius: 4px;
     }
+
     .text {
       flex: 1;
       text-align: justify;
       line-height: 2rem;
-      background-color: #9eea6a;
+      background-color: var(--green);
       padding: .5rem 1rem;
       display: inline-block;
       border-radius: 4px;
       position: relative;
+
       p {
         margin: 0 !important;
         padding: .5rem 0;
+
         &:first-child {
           padding-top: 0;
         }
+
         &:not(:only-child):last-of-type {
           padding-bottom: 0;
         }
       }
+
       ul li p {
         padding: 0;
       }
+
       &:after {
         content: '';
-        border: 6px solid #ffffff00;
-        border-right: 6px solid #9eea6a;
+        border: 6px solid var(--ll-none);
+        border-right: 6px solid var(--green);
         position: absolute;
         top: 12px;
         left: -12px;
       }
     }
+
     &+hr {
       margin: 1.6rem 0 !important;
       height: 1px !important;
       border: none !important;
-      border-top: 1px dashed rgba(0, 0, 0, 0.15) !important;
-    }
-  }
-}
-[data-theme='dark'] #journal {
-  h2 {
-    color: #ddd;
-  }
-  .top {
-    color: #ddd !important;
-    &+hr {
-      border-top: 1px dashed var(--forecolor);
-    }
-  }
-  .box {
-    .text {
-      background-color: #1b1b1b;
-      color: #ddd;
-      strong {
-        color: var(--forecolor);
-      }
-      &:after {
-        border-right: 6px solid #1b1b1b;
-      }
-    }
-    &+hr {
-      border-top: 1px dashed rgba(255, 255, 255, 0.2) !important;
+      border-top: 1px dashed var(--ll-black-op) !important;
     }
   }
 }

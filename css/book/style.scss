@@ -11,7 +11,7 @@
           width: calc(20% - 20px);
           height: auto;
           margin: 0 auto;
-          color: var(--forecolor);
+          color: var(--ll-theme);
           text-decoration-line: none;
           display: block;
           &[target=_blank]:after {
@@ -28,7 +28,7 @@
               left: 0;
               overflow: hidden;
               &:before {
-                color: #fff;
+                color: var(--ll-lighttext);
                 font-family: 'Courier New';
                 text-align: center;
                 position: absolute;
@@ -88,9 +88,9 @@
         margin-top: 1rem;
         .book-button {
           padding: .5rem 1rem;
-          background-color: var(--forecolor);
+          background-color: var(--ll-theme);
           margin: 0 .5rem;
-          color: #fff !important;
+          color: var(--ll-lighttext) !important;
           border-radius: 6px;
           &:hover {
             text-decoration: none;

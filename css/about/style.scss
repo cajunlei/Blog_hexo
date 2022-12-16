@@ -18,7 +18,7 @@ main#content-inner.layout.hide-aside {
     #article-container,
     #post-comment {
       padding-top: 1rem;
-      background-color: var(--card-bg);
+      background-color: var(--ll-card-bg);
       padding: 10px 2rem;
       margin-top: 1rem;
       border-radius: 24px;
@@ -41,7 +41,7 @@ main#content-inner.layout.hide-aside {
           background: #28a63f;
           position: absolute;
           border-radius: 50%;
-          border: 5px solid var(--white);
+          border: 5px solid var(--ll-white);
           bottom: 15px;
           right: 10px;
           z-index: 2;
@@ -63,7 +63,7 @@ main#content-inner.layout.hide-aside {
         font-size: 2rem;
         font-weight: bold;
         line-height: 1;
-        color: var(--font-color);
+        color: var(--ll-fontcolor);
         margin: 1rem 0;
       }
 
@@ -136,8 +136,8 @@ main#content-inner.layout.hide-aside {
           width: 49%;
           padding: 1rem 2rem;
           border-radius: 24px;
-          border: var(--border);
-          background: var(--card-bg);
+          border: var(--style-border);
+          background: var(--ll-card-bg);
           box-shadow: var(--card-box-shadow);
           position: relative;
           overflow: hidden;
@@ -146,8 +146,8 @@ main#content-inner.layout.hide-aside {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: var(--white);
-            background: linear-gradient(120deg, var(--forecolor) 0%, #ff8b8b 100%);
+            color: var(--ll-white);
+            background: var(--ll-logo-color);
             background-size: 200%;
             animation: gradient 15s ease infinite;
             width: 59%;
@@ -214,10 +214,10 @@ main#content-inner.layout.hide-aside {
                 align-items: center;
                 margin-right: 10px;
                 margin-top: 10px;
-                background: var(--white);
+                background: var(--ll-theme-op);
                 border-radius: 40px;
                 padding: 4px 12px 4px 8px;
-                border: var(--border);
+                border: var(--ll-border);
 
                 .skill-icon {
                   width: 32px;
@@ -236,7 +236,7 @@ main#content-inner.layout.hide-aside {
 
                 .skill-name {
                   font-weight: bold;
-                  color: var(--forecolor);
+                  color: var(--ll-theme);
                 }
               }
 
@@ -248,14 +248,14 @@ main#content-inner.layout.hide-aside {
           }
 
           &.like-technology {
-            color: var(--white);
+            color: var(--ll-lighttext);
             background: $technology;
             background-size: cover;
             min-height: 260px;
           }
 
           &.like-music {
-            color: var(--white);
+            color: var(--ll-lighttext);
             background: $music;
             background-size: cover;
             min-height: 400px;
@@ -266,10 +266,9 @@ main#content-inner.layout.hide-aside {
           &.about-statistic {
             min-height: 380px;
             width: 39%;
-            color: var(--white);
+            color: var(--ll-lighttext);
             background: $statistic;
             background-size: cover;
-
             overflow: hidden;
 
             #statistic {
@@ -284,7 +283,7 @@ main#content-inner.layout.hide-aside {
               margin-top: 1rem;
               margin-bottom: 2rem;
 
-              div {
+              & > div {
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
@@ -302,6 +301,12 @@ main#content-inner.layout.hide-aside {
                   line-height: 1;
                   white-space: nowrap;
                 }
+              }
+            }
+            .post-tips a {
+              color: var(--ll-lighttext) !important;
+              &:hover {
+                color: var(--ll-hovertext) !important;
               }
             }
 
@@ -336,16 +341,17 @@ main#content-inner.layout.hide-aside {
             transition: 1s ease-in-out;
 
             .map-title {
-              position: absolute;
-              bottom: 0px;
+              font-size: 20px;
               left: 0px;
               width: 100%;
+              bottom: 0px;
+              position: absolute;
+              color: var(--ll-fontcolor);
               background: var(--ll-maskbg);
               padding: 0.5rem 2rem;
               backdrop-filter: saturate(180%) blur(20px);
               -webkit-backdrop-filter: blur(20px);
               transition: 1s ease-in-out;
-              font-size: 20px;
             }
 
             &:hover {
@@ -417,7 +423,10 @@ main#content-inner.layout.hide-aside {
         }
 
         a {
-          color: var(--font-color) !important;
+          color: var(--ll-fontcolor) !important;
+          &:hover {
+            color: var(--ll-hovertext) !important;
+          }
         }
       }
 
