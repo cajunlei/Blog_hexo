@@ -7703,10 +7703,13 @@ nav#pagination .pagination .extend.prev:hover {
 [data-theme='dark'] #post .post-copyright :hover {
   background-color: #2c2c2c;
 }
-#rightside #rightside-config-show button {
+#rightside > div button,
+#rightside > div a {
   background: var(--ll-btn-bg);
 }
-#rightside #rightside-config-show button:hover {
+#rightside > div button:hover,
+#rightside > div a:hover {
+  background: var(--ll-pink);
   border: var(--style-border-hover);
   -webkit-box-shadow: var(--ll-shadow-main);
   box-shadow: var(--ll-shadow-main);

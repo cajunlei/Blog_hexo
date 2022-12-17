@@ -37,28 +37,31 @@ main {
       .moments_items {
         padding: .5rem;
         padding-top: 3rem;
-      }
 
-      .one-comment {
-        margin: 1rem;
-        grid-template-columns: 50px auto;
-        grid-gap: .6rem;
+        .one-comment {
+          margin: .5rem;
+          grid-template-columns: 3rem auto;
+          grid-gap: .6rem;
 
-        .right {
-          .comment {
-            .author {
-              font-size: 1.2rem;
-              margin-bottom: 5px;
-              line-height: 1.5rem;
+          .right {
+            .comment {
+              .author {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+                line-height: 1.5rem;
+              }
+
+              .images {
+                grid-gap: .5em;
+                a img {
+                  border-radius: .25rem;
+                }
+              }
             }
 
-            .images {
-              grid-gap: .5em;
+            .add {
+              margin-bottom: 0;
             }
-          }
-
-          .add {
-            margin-bottom: 0;
           }
         }
       }

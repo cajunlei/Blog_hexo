@@ -51,7 +51,7 @@
   --ll-yellow-op: #d99c001a;
   --ll-orange: #e38100;
   --ll-fontcolor: #363636;
-  --ll-background: #fef7f9;
+  --ll-background: #fef7f7;
   --ll-reverse: #000;
   --ll-maskbg: rgba(255, 255, 255, 0.6);
   --ll-maskbgdeep: rgba(255, 255, 255, 0.85);
@@ -72,6 +72,8 @@
   --ll-card-hover-bg: var(--ll-red);
   --ll-card-hover-text: var(--ll-fontcolor);
   --ll-card-bg-none: rgba(255, 255, 255, 0);
+  --ll-snackbar-bg: var(--ll-theme);
+  --ll-snackbar-text: var(--ll-white);
   --ll-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0.00);
   --ll-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0.00);
   --ll-card-border: var(--ll-theme);
@@ -112,6 +114,8 @@
   --ll-card-hover-bg: var(--ll-card-btn-bg);
   --ll-card-hover-text: var(--ll-black);
   --ll-card-bg-none: #1d1b2600;
+  --ll-snackbar-bg: var(--ll-card-btn-bg);
+  --ll-snackbar-text: var(--ll-fontcolor);
   --ll-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0.0);
   --ll-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0.0);
   --ll-card-border: var(--ll-theme);

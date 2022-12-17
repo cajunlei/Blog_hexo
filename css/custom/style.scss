@@ -337,8 +337,9 @@ hr {
     }
 
     .copyright a i.fa {
-      animation: flash 3s ease infinite;
-      color: #ff0000;
+      transition: .3s;
+      animation: heartbeat-bounce 2s ease-in-out infinite;
+      color: red;
     }
   }
 
