@@ -1,6 +1,8 @@
 body {
   cursor: url(/img/mouse/normal.cur),
     default;
+  background: var(--ll-global-bg) !important;
+  // background: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/662d2d9d9e93637e.jpg);
 }
 
 a,
@@ -112,19 +114,19 @@ table td {
 #book img,
 #post img {
   border-radius: 8px;
-  box-shadow: 2px 2px 5px #909090;
+  box-shadow: var(--card-box-shadow);
 }
 
 // 图片圆角样式end
 // 关于页面颜色start
 #article-container .timeline .timeline-item .item-circle:before,
 #article-container .timeline {
-  border-color: var(--backcolor) !important;
+  border-color: var(--ll-red) !important;
 }
 
 #article-container .timeline .timeline-item.headline .timeline-item-title .item-circle::before,
 #article-container .timeline .timeline-item .item-circle:hover:before {
-  border-color: var(--forecolor) !important;
+  border-color: var(--ll-main) !important;
 }
 
 // 关于页面颜色end

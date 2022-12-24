@@ -85,11 +85,23 @@ document.addEventListener("visibilitychange", function () {
 // 页面标题start
 window.onscroll = page_title;
 function page_title() {
-  document.getElementById('page-title').style.display = window.location.pathname === '/' || /^\/page\/[0-9]+\//.test(window.location.pathname)
-  document.querySelector('#page-title>span').innerHTML = GLOBAL_CONFIG_SITE.title
+  document.getElementById('page-name-text').style.display = window.location.pathname === '/' || /^\/page\/[0-9]+\//.test(window.location.pathname)
+  document.querySelector('#page-name-text').innerHTML = GLOBAL_CONFIG_SITE.title
 }
 // 页面标题end
-
+// 利用 SiteMap 随机访问站内页面start
+function randomPost() {
+  fetch('/sitemap.xml').then(res => res.text()).then(str => (new window.DOMParser()).parseFromString(str, "text/xml")).then(data => {
+    let ls = data.querySelectorAll('url loc');
+    let locationHref, locSplit;
+    do {
+      locationHref = ls[Math.floor(Math.random() * ls.length)].innerHTML
+      locSplit = locationHref.split('/')[3] || ''
+    } while (locSplit !== 'posts');
+    location.href = locationHref
+  })
+}
+// 利用 SiteMap 随机访问站内页面end
 // 老旧浏览器弹窗提醒start
 function browserTC() {
   btf.snackbarShow("");

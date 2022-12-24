@@ -50,6 +50,7 @@
   --ll-yellow: #c28b00;
   --ll-yellow-op: #d99c001a;
   --ll-orange: #e38100;
+  --ll-global-bg: #f7f9fe;
   --ll-fontcolor: #363636;
   --ll-background: #fef7f7;
   --ll-reverse: #000;
@@ -92,11 +93,12 @@
   --ll-yellow: #ffc93e;
   --ll-yellow-op: #ffc93e30;
   --ll-orange: #ff953e;
+  --ll-global-bg: #18171d;
   --ll-fontcolor: #F7F7FA;
   --ll-background: #18171d;
   --ll-reverse: #fff;
   --ll-maskbg: rgba(0, 0, 0, 0.6);
-  --ll-maskbgdeep: rgba(0, 0, 0, 0.85);
+  --ll-maskbgdeep: rgba(18,18,18,0.8);
   --ll-hovertext: var(--ll-theme);
   --ll-ahoverbg: #fff;
   --ll-lighttext: var(--ll-white);
