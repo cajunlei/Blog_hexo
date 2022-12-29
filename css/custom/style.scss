@@ -94,7 +94,7 @@ main {
       font-family: iconfont;
       content: "\e627";
       color: #aaa !important;
-      margin: 0 5px;
+      margin-left: 5px;
     }
   }
 }
@@ -322,6 +322,7 @@ hr {
 #footer {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
   font-weight: bold;
+  background: transparent;
 
   #footer-wrap {
     display: flex;
@@ -329,6 +330,7 @@ hr {
     max-width: 1200px;
     padding: 20px 15px;
     margin: 0 auto;
+    color: var(--ll-fontcolor);
 
     .footer-left {
       text-align: left;
@@ -343,10 +345,15 @@ hr {
       animation: heartbeat-bounce 2s ease-in-out infinite;
       color: red;
     }
-  }
 
-  a:hover {
-    text-decoration: none;
+    a {
+      color: var(--ll-fontcolor);
+
+      &:hover {
+        text-decoration: none;
+        color: var(--ll-hovertext);
+      }
+    }
   }
 }
 

@@ -3420,13 +3420,6 @@ h1.page-title {
   background-position: bottom;
   background-size: cover;
 }
-#footer:before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  content: '';
-}
 #footer-wrap {
   position: relative;
   padding: 40px 20px;
@@ -7182,6 +7175,42 @@ blockquote.pullquote.right {
 .link_card .link_content:has(.link_desc) .link_title {
   white-space: nowrap;
 }
+#body-wrap.post #post #article-container a:not([data-fancybox='gallery'],
+#body-wrap.post #post #article-container .btn-beautify) {
+  color: var(--ll-hovertext);
+  padding: 0 5px;
+}
+#body-wrap.post #post #article-container a:not([data-fancybox='gallery']:hover,
+#body-wrap.post #post #article-container .btn-beautify):hover {
+  text-decoration: none;
+  background-color: var(--ll-green);
+  color: var(--ll-lighttext);
+  border-radius: 4px;
+}
+#body-wrap.post #post #article-container a:not([data-fancybox='gallery']:hover::after,
+#body-wrap.post #post #article-container .btn-beautify):hover::after {
+  color: var(--ll-lighttext) !important;
+}
+#body-wrap.post #post #article-container.post-content li::marker {
+  color: var(--ll-main);
+}
+#body-wrap.post #post #article-container.post-content li:hover::marker {
+  color: var(--ll-pink);
+}
+#body-wrap.post #post #article-container blockquote {
+  border-left: 3px solid var(--ll-main);
+  background-color: var(--ll-theme-op);
+  border-radius: 0 100px 100px 0;
+}
+#body-wrap.post #post .post-copyright .post-copyright-info a {
+  text-decoration: none;
+}
+#body-wrap.post #post .post-copyright .post-copyright-info a:hover {
+  background-color: var(--ll-green);
+  color: var(--ll-lighttext);
+  border-radius: 4px;
+  padding: 0 5px;
+}
 #page-header {
   display: -webkit-box;
   display: -moz-box;
@@ -8162,9 +8191,8 @@ nav#pagination .pagination .extend.prev:hover {
   fill: #18171d;
 }
 @media (max-width: 768px) {
-  .waves-area .waves-svg {
-    height: 40px;
-    min-height: 40px;
+  .main-hero-waves-area.waves-area .waves-svg {
+    height: 2rem;
   }
 }
 @-moz-keyframes move-forever {
