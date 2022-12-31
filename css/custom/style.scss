@@ -85,7 +85,7 @@ main {
 
   // 页面宽度
   &#content-inner {
-    max-width: 1200px;
+    max-width: 1300px;
   }
 
   // 链接小尾标
@@ -182,23 +182,71 @@ table td {
 #recent-posts {
   &>.recent-post-item {
     height: 16em;
+    position: relative;
+    width: calc(100% / 2 - 0.5rem) !important;
+    border: 1px solid rgba(255, 255, 255, 0);
+
+    &:hover {
+      border: var(--style-border);
+    }
+
+    a.article-meta__categories {
+      position: absolute;
+      padding: 1px 8px;
+      background: var(--ll-theme-op);
+      border-radius: 8px;
+      margin-left: 0px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      line-height: 2em;
+      color: var(--ll-white);
+      top: 10px;
+      left: 10px;
+      backdrop-filter: saturate(180%) blur(20px);
+
+      &:hover {
+        background: var(--ll-btn-bg);
+      }
+    }
 
     &>.recent-post-info {
-      padding: 0 2rem;
+      padding: 2rem;
+      margin: 0;
 
       &>.article-title {
         font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
         font-weight: bold;
+        -webkit-line-clamp: 2 !important;
+        height: 3em;
+        margin: 0 !important;
 
-        :hover {
+        &:hover {
           color: var(--ll-hovertext);
           transform: translateX(6px);
         }
       }
 
       &>.article-meta-wrap {
-        &>.tags:before {
-          content: none !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: .5rem 0 0 0 !important;
+
+        &>.tags {
+          .article-meta__tags {
+            color: var(--ll-fontcolor);
+
+            .tags-punctuation {
+              font-size: 14px;
+              padding-right: 2px;
+              color: #858585;
+            }
+          }
+
+          &:before {
+            content: none !important;
+          }
         }
 
         a:hover {
@@ -322,12 +370,13 @@ hr {
 #footer {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
   font-weight: bold;
-  background: transparent;
+  background: var(--card-bg);
+  border-top: var(--style-border);
 
   #footer-wrap {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1300px;
     padding: 20px 15px;
     margin: 0 auto;
     color: var(--ll-fontcolor);

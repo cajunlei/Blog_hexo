@@ -45,13 +45,13 @@
   #recent-posts {
     .recent-post-item {
       max-height: 20em !important;
-
+      width: 100% !important;
       .post_cover {
         height: 160px;
       }
 
       .recent-post-info {
-        padding: 0 1rem;
+        padding: 1rem;
         margin-top: .5rem;
 
         .article-meta-wrap {
