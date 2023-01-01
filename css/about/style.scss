@@ -25,7 +25,7 @@ main#content-inner.layout.hide-aside {
     }
 
     #about-page {
-      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+      font-family: var(--fonts-heiti);
       display: flex;
       padding-top: 1rem;
       flex-direction: column;

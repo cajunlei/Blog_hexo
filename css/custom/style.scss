@@ -12,17 +12,12 @@ img {
 }
 
 // 文本样式start
-body,
-button {
-  font-family: LXGWFont !important;
-  font-weight: 400;
-}
 
 #pagination .prev_info,
 #pagination .next_info,
 .relatedPosts-list .title,
 #post-info h1.post-title {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+  font-family: var(--fonts-heiti);
   font-weight: bold;
 }
 
@@ -197,7 +192,7 @@ table td {
       border-radius: 8px;
       margin-left: 0px;
       font-size: 14px;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       line-height: 2em;
       color: var(--ll-white);
       top: 10px;
@@ -214,7 +209,7 @@ table td {
       margin: 0;
 
       &>.article-title {
-        font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+        font-family: var(--fonts-heiti);
         font-weight: bold;
         -webkit-line-clamp: 2 !important;
         height: 3em;
@@ -348,7 +343,7 @@ hr {
 
   h2#参考链接+ul>li {
     strong {
-      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+      font-family: var(--fonts-heiti);
       font-weight: bold;
     }
 
@@ -368,7 +363,7 @@ hr {
 // 文章正文样式end
 // footer 中间小心心start
 #footer {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+  font-family: var(--fonts-heiti);
   font-weight: bold;
   background: var(--card-bg);
   border-top: var(--style-border);

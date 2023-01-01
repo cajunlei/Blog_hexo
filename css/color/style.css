@@ -32,6 +32,8 @@
   --style-border-hover: 1px solid var(--ll-main);
   --style-border-hover-always: 1px solid var(--ll-main);
   --style-border-dashed: 1px dashed var(--ll-theme-op);
+  --fonts-heiti: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+  --fonts-custom: DingTalkJinBuTi;
 }
 
 ::selection {

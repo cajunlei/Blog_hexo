@@ -59,7 +59,7 @@ main#content-inner {
                 margin: 0 .5rem 0 $kd + 25;
 
                 .title {
-                  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+                  font-family: var(--fonts-heiti);
                   font-weight: bold;
                   font-size: 1.2em;
                   line-height: 1.3;

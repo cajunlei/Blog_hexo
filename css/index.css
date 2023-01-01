@@ -1379,7 +1379,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+  font-family: DingTalkJinBuTi;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -1493,13 +1493,6 @@ a {
 }
 a:hover {
   color: #49b1f5;
-}
-#site-title,
-#site-subtitle,
-#site-name,
-#aside-content .author-info__name,
-#aside-content .author-info__description {
-  font-family: titleFont;
 }
 .is-center {
   text-align: center;
@@ -2015,7 +2008,6 @@ figure.highlight pre .javascript .function {
   height: 100%;
   vertical-align: top;
   text-align: center;
-  font-family: titleFont;
 }
 @media screen and (max-width: 768px) {
   .error404 #error-wrap .error-content .error-info {
@@ -6341,6 +6333,7 @@ blockquote.pullquote.right {
   font-weight: bold;
   font-size: 1.75em;
   letter-spacing: 0.5em;
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei';
 }
 #aside-content.aside-content>.card-widget.card-info {
   background: -webkit-linear-gradient(135deg, var(--ll-theme), #031764, #150136, #67044d);
@@ -6359,9 +6352,11 @@ blockquote.pullquote.right {
   position: relative;
   color: var(--ll-white);
 }
-#aside-content.aside-content .site-data>a .headline,
-#aside-content.aside-content .site-data>a .length-num {
+#aside-content.aside-content .site-data>a>div {
   color: var(--ll-white);
+}
+#aside-content.aside-content .site-data>a:hover div {
+  color: var(--ll-hovertext) !important;
 }
 #aside-content.aside-content .card-recent-post .aside-list .aside-list-item .thumbnail {
   width: 4.5rem;
@@ -6689,6 +6684,9 @@ blockquote.pullquote.right {
 .category-lists {
   text-align: center;
 }
+.category-lists .category-list a {
+  color: var(--ll-fontcolor);
+}
 .category-lists .category-list .category-list-item {
   display: inline-block;
   -webkit-transition: all 0.3s ease 0s;
@@ -6709,6 +6707,7 @@ blockquote.pullquote.right {
 .category-lists .category-list .category-list-item .category-list-link:before {
   content: '# ';
   font-weight: bold;
+  color: var(--ll-secondtext);
 }
 .category-lists .category-list .category-list-item .category-list-count {
   position: relative;
@@ -7088,6 +7087,10 @@ blockquote.pullquote.right {
   src: url("https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/LXGWWenKaiMono-Regular.woff2") format('woff2');
 }
 @font-face {
+  font-family: DingTalkJinBuTi;
+  src: url("https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/DingTalkJinBuTi-Regular.woff2") format('woff2');
+}
+@font-face {
   font-family: 'iconfont' /* Project id 3027393 */;
   src: url("//at.alicdn.com/t/font_3027393_bqe7ffvyh.woff2?t=1641477988546") format('woff2'), url("//at.alicdn.com/t/font_3027393_bqe7ffvyh.woff?t=1641477988546") format('woff'), url("//at.alicdn.com/t/font_3027393_bqe7ffvyh.ttf?t=1641477988546") format('truetype');
 }
@@ -7101,14 +7104,18 @@ blockquote.pullquote.right {
   margin: 10px 0;
   color: var(--ll-fontcolor) !important;
   text-decoration: none !important;
-  background: var(--ll-theme);
+  background: var(--ll-theme-op);
   border-radius: 10px;
   border: var(--style-border);
-  padding: 12px;
+  padding: 12px !important;
+}
+.link_card:after {
+  content: none !important;
 }
 .link_card:hover {
   background: var(--ll-btn-bg);
   color: var(--ll-btn-text) !important;
+  border-radius: 10px !important;
 }
 .link_card:hover .link_content .link_desc {
   opacity: 1;
@@ -7150,7 +7157,7 @@ blockquote.pullquote.right {
   justify-content: center;
 }
 .link_card .link_content .link_title {
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei';
+  font-family: var(--fonts-heiti);
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -7326,6 +7333,7 @@ blockquote.pullquote.right {
   font-weight: bold;
 }
 #page-header #nav #nav-group #blog_name a#site-name #site-name-icon {
+  font-family: titleFont;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -7810,6 +7818,57 @@ blockquote.pullquote.right {
 }
 #page-header #site-info #site-title {
   letter-spacing: 0.2em;
+  font-family: var(--fonts-heiti);
+}
+#newYear {
+  color: #fff;
+  padding: 0 !important;
+}
+#newYear p,
+#newYear h3 {
+  font-weight: normal;
+  color: inherit;
+  margin: 0;
+}
+#newYear .item-headline {
+  display: none;
+}
+#newYear-main {
+  min-height: 160px;
+  padding: 1rem;
+  position: relative;
+  border-radius: 12px;
+  background-image: url("https://img.cdn.tencent-qq.cn/Yize/2023/01/930b82371b2ea955.webp");
+  background-size: cover;
+  background-position: center;
+}
+#newYear-main * {
+  position: relative;
+  line-height: 1.3;
+}
+#newYear-main .newYear-time {
+  font-weight: bold;
+  text-align: center;
+}
+#newYear-main .time,
+#newYear-main .happyNewYear {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+  display: block;
+}
+#newYear-main .day {
+  font-size: 5rem;
+}
+#newYear-main .day .unit {
+  font-size: 1rem;
+}
+#newYear-main .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
 }
 nav#pagination {
   width: 100%;
