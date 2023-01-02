@@ -231,6 +231,17 @@ table td {
         &>.tags {
           .article-meta__tags {
             color: var(--ll-fontcolor);
+            padding: 2px .25em;
+
+            &:hover {
+              background: var(--ll-btn-bg);
+              color: var(--ll-btn-text);
+              border-radius: .5em;
+
+              .tags-punctuation {
+                color: var(--ll-btn-text);
+              }
+            }
 
             .tags-punctuation {
               font-size: 14px;

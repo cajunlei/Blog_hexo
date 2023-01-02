@@ -1,0 +1,20 @@
+#article-container a {
+  color: var(--ll-main);
+  font-weight: 600;
+
+  &:hover {
+    background: var(--ll-snackbar-bg);
+    color: var(--ll-snackbar-text);
+    text-decoration: none;
+    padding: 1px 2px;
+    border-radius: 5px;
+
+    strong {
+      color: var(--ll-snackbar-text);
+    }
+
+    &[target=_blank]::after {
+      color: var(--ll-snackbar-text) !important;
+    }
+  }
+}

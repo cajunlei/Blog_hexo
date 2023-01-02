@@ -100,7 +100,7 @@
   --ll-background: #18171d;
   --ll-reverse: #fff;
   --ll-maskbg: rgba(0, 0, 0, 0.6);
-  --ll-maskbgdeep: rgba(18,18,18,0.8);
+  --ll-maskbgdeep: rgba(18, 18, 18, 0.8);
   --ll-hovertext: var(--ll-theme);
   --ll-ahoverbg: #fff;
   --ll-lighttext: var(--ll-white);
@@ -127,12 +127,12 @@
   --style-border-forever: 2px solid var(--ll-lighttext);
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   :root {
     --style-border: 0px solid var(--ll-card-border);
     --style-border-hover: 0px solid var(--ll-main);
   }
-}
+} */
 
 /* 
 松石songshi: #75c1c4;

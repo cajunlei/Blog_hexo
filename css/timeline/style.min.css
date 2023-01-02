@@ -1,0 +1,1 @@
+#article-container a{color:var(--ll-main);font-weight:600}#article-container a:hover{background:var(--ll-snackbar-bg);color:var(--ll-snackbar-text);text-decoration:none;padding:1px 2px;border-radius:5px}#article-container a:hover strong{color:var(--ll-snackbar-text)}#article-container a:hover[target=_blank]::after{color:var(--ll-snackbar-text) !important}

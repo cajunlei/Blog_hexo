@@ -6849,6 +6849,9 @@ blockquote.pullquote.right {
 #comment-barrage .swiper-slide-active .comment-barrage-item .barrage-content img {
   width: 3em;
 }
+#post-comment #twikoo .tk-comments .tk-submit .tk-row .tk-col .tk-input.el-textarea textarea.el-textarea__inner {
+  height: 100px !important;
+}
 #post-comment #twikoo .tk-comments .tk-comments-container .tk-comments-title .tk-icon.__comments {
   color: var(--ll-main);
 }

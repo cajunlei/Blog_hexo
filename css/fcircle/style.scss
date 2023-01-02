@@ -1,0 +1,145 @@
+#cf-container {
+  max-width: 100%;
+
+  &>div:nth-of-type(1) {
+    #cf-state.cf-new-add {
+      max-width: 100%;
+      background: transparent;
+      margin: 0.5rem 0;
+      border: var(--style-border);
+      border-radius: 0.5rem;
+
+      button.el-button.is-circle {
+        padding: 8px;
+        right: .5em;
+        bottom: 0.5em;
+        border: var(--style-border);
+
+        &:hover {
+          background: var(--ll-theme-op);
+        }
+      }
+    }
+  }
+
+  &>div:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+
+    &>div {
+      width: calc(100% /3 - 10px);
+
+      .cf-article {
+        margin: 0;
+        background: transparent;
+
+        a.cf-article-title {
+          letter-spacing: normal;
+          color: var(--ll-fontcolor);
+          width: 90%;
+          line-height: 1.5em;
+          height: 3em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+
+          &::after {
+            content: none;
+          }
+        }
+
+        span.cf-article-floor {
+          font-size: 2rem;
+          top: .5rem;
+          right: 1rem;
+        }
+
+        .cf-article-avatar {
+          position: relative;
+
+          .cf-img-avatar {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          .img-alt.is-center {
+            display: none;
+          }
+
+          .cf-article-author {
+            font-size: 1rem;
+            margin-left: 2rem;
+          }
+
+          .cf-article-time {
+            .cf-time-created {
+              i.far.fa-calendar-alt {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          transition: transform .3s;
+          transform: none;
+          background-color: var(--ll-card-hover-bg);
+
+          a.cf-article-title {
+            transform: translateX(.5em);
+            text-decoration: none;
+            letter-spacing: normal;
+            color: var(--ll-hovertext);
+          }
+        }
+      }
+    }
+
+    &>div:not(:nth-last-child(1)) {
+      margin: 0.5rem 0;
+      border: var(--style-border);
+      border-radius: 0.5rem;
+    }
+
+    &>div:nth-last-child(1) {
+      // width: 100%;
+      margin-top: .5rem;
+
+      #cf-more {
+        width: 100%;
+        background: transparent;
+        border: var(--style-border);
+        border-radius: 0.5rem;
+        height: 2rem;
+
+        &>i:before {
+          content: "加载更多……";
+          // content: "\f103";
+        }
+      }
+
+      #cf-footer {
+        color: var(--ll-secondtext);
+        margin: 2rem 1% 0rem 0;
+
+        a {
+          color: var(--ll-fontcolor);
+
+          &:hover {
+            color: var(--ll-hovertext);
+            text-decoration: none;
+          }
+
+          &::after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
