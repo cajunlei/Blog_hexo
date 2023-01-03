@@ -19,6 +19,14 @@
           background: var(--ll-theme-op);
         }
       }
+
+      .cf-state-data {
+        justify-content: space-between;
+
+        .el-tooltip__trigger {
+          width: calc(100%/3 - 10px);
+        }
+      }
     }
   }
 
@@ -34,6 +42,7 @@
       .cf-article {
         margin: 0;
         background: transparent;
+        box-shadow: var(--ll-shadow-main);
 
         a.cf-article-title {
           letter-spacing: normal;

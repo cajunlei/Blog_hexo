@@ -1,6 +1,4 @@
-let newYearTimer = null;
 var newYear = () => {
-  clearTimeout(newYearTimer);
   if (!document.querySelector('#newYear')) return;
   // 新年时间戳 and 星期对象
   let newYear = new Date('2023-01-22 00:00:00').getTime() / 1000,

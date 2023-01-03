@@ -28,7 +28,7 @@ main#content-inner {
         border: var(--style-border);
         color: var(--ll-hovertext);
         background-color: var(--ll-card-bg);
-        box-shadow: var(--ll-shadow-border);
+        box-shadow: var(--ll-shadow-main);
         transition: 0.5s;
 
         .left {
@@ -64,6 +64,7 @@ main#content-inner {
             word-break: break-all;
             text-overflow: ellipsis;
             display: -webkit-box;
+            transition: all 0.3s;
           }
 
           .info {
@@ -79,24 +80,24 @@ main#content-inner {
             height: 2.5em;
           }
         }
-      }
 
-      a.link:after {
-        content: none !important;
-      }
-
-      a.link:hover {
-        transition: 0.5s;
-        transform: scale(1.03);
-        background: var(--ll-theme-op);
-
-        .info {
-          color: var(--font-color);
+        &:after {
+          content: none !important;
         }
 
-        .left .icon {
-          transition: 0.9s;
-          transform: rotate(360deg);
+        &:hover {
+          transition: 0.5s;
+          transform: scale(1.02);
+          background: var(--ll-theme-op);
+
+          .left .icon {
+            transition: 0.9s;
+            transform: rotate(360deg);
+          }
+
+          .name {
+            transform: translateX(.5em);
+          }
         }
       }
     }

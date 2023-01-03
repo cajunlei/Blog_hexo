@@ -7,6 +7,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+
         .book_item {
           width: calc(20% - 20px);
           height: auto;
@@ -14,11 +15,18 @@
           color: var(--ll-theme);
           text-decoration-line: none;
           display: block;
+
           &[target=_blank]:after {
             content: none;
           }
+
+          &:hover {
+            transform: scale(1.03);
+          }
+
           .cover {
             position: relative;
+
             label {
               line-height: 1.5;
               position: absolute;
@@ -27,6 +35,7 @@
               bottom: 0;
               left: 0;
               overflow: hidden;
+
               &:before {
                 color: var(--ll-lighttext);
                 font-family: 'Courier New';
@@ -40,20 +49,24 @@
                 transform-origin: bottom center;
                 transform: translate(50%, -100%) rotate(45deg) scale(0.5);
               }
+
               &.finish::before {
                 background-color: rgba(250, 89, 95, 0.9);
                 content: '读 完';
               }
+
               &.reading::before {
                 background-color: rgba(241, 199, 154, 0.9);
                 content: '在 读';
               }
+
               &.want::before {
                 background-color: rgba(83, 102, 140, 0.9);
                 content: '想 读';
               }
             }
           }
+
           .name {
             text-align: center;
             margin-top: .5em;
@@ -61,6 +74,7 @@
             font-size: 1rem;
             font-weight: bold;
           }
+
           .author {
             text-align: center;
             margin-top: .5em;
@@ -69,31 +83,41 @@
             margin-bottom: 1rem;
           }
         }
+
         .placeholder {
           margin: 0 auto;
           display: block;
           width: calc(20% - 20px);
           height: auto;
         }
+
         .book-hide {
           display: none !important;
         }
+
         .book-show {
           display: block !important;
         }
       }
+
       .book-pagination {
         font-size: 15px;
         text-align: center;
         margin-top: 1rem;
+
         .book-button {
           padding: .5rem 1rem;
-          background-color: var(--ll-theme);
           margin: 0 .5rem;
-          color: var(--ll-lighttext) !important;
+          color: var(--ll-fontcolor);
+          background: var(--ll-card-bg);
+          box-shadow: var(--ll-shadow-main);
+          border: var(--style-border-hover);
           border-radius: 6px;
+
           &:hover {
             text-decoration: none;
+            color: var(--ll-btn-text);
+            background: var(--ll-btn-bg);
           }
         }
       }

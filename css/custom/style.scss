@@ -169,6 +169,7 @@ table td {
     background: var(--ll-btn-bg);
     color: var(--ll-btn-text) !important;
     border: var(--style-border-always);
+    transform: scale(1.05);
   }
 }
 
@@ -338,40 +339,6 @@ hr {
 }
 
 // 水平分隔线图标end
-// 文章正文样式start
-#article-container {
-  p .img-alt.is-center {
-    margin-top: -2px !important;
-
-    &::before {
-      content: "▲ ";
-    }
-  }
-
-  #comments.tabs .nav-tabs .tab.active button {
-    border-color: var(--ll-main);
-  }
-
-  h2#参考链接+ul>li {
-    strong {
-      font-family: var(--fonts-heiti);
-      font-weight: bold;
-    }
-
-    &::marker {
-      font-family: iconfont;
-      content: "\e623";
-      color: var(--ll-main);
-      letter-spacing: .5rem;
-    }
-
-    &>a {
-      color: var(--ll-main);
-    }
-  }
-}
-
-// 文章正文样式end
 // footer 中间小心心start
 #footer {
   font-family: var(--fonts-heiti);

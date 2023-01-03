@@ -2340,8 +2340,8 @@ figure.highlight pre .javascript .function {
   -o-transition: all 0.3s ease 0s, -o-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
   -ms-transition: all 0.3s ease 0s, -ms-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
   transition: all 0.3s ease 0s, transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  -webkit-box-shadow: 0 14px 38px rgba(0,0,0,0.08), 0 3px 8px rgba(0,0,0,0.06);
-  box-shadow: 0 14px 38px rgba(0,0,0,0.08), 0 3px 8px rgba(0,0,0,0.06);
+  -webkit-box-shadow: var(--ll-shadow-main);
+  box-shadow: var(--ll-shadow-main);
 }
 .flink-list > a:hover .info {
   -webkit-transform: translateY(-100%);
@@ -6235,7 +6235,7 @@ blockquote.pullquote.right {
   justify-content: space-between;
 }
 .article-sort .article-sort-item.year {
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei';
+  font-family: var(--fonts-heiti);
   font-weight: bold;
   width: 100%;
   border: none;
@@ -6250,7 +6250,9 @@ blockquote.pullquote.right {
   padding: 0.5rem;
   margin: 0 0 1.5rem 0;
   border-radius: 0.5rem;
-  border: var(--style-border);
+  border: var(--style-border-hover);
+  -webkit-box-shadow: var(--ll-shadow-main);
+  box-shadow: var(--ll-shadow-main);
   -webkit-box-align: normal;
   -moz-box-align: normal;
   -o-box-align: normal;
@@ -6275,7 +6277,7 @@ blockquote.pullquote.right {
   color: var(--ll-hovertext);
 }
 .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index {
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei';
+  font-family: var(--fonts-heiti);
   font-weight: bold;
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -6300,9 +6302,6 @@ blockquote.pullquote.right {
 .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap>span {
   padding-right: 1em;
 }
-.article-sort .article-sort-item .article-sort-item-info .article-meta-wrap .article-meta__link {
-  padding: 0 0.25em;
-}
 .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap .article-sort-item-tags i {
   padding-right: 0.5em;
 }
@@ -6315,6 +6314,13 @@ blockquote.pullquote.right {
 }
 .article-sort .article-sort-item:hover {
   background-color: var(--ll-card-hover-bg);
+}
+.article-sort .article-sort-item:hover .article-sort-item-index,
+.article-sort .article-sort-item:hover .article-sort-item-time {
+  color: var(--ll-fontcolor);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 .article-sort-title,
 .article-sort {
@@ -6744,6 +6750,9 @@ blockquote.pullquote.right {
 .category-lists .category-list .category-list-item:hover .category-list-link {
   color: var(--ll-btn-text);
 }
+.category-lists .category-list .category-list-item:hover .category-list-link:before {
+  color: var(--ll-btn-text);
+}
 [data-theme='dark'] .category-lists .category-list .category-list-item {
   background-color: inherit;
   border: var(--style-border);
@@ -6920,9 +6929,6 @@ blockquote.pullquote.right {
   font-size: 1rem !important;
   margin-left: 0.5rem;
 }
-#post-comment #twikoo .tk-comments .tk-comments-container .tk-comment .tk-main .tk-content a:hover {
-  color: var(--ll-hovertext);
-}
 #post-comment #twikoo .tk-comments .tk-comments-container .tk-comment .tk-main .tk-extras {
   color: #7a7a7a;
 }
@@ -6937,6 +6943,12 @@ blockquote.pullquote.right {
 #post-comment #twikoo .tk-comments .tk-comments-container .tk-comment .tk-main .tk-expand:hover {
   background-color: var(--ll-btn-bg);
   color: var(--ll-btn-text);
+}
+#post-comment #twikoo .tk-comments .tk-comments-container a:hover {
+  color: var(--ll-hovertext);
+}
+#post-comment #twikoo .tk-footer a:hover {
+  color: var(--ll-hovertext);
 }
 .Cuteen_DarkSky,
 .Cuteen_DarkSky:before {
@@ -7185,41 +7197,70 @@ blockquote.pullquote.right {
 .link_card .link_content:has(.link_desc) .link_title {
   white-space: nowrap;
 }
-#body-wrap.post #post #article-container a:not([data-fancybox='gallery'],
-#body-wrap.post #post #article-container .btn-beautify) {
+#body-wrap.post main#content-inner #post #article-container p .img-alt.is-center {
+  margin-top: -2px !important;
+}
+#body-wrap.post main#content-inner #post #article-container p .img-alt.is-center::before {
+  content: '▲ ';
+}
+#body-wrap.post main#content-inner #post #article-container a:not([data-fancybox='gallery'],
+#body-wrap.post main#content-inner #post #article-container .btn-beautify) {
   color: var(--ll-hovertext);
   padding: 0 5px;
 }
-#body-wrap.post #post #article-container a:not([data-fancybox='gallery']:hover,
-#body-wrap.post #post #article-container .btn-beautify):hover {
+#body-wrap.post main#content-inner #post #article-container a:not([data-fancybox='gallery']:hover,
+#body-wrap.post main#content-inner #post #article-container .btn-beautify):hover {
   text-decoration: none;
   background-color: var(--ll-btn-bg);
   color: var(--ll-lighttext);
   border-radius: 4px;
 }
-#body-wrap.post #post #article-container a:not([data-fancybox='gallery']:hover::after,
-#body-wrap.post #post #article-container .btn-beautify):hover::after {
+#body-wrap.post main#content-inner #post #article-container a:not([data-fancybox='gallery']:hover::after,
+#body-wrap.post main#content-inner #post #article-container .btn-beautify):hover::after {
   color: var(--ll-lighttext) !important;
 }
-#body-wrap.post #post #article-container.post-content li::marker {
+#body-wrap.post main#content-inner #post #article-container.post-content li::marker {
   color: var(--ll-main);
 }
-#body-wrap.post #post #article-container.post-content li:hover::marker {
+#body-wrap.post main#content-inner #post #article-container.post-content li:hover::marker {
   color: var(--ll-pink);
 }
-#body-wrap.post #post #article-container blockquote {
+#body-wrap.post main#content-inner #post #article-container blockquote {
   border-left: 3px solid var(--ll-main);
   background-color: var(--ll-theme-op);
   border-radius: 0 100px 100px 0;
 }
-#body-wrap.post #post .post-copyright .post-copyright-info a {
+#body-wrap.post main#content-inner #post .post-copyright .post-copyright-info a {
   text-decoration: none;
 }
-#body-wrap.post #post .post-copyright .post-copyright-info a:hover {
+#body-wrap.post main#content-inner #post .post-copyright .post-copyright-info a:hover {
   background-color: var(--ll-btn-bg);
   color: var(--ll-lighttext);
   border-radius: 4px;
   padding: 0 5px;
+}
+#body-wrap h2#参考链接+ul>li a {
+  color: var(--ll-hovertext);
+  padding: 0 5px;
+}
+#body-wrap h2#参考链接+ul>li a:hover {
+  text-decoration: none;
+  background-color: var(--ll-btn-bg);
+  color: var(--ll-lighttext);
+  border-radius: 4px;
+}
+#body-wrap h2#参考链接+ul>li a:hover::after {
+  color: var(--ll-lighttext) !important;
+}
+#body-wrap h2#参考链接+ul>li strong {
+  font-family: var(--fonts-heiti);
+  font-weight: bold;
+}
+#body-wrap h2#参考链接+ul>li::marker {
+  font-family: iconfont;
+  content: '\e623';
+  color: var(--ll-main);
+  letter-spacing: 0.5rem;
 }
 #page-header {
   display: -webkit-box;
