@@ -3,6 +3,11 @@ $music: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/77da24e7c99f5b27.webp) no
 $statistic: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/883252eb6b8a0411.webp) no-repeat top;
 $map_dark: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/0d63cfb3a5a72563.webp) no-repeat center;
 $map: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/63d8896984f34cc6.webp) no-repeat center;
+
+body {
+  color: var(--ll-fontcolor);
+}
+
 main#content-inner.layout.hide-aside {
   padding-top: 0;
 
@@ -283,7 +288,7 @@ main#content-inner.layout.hide-aside {
               margin-top: 1rem;
               margin-bottom: 2rem;
 
-              & > div {
+              &>div {
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
@@ -303,8 +308,10 @@ main#content-inner.layout.hide-aside {
                 }
               }
             }
+
             .post-tips a {
               color: var(--ll-lighttext) !important;
+
               &:hover {
                 color: var(--ll-hovertext) !important;
               }
@@ -332,10 +339,10 @@ main#content-inner.layout.hide-aside {
           &.map {
             background: $map;
             background-size: 100%;
-            height: 60%;
+            height: 65%;
             min-height: 160px;
             max-height: 400px;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             position: relative;
             overflow: hidden;
             transition: 1s ease-in-out;
@@ -374,7 +381,7 @@ main#content-inner.layout.hide-aside {
             align-items: center;
             flex-wrap: wrap;
             height: -webkit-fill-available;
-            height: 40%;
+            height: 35%;
 
             div {
               display: flex;
@@ -398,7 +405,7 @@ main#content-inner.layout.hide-aside {
               opacity: 0.6;
               font-size: 0.9rem;
               line-height: 1;
-              margin-bottom: 8px;
+              margin-bottom: 1rem;
             }
 
             .selfInfo-content {
@@ -424,6 +431,7 @@ main#content-inner.layout.hide-aside {
 
         a {
           color: var(--ll-fontcolor) !important;
+
           &:hover {
             color: var(--ll-hovertext) !important;
           }
@@ -432,6 +440,29 @@ main#content-inner.layout.hide-aside {
 
       a[target=_blank]:after {
         content: none;
+      }
+    }
+
+    #article-container {
+      a {
+        color: var(--ll-hovertext);
+        padding: 0 5px;
+
+        &:hover {
+          text-decoration: none;
+          background-color: var(--ll-btn-bg);
+          color: var(--ll-lighttext);
+          border-radius: 4px;
+
+          &::after,
+          strong {
+            color: var(--ll-lighttext);
+          }
+        }
+      }
+
+      .flink-list-card {
+        padding: 0;
       }
     }
   }
