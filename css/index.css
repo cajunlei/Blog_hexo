@@ -6338,11 +6338,22 @@ blockquote.pullquote.right {
 #aside-content.aside-content .card-widget {
   padding: 20px;
 }
+#aside-content.aside-content .card-info .avatar-img {
+  margin-bottom: 1rem;
+}
+#aside-content.aside-content .card-info .author-info__sayhi {
+  font-size: 14px;
+  color: var(--ll-white);
+  background: var(--ll-white-op);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
 #aside-content.aside-content .card-info .author-info__name {
+  font-family: var(--fonts-heiti);
+  font-size: 2em;
   font-weight: bold;
-  font-size: 1.75em;
   letter-spacing: 0.5em;
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei';
+  color: var(--ll-white);
 }
 #aside-content.aside-content>.card-widget.card-info {
   background: -webkit-linear-gradient(135deg, var(--ll-theme), #031764, #150136, #67044d);
@@ -7204,6 +7215,26 @@ blockquote.pullquote.right {
 .link_card .link_content .link_desc,
 .link_card .link_content:has(.link_desc) .link_title {
   white-space: nowrap;
+}
+.link_card>i {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 #body-wrap.post main#content-inner #post #article-container p .img-alt.is-center {
   margin-top: -2px !important;
