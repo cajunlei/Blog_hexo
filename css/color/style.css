@@ -35,6 +35,8 @@
   --fonts-heiti: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
   --fonts-custom: DingTalkJinBuTi;
   --ll-top-img: linear-gradient(to bottom, var(--ll-theme-op), var(--ll-theme));
+  --ll-cover-bg: rgb(var(--r), var(--g), var(--b));
+  --ll-main-lighter: rgba(var(--r), var(--g), var(--b), .4);
 }
 
 ::selection {

@@ -168,3 +168,26 @@ if (getCookie('browsertc') != 1) {
   browserVersion();
 }
 // 老旧浏览器弹窗提醒end
+
+// 封面纯色start
+var ll = {
+  // CSS 主颜色变量
+  switchThemeColor: function ([r, g, b]) {
+    document.documentElement.style.setProperty('--r', r)
+    document.documentElement.style.setProperty('--g', g)
+    document.documentElement.style.setProperty('--b', b)
+    document.documentElement.style.setProperty('--second', r * 0.299 + g * 0.587 + b * 0.114 >= 192 ? '#000' : '#FFF')
+    document.documentElement.style.setProperty('--cover-text', r * 0.299 + g * 0.587 + b * 0.114 >= 192 ? '#4C4948' : '#EEE')
+  },
+
+  // ColorThief 获取主颜色
+  getMainColor: function (theme = '#ea517f') {
+    let rgb = [parseInt('0x' + theme.slice(1, 3)), parseInt('0x' + theme.slice(3, 5)), parseInt('0x' + theme.slice(5, 7))]
+    if (document.getElementById('post-top-bg')) {
+      try { rgb = new ColorThief().getColor(document.getElementById('post-top-bg')) } catch (err) { console.log(err) }
+    }
+    return rgb
+  }
+};
+ll.switchThemeColor(ll.getMainColor());
+// 封面纯色end

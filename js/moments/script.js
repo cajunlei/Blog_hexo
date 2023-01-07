@@ -49,9 +49,7 @@ var ll = {
       document.getElementById("comment-tips").classList.add("show");
     }
   }
-
 }
-
 //替换所有内容
 function replaceAll(string, search, replace) {
   return string.split(search).join(replace);

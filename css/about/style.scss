@@ -110,6 +110,34 @@ main#content-inner.layout.hide-aside {
           bottom: 1rem;
         }
 
+        .banner-button-group {
+          position: absolute;
+          bottom: 1rem;
+          right: 2rem;
+
+          .banner-button {
+            font-size: 1rem;
+            height: 2.5rem;
+            width: 7rem;
+            border-radius: 2rem;
+            justify-content: center;
+            background: var(--ll-theme-op);
+            color: var(--ll-white) !important;
+            display: flex;
+            align-items: center;
+            border: var(--style-border);
+
+            &:hover {
+              background: var(--ll-btn-bg);
+              color: var(--ll-btn-text) !important;
+            }
+
+            i {
+              margin-right: .5rem;
+            }
+          }
+        }
+
         h2 {
           font-size: 2rem;
           font-family: Helvetica;
