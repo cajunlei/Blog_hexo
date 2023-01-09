@@ -1379,7 +1379,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: DingTalkJinBuTi;
+  font-family: LXGW WenKai Screen;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -2375,6 +2375,9 @@ figure.highlight pre .javascript .function {
   color: #fff;
   padding: 10px;
   background-color: rgba(73,177,245,0.8);
+}
+#article-container .flink-list > a.flink-list-card.no-descr:hover::before {
+  content: none;
 }
 #article-container .flink-list > a.flink-list-card .cover {
   width: 100%;
@@ -6338,22 +6341,53 @@ blockquote.pullquote.right {
 #aside-content.aside-content .card-widget {
   padding: 20px;
 }
-#aside-content.aside-content .card-info .avatar-img {
+#aside-content.aside-content .card-info .is-center .avatar-img {
   margin-bottom: 1rem;
 }
-#aside-content.aside-content .card-info .author-info__sayhi {
-  font-size: 14px;
+#aside-content.aside-content .card-info .is-center .author-info__sayhi {
+  text-align: left;
+  font-size: 16px;
   color: var(--ll-white);
   background: var(--ll-white-op);
-  padding: 2px 8px;
+  padding: 5px 12px;
   border-radius: 12px;
 }
-#aside-content.aside-content .card-info .author-info__name {
+#aside-content.aside-content .card-info .is-center .author-info__name {
   font-family: var(--fonts-heiti);
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 0.5em;
   color: var(--ll-white);
+}
+#aside-content.aside-content .card-info .card-info-data.site-data.is-center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+#aside-content.aside-content .card-info .card-info-data.site-data.is-center>a {
+  width: calc(100% / 3 - 10px);
+  border-radius: 12px;
+}
+#aside-content.aside-content .card-info .card-info-data.site-data.is-center>a:hover {
+  background: var(--ll-btn-bg);
+}
+#aside-content.aside-content .card-info .card-info-data.site-data.is-center>a:hover>* {
+  color: var(--ll-btn-text) !important;
 }
 #aside-content.aside-content>.card-widget.card-info {
   background: -webkit-linear-gradient(135deg, var(--ll-theme), #031764, #150136, #67044d);
@@ -7109,15 +7143,7 @@ blockquote.pullquote.right {
 }
 @font-face {
   font-family: titleFont;
-  src: url("https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/title.woff2") format('woff2');
-}
-@font-face {
-  font-family: LXGWFont;
-  src: url("https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/LXGWWenKaiMono-Regular.woff2") format('woff2');
-}
-@font-face {
-  font-family: DingTalkJinBuTi;
-  src: url("https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/DingTalkJinBuTi-Regular.woff2") format('woff2');
+  src: url("https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/fonts/title.woff2") format('woff2');
 }
 @font-face {
   font-family: 'iconfont' /* Project id 3027393 */;
@@ -7941,6 +7967,7 @@ blockquote.pullquote.right {
   display: block;
 }
 #newYear-main .day {
+  font-family: var(--fonts-heiti);
   font-size: 5rem;
 }
 #newYear-main .day .unit {

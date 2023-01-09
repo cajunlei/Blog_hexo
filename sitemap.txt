@@ -1,3 +1,4 @@
+https://ll.sc.cn/journal/index.html
 https://ll.sc.cn/links/index.html
 https://ll.sc.cn/love/index.html
 https://ll.sc.cn/moments/index.html
@@ -5,15 +6,14 @@ https://ll.sc.cn/movies/index.html
 https://ll.sc.cn/tags/index.html
 https://ll.sc.cn/talking/index.html
 https://ll.sc.cn/timeline/index.html
-https://ll.sc.cn/journal/index.html
-https://ll.sc.cn/about/index.html
-https://ll.sc.cn/board/index.html
-https://ll.sc.cn/book/index.html
-https://ll.sc.cn/categories/index.html
 https://ll.sc.cn/echart/index.html
 https://ll.sc.cn/fcircle/index.html
 https://ll.sc.cn/friends/index.html
 https://ll.sc.cn/china-map/index.html
+https://ll.sc.cn/about/index.html
+https://ll.sc.cn/board/index.html
+https://ll.sc.cn/book/index.html
+https://ll.sc.cn/categories/index.html
 https://ll.sc.cn/Gallery/index.html
 https://ll.sc.cn/Gallery/jay/index.html
 https://ll.sc.cn/Gallery/ohmygirl/index.html

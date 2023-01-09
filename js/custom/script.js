@@ -1,32 +1,50 @@
+// 调用霞鹜文楷在线字体start
+// function lxgw_wenkai_screen() {
+//   const link = document.createElement("link");
+//   link.rel = "stylesheet";
+//   link.type = "text/css";
+//   link.href = "https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css";
+//   document.head.append(link);
+// }
+// lxgw_wenkai_screen();
+// 调用霞鹜文楷在线字体end
+
 // 作者卡片问好start
-function authorInfoSayhi() {
-  // 获取时间
-  var getTimeState = () => {
-    // 获取当前时间
-    var timeNow = new Date();
-    // 获取当前小时
-    var hours = timeNow.getHours();
-    // 设置默认文字
-    var text = ``;
-    // 判断当前时间段
-    if (hours >= 0 && hours <= 5) {
-      text = `晚安`;
-    } else if (hours > 5 && hours <= 10) {
-      text = `早上好`;
-    } else if (hours > 10 && hours <= 14) {
-      text = `中午好`;
-    } else if (hours > 14 && hours <= 18) {
-      text = `下午好`;
-    } else if (hours > 18 && hours <= 24) {
-      text = `晚上好`;
-    }
-    return text;
-  };
-  if (document.querySelector('#author-info__sayhi')) {
-    document.getElementById("author-info__sayhi").innerHTML = getTimeState() + "！我是";
-  }
-};
-authorInfoSayhi();
+// function authorInfoSayhi() {
+//   // 获取时间
+//   var getTimeState = () => {
+//     // 获取当前时间
+//     var timeNow = new Date();
+//     // 获取当前小时
+//     var hours = timeNow.getHours();
+//     // 设置默认文字
+//     var text = ``;
+//     // 判断当前时间段
+//     if (hours >= 0 && hours <= 5) {
+//       text = `晚安`;
+//     } else if (hours > 5 && hours <= 10) {
+//       text = `早上好`;
+//     } else if (hours > 10 && hours <= 14) {
+//       text = `中午好`;
+//     } else if (hours > 14 && hours <= 18) {
+//       text = `下午好`;
+//     } else if (hours > 18 && hours <= 24) {
+//       text = `晚上好`;
+//     }
+//     return text;
+//   };
+//   if (document.querySelector('#author-info__sayhi')) {
+//     document.getElementById("author-info__sayhi").innerHTML = getTimeState() + "！我是";
+//   }
+// };
+// authorInfoSayhi();
+function card_info() {
+  fetch("https://api.vvhan.com/api/visitor.info").then((n => n.json())).then((n => {
+    let t = n.time.substring(11, 13), o = -1 !== n.location.indexOf("-") ? n.location.split("-") : n.location.split(" "), i = o[o.length - 1];
+    document.getElementById("author-info__sayhi").innerHTML = `<strong>${t < 5 ? "深夜了！🥱" : t < 11 ? "早上好！👋" : t < 14 ? "中午好！😄" : t < 19 ? "下午好！☕" : "晚上好！😄"} </strong><br>欢迎来自 <strong>${i}</strong> 的小伙伴。`
+  })).catch((function (n) { console.log(n) }))
+}
+card_info();
 // 作者卡片问好end
 
 // 切换热评start

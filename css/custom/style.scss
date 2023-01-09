@@ -47,9 +47,10 @@ strong {
   h4:before,
   h5:before,
   h6:before {
-    color: var(--ll-main);
-    margin-left: -2rem;
     font-size: 1.25rem;
+    color: var(--ll-red);
+    margin-left: -2rem;
+    top: calc(50% - 10px);
   }
 
   h1:hover,
