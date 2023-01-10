@@ -1,3 +1,13 @@
+// 自定义js文件pjax适配start
+function whenDOMReady() {
+  //列表里面调用方法，传递两个参数 数据库时间和选择器
+  $(".one-comment").each(function () {
+    var t_time = $(this).find(".time").text();
+    var timeSelector = $(this).find(".time");
+    setTime(t_time, timeSelector);
+  })
+}
+
 function setTime(time, timeSelector) {
   var currentTime = Date.parse(new Date());
   var dateTime = time;//后台传递来的时间
@@ -26,31 +36,6 @@ function setTime(time, timeSelector) {
     ts.text(parseInt(seconds) + "秒前").toString();
   }
 }
-//列表里面调用方法，传递两个参数 数据库时间和选择器
-$(".one-comment").each(function () {
-  var t_time = $(this).find(".time").text();
-  var timeSelector = $(this).find(".time");
-  setTime(t_time, timeSelector);
-})
-//引用到评论
-var ll = {
-  commentText: function (txt) {
-    var input = document.getElementsByClassName('el-textarea__inner')[0];
-    let evt = document.createEvent('HTMLEvents');
-    evt.initEvent('input', true, true);
-    let inputValue = replaceAll(txt, '\n', '\n> ')
-    input.value = '> ' + inputValue + '\n\n';
-    input.dispatchEvent(evt);
-    var domTop = document.querySelector("#post-comment").offsetTop;
-    window.scrollTo(0, domTop - 80);
-    input.focus();
-    input.setSelectionRange(-1, -1);
-    if (document.getElementById("comment-tips")) {
-      document.getElementById("comment-tips").classList.add("show");
-    }
-  }
-}
-//替换所有内容
-function replaceAll(string, search, replace) {
-  return string.split(search).join(replace);
-}
+
+whenDOMReady() //打开网站之后先执行一次函数
+document.addEventListener("pjax:complete", whenDOMReady) //pjax加载完成之后执行上面函数

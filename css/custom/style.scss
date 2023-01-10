@@ -210,6 +210,17 @@ table td {
       padding: 2rem;
       margin: 0;
 
+      &>.newPost {
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        background-color: var(--ll-main);
+        padding: 0 .5em;
+        border-radius: 0 0 0 10px;
+      }
+
       &>.article-title {
         font-family: var(--fonts-heiti);
         font-weight: bold;
@@ -267,7 +278,6 @@ table td {
 }
 
 // 文章双栏布局微调end
-
 // 打赏样式start
 .post-reward {
   .reward-button {
@@ -382,8 +392,17 @@ hr {
 
 // footer 中间小心心end
 // 隐藏右下角深浅色模式start
-#rightside>div>a.icon-V.hidden {
-  display: none;
+#rightside>div {
+  &>a.icon-V.hidden {
+    display: none;
+  }
+
+  &>button,
+  &>a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+  }
 }
 
 // 隐藏右下角深浅色模式end

@@ -1,11 +1,11 @@
+https://ll.sc.cn/talking/index.html
+https://ll.sc.cn/timeline/index.html
 https://ll.sc.cn/journal/index.html
 https://ll.sc.cn/links/index.html
 https://ll.sc.cn/love/index.html
 https://ll.sc.cn/moments/index.html
 https://ll.sc.cn/movies/index.html
 https://ll.sc.cn/tags/index.html
-https://ll.sc.cn/talking/index.html
-https://ll.sc.cn/timeline/index.html
 https://ll.sc.cn/echart/index.html
 https://ll.sc.cn/fcircle/index.html
 https://ll.sc.cn/friends/index.html
@@ -17,6 +17,7 @@ https://ll.sc.cn/categories/index.html
 https://ll.sc.cn/Gallery/index.html
 https://ll.sc.cn/Gallery/jay/index.html
 https://ll.sc.cn/Gallery/ohmygirl/index.html
+https://ll.sc.cn/posts/27b0/
 https://ll.sc.cn/posts/95ac/
 https://ll.sc.cn/posts/6f01/
 https://ll.sc.cn/posts/ba60/
@@ -26,7 +27,6 @@ https://ll.sc.cn/posts/61ae/
 https://ll.sc.cn/posts/2410/
 https://ll.sc.cn/posts/8589/
 https://ll.sc.cn/posts/4c4e/
-https://ll.sc.cn/posts/27b0/
 https://ll.sc.cn/posts/f0ec/
 https://ll.sc.cn/posts/bd6a/
 https://ll.sc.cn/posts/62f6/
