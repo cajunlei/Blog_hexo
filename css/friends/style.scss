@@ -14,10 +14,10 @@
         color: var(--ll-lighttext);
       }
     }
+  }
 
-    .flink-list-card {
-      padding: 0;
-    }
+  .flink-list>a.flink-list-card {
+    padding: 0;
   }
 
   .addBtn {

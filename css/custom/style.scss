@@ -88,7 +88,7 @@ main {
   #article-container {
     a[target=_blank]:after {
       font-family: iconfont;
-      content: "\e627";
+      content: "\e004";
       color: #aaa !important;
       margin-left: 5px;
     }
@@ -350,47 +350,6 @@ hr {
 }
 
 // 水平分隔线图标end
-// footer 中间小心心start
-#footer {
-  font-family: var(--fonts-heiti);
-  font-weight: bold;
-  background: var(--card-bg);
-  border-top: var(--style-border);
-
-  #footer-wrap {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1300px;
-    padding: 20px 15px;
-    margin: 0 auto;
-    color: var(--ll-fontcolor);
-
-    .footer-left {
-      text-align: left;
-    }
-
-    .footer-right {
-      text-align: right;
-    }
-
-    .copyright a i.fa {
-      transition: .3s;
-      animation: heartbeat-bounce 2s ease-in-out infinite;
-      color: red;
-    }
-
-    a {
-      color: var(--ll-fontcolor);
-
-      &:hover {
-        text-decoration: none;
-        color: var(--ll-hovertext);
-      }
-    }
-  }
-}
-
-// footer 中间小心心end
 // 隐藏右下角深浅色模式start
 #rightside>div {
   &>a.icon-V.hidden {

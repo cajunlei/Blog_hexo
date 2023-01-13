@@ -7,6 +7,7 @@ var ll = {
     link.href = "https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css";
     document.head.append(link);
   },
+
   // 作者卡片问好heo
   authorInfoSayhi: function () {
     // 获取时间
@@ -35,6 +36,7 @@ var ll = {
       document.getElementById("author-info__sayhi").innerHTML = getTimeState() + "！我是";
     }
   },
+
   // 作者卡片问好
   cardInfoSayhi: function () {
     fetch("https://api.vvhan.com/api/visitor.info").then((n => n.json())).then((n => {
@@ -42,11 +44,13 @@ var ll = {
       document.getElementById("author-info__sayhi").innerHTML = `<strong>${t < 5 ? "深夜了！🥱" : t < 11 ? "早上好！👋" : t < 14 ? "中午好！😄" : t < 19 ? "下午好！☕" : "晚上好！😄"} </strong><br>欢迎来自 <strong>${i}</strong> 的小伙伴。`
     })).catch((function (n) { console.log(n) }))
   },
+
   // 页面标题
   pageTitle: function () {
     document.getElementById('page-name-text').style.display = window.location.pathname === '/' || /^\/page\/[0-9]+\//.test(window.location.pathname)
     document.querySelector('#page-name-text').innerHTML = GLOBAL_CONFIG_SITE.title
   },
+
   //动态标题
   dynamicTitle: function () {
     var OriginTitile = document.title;
@@ -66,6 +70,7 @@ var ll = {
       }
     })
   },
+
   // 返回顶部显示网页阅读进度
   percent: function () {
     let a = document.documentElement.scrollTop || window.pageYOffset, // 卷去高度
@@ -81,6 +86,7 @@ var ll = {
       up.childNodes[0].style.display = 'block'
     }
   },
+
   // 分类目录条、标签目录条
   catalogActive: function () {
     let $list = document.getElementById('catalog-list')
@@ -101,6 +107,7 @@ var ll = {
       $list.scrollLeft = ($catalog.offsetLeft - $list.offsetLeft) - ($list.offsetWidth - $catalog.offsetWidth) / 2
     }
   },
+
   // 利用 SiteMap 随机访问站内页面
   randomPost: function () {
     fetch('/sitemap.xml').then(res => res.text()).then(str => (new window.DOMParser()).parseFromString(str, "text/xml")).then(data => {
@@ -113,6 +120,7 @@ var ll = {
       location.href = locationHref
     })
   },
+
   // 白天夜晚切换动画
   switchNightMode: function () {
     document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>'),
@@ -142,6 +150,7 @@ var ll = {
     typeof FB === 'object' && window.loadFBComment()
     window.DISQUS && document.getElementById('disqus_thread').children.length && setTimeout(() => window.disqusReset(), 200)
   },
+
   // 切换热评
   switchCommentBarrage: function () {
     let flag = window.localStorage.getItem('commentBarrageDisplay') // undefined || false
@@ -149,6 +158,7 @@ var ll = {
     // 本地缓存一天，刷新或切换页面时仍 隐藏或显示 热评。
     window.localStorage.setItem('commentBarrageDisplay', flag === 'false' ? 'undefined' : 'false', 86400000)
   },
+
   // 评论表情包放大
   owoBig: function () {
     let flag = 1, // 设置节流阀
@@ -197,6 +207,7 @@ var ll = {
     })
     observer.observe(document.getElementById('post-comment'), { subtree: true, childList: true }) // 监听的 元素 和 配置项
   },
+
   // CSS 主颜色变量
   switchThemeColor: function ([r, g, b]) {
     document.documentElement.style.setProperty('--r', r)
@@ -208,11 +219,12 @@ var ll = {
   // ColorThief 获取主颜色
   getMainColor: function (theme = '#ea517f') {
     let rgb = [parseInt('0x' + theme.slice(1, 3)), parseInt('0x' + theme.slice(3, 5)), parseInt('0x' + theme.slice(5, 7))]
-    if (document.getElementById('post-top-bg')) {
-      try { rgb = new ColorThief().getColor(document.getElementById('post-top-bg')) } catch (err) { console.log(err) }
-    }
+    // if (document.getElementById('post-top-bg')) {
+    //   try { rgb = new ColorThief().getColor(document.getElementById('post-top-bg')) } catch (err) { console.log(err) }
+    // }
     return rgb
   },
+
   //引用到评论
   commentText: function (txt) {
     var input = document.getElementsByClassName('el-textarea__inner')[0];
@@ -229,12 +241,14 @@ var ll = {
       document.getElementById("comment-tips").classList.add("show");
     }
   },
+
   // 快速申请友链
   linkCom: e => {
     var t = document.querySelector(".el-textarea__inner");
     "bf" == e ? (t.value = "```yml\n", t.value += "- name: \n  link: \n  avatar: \n  descr: ", t.value += "\n```", t.setSelectionRange(15, 15)) : (t.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\nRSS地址：", t.setSelectionRange(5, 5)), t.focus()
   },
 
+  // 旧浏览器弹窗提醒
   browserVersion: function () {
     var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
     var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
