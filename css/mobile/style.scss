@@ -6,6 +6,7 @@
 #nav #menus,
 #nav a#travellings,
 #nav a#foreverblog,
+#nav a#randompost,
 .article-sort .article-sort-item .article-sort-item-info .article-sort-item-index,
 .article-sort-item-tags,
 // 页脚
@@ -16,7 +17,12 @@
 
 #footer #footer-wrap {
   justify-content: center;
-  ;
+
+  .footer-wrap-group {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 #nav {
@@ -46,6 +52,7 @@
     .recent-post-item {
       max-height: 20em !important;
       width: 100% !important;
+
       .post_cover {
         height: 160px;
       }

@@ -45,7 +45,8 @@ main#content-inner.layout.hide-aside #page {
         }
 
         &.map .map-title {
-          padding: 1rem;
+          padding: .5rem 1rem 1rem;
+          font-size: 18px;
         }
 
         &.selfInfo {
@@ -59,6 +60,9 @@ main#content-inner.layout.hide-aside #page {
 
       .author-content-item-group.column.mapAndInfo {
         width: 100% !important;
+        .selfInfo.single .selfInfo-content {
+          font-size: 30px;
+        }
       }
     }
   }

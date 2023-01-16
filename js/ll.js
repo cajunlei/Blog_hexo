@@ -87,6 +87,68 @@ var ll = {
     }
   },
 
+  // 网页运行时间
+  runtime: () => {
+    var e = function (e) {
+      return e > 9 ? e : "0" + e
+    };
+    let t = new Date("2021/09/25 00:00:00").getTime(),
+      n = (new Date).getTime(),
+      o = Math.round((n - t) / 1e3),
+      l = "本站已运行：";
+    o >= 86400 && (l += e(parseInt(o / 86400)) + " 天 ", o %= 86400),
+      o >= 3600 && (l += e(parseInt(o / 3600)) + " 时 ", o %= 3600),
+      o >= 60 && (l += e(parseInt(o / 60)) + " 分 ", o %= 60),
+      o >= 0 && (l += e(o) + " 秒");
+    let a = document.getElementById("runtime");
+    a && (a.innerHTML = l),
+      setTimeout(ll.runtime, 1e3)
+  },
+
+  // 页脚友链
+  addFriendLinksInFooter: function () {
+    var fetchUrl = "https://friends.ll.sc.cn/randomfriend?num=3"
+    fetch(fetchUrl)
+      .then(res => res.json())
+      .then(json => {
+        var randomFriendLinks = ll.getArrayItems(json, 3);
+
+        var htmlText = '';
+        for (let i = 0; i < randomFriendLinks.length; ++i) {
+          var item = randomFriendLinks[i]
+          htmlText += `<a class='footer-menu-item' href='${item.link}'  target="_blank" rel="noopener nofollow">${item.name}</a>`;
+        }
+        htmlText += `<a class='footer-menu-item' href='/friends/'>更多…</a>`
+        document.getElementById("friend-links-in-footer").innerHTML = htmlText;
+      })
+  },
+
+  //从一个给定的数组arr中,随机返回num个不重复项
+  getArrayItems: function (arr, num) {
+    //新建一个数组,将传入的数组复制过来,用于运算,而不要直接操作传入的数组;
+    var temp_array = new Array();
+    for (var index in arr) {
+      temp_array.push(arr[index]);
+    }
+    //取出的数值项,保存在此数组
+    var return_array = new Array();
+    for (var i = 0; i < num; i++) {
+      //判断如果数组还有可以取出的元素,以防下标越界
+      if (temp_array.length > 0) {
+        //在数组中产生一个随机索引
+        var arrIndex = Math.floor(Math.random() * temp_array.length);
+        //将此随机索引的对应的数组元素值复制出来
+        return_array[i] = temp_array[arrIndex];
+        //然后删掉此索引的数组元素,这时候temp_array变为新的数组
+        temp_array.splice(arrIndex, 1);
+      } else {
+        //数组中数据项取完后,退出循环,比如数组本来只有10项,但要求取出20项.
+        break;
+      }
+    }
+    return return_array;
+  },
+
   // 分类目录条、标签目录条
   catalogActive: function () {
     let $list = document.getElementById('catalog-list')

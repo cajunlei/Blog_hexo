@@ -7376,18 +7376,49 @@ blockquote.pullquote.right {
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 1200px;
   padding: 20px 15px;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  #footer #footer-menu {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 #footer #footer-menu .footer-menu-group {
   font-size: 16px;
+  position: relative;
+}
+#footer #footer-menu .footer-menu-group.friends .random-friends-btn:hover {
+  color: var(--ll-main);
+}
+@media screen and (max-width: 768px) {
+  #footer #footer-menu .footer-menu-group {
+    min-width: calc(100% / 3 - 1rem);
+  }
+  #footer #footer-menu .footer-menu-group.friends {
+    display: none;
+  }
 }
 #footer #footer-menu .footer-menu-group .footer-menu-title {
   font-family: var(--fonts-heiti);
   font-weight: bold;
   color: var(--ll-secondtext);
   margin: 1rem 0px;
+}
+#footer #footer-menu .footer-menu-group .random-friends-btn {
+  font-size: 14px;
+  color: var(--ll-secondtext);
+  position: absolute;
+  top: calc(1rem + 3px);
+  left: calc(2rem + 5px);
 }
 #footer #footer-menu .footer-menu-group .footer-menu-links {
   display: -webkit-box;
@@ -7412,7 +7443,7 @@ blockquote.pullquote.right {
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  max-width: 120px;
+  max-width: 150px;
 }
 #footer #footer-menu .footer-menu-group .footer-menu-links .footer-menu-item:hover {
   color: var(--ll-main);
@@ -7458,6 +7489,11 @@ blockquote.pullquote.right {
 }
 #footer #footer-wrap .footer-wrap-group .footer-left {
   text-align: left;
+}
+@media screen and (max-width: 768px) {
+  #footer #footer-wrap .footer-wrap-group .footer-left .copyright {
+    text-align: center;
+  }
 }
 #footer #footer-wrap .footer-wrap-group .footer-right {
   text-align: right;
@@ -8380,6 +8416,14 @@ nav#pagination .pagination .extend {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  nav#pagination .pagination .extend {
+    width: 3rem;
+  }
+  nav#pagination .pagination .extend .meta-nav {
+    display: none;
+  }
 }
 nav#pagination .pagination .extend.prev {
   left: 0;

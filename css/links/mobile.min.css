@@ -1,1 +1,1 @@
-#content-inner a.link{width:calc(50% - 5px) !important}#content-inner a.link .right{margin-left:72px !important}#content-inner a.link .right .name{font-size:0.9rem;line-height:1rem;max-height:2.5rem}#content-inner a.link .right .info{display:none}
+#article-container .links .link_list a.link{width:calc(50% - 5px);height:72px}#article-container .links .link_list a.link .right{margin-left:72px}#article-container .links .link_list a.link .right .name{font-size:0.9rem;line-height:1rem;max-height:3.5rem}#article-container .links .link_list a.link .right .info{display:none}

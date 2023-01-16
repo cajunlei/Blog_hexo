@@ -8,8 +8,12 @@ function whenDOMReady() {
   ll.catalogActive();
   // 页面标题
   window.addEventListener('scroll', ll.pageTitle);
-  //动态标题
+  //网页运行时间
   ll.dynamicTitle();
+  //页脚友链
+  ll.addFriendLinksInFooter();
+  //动态标题
+  ll.runtime();
   // 如果当前页有评论就执行函数
   if (document.getElementById('post-comment')) ll.owoBig();
   // 封面纯色

@@ -1,15 +1,21 @@
-#content-inner {
-  a.link {
-    width: calc(50% - 5px) !important;
-    .right {
-      margin-left: 72px !important;
-      .name {
-        font-size: 0.9rem;
-        line-height: 1rem;
-        max-height: 2.5rem;
-      }
-      .info {
-        display: none;
+#article-container {
+  .links .link_list {
+    a.link {
+      width: calc(50% - 5px);
+      height: 72px;
+
+      .right {
+        margin-left: 72px;
+
+        .name {
+          font-size: 0.9rem;
+          line-height: 1rem;
+          max-height: 3.5rem;
+        }
+
+        .info {
+          display: none;
+        }
       }
     }
   }
