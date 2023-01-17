@@ -7382,26 +7382,21 @@ blockquote.pullquote.right {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 20px 15px;
   margin: 0 auto;
-}
-@media screen and (max-width: 768px) {
-  #footer #footer-menu {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 }
 #footer #footer-menu .footer-menu-group {
   font-size: 16px;
   position: relative;
+  width: calc(100% / 7 - 1rem);
 }
 #footer #footer-menu .footer-menu-group.friends .random-friends-btn:hover {
   color: var(--ll-main);
 }
 @media screen and (max-width: 768px) {
   #footer #footer-menu .footer-menu-group {
-    min-width: calc(100% / 3 - 1rem);
+    width: calc(100% / 3 - 0.5rem);
   }
   #footer #footer-menu .footer-menu-group.friends {
     display: none;
