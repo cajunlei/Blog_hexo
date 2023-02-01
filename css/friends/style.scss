@@ -16,8 +16,49 @@
     }
   }
 
+  ol {
+    counter-reset: li 0;
+    padding-left: 1rem;
+
+    &>li {
+      position: relative;
+      padding-left: 1.75rem;
+
+      &::marker {
+        content: none;
+      }
+
+      &::before {
+        background: var(--ll-theme);
+        color: #fff;
+        margin-top: .55em;
+        width: 1.45em;
+        height: 1.45em;
+        border-radius: .725em;
+        content: counter(li);
+        counter-increment: li 1;
+        text-align: center;
+        font-size: .85em;
+        line-height: 1.45em;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .flink>h2>i,
+  .flink+h2>i {
+    padding-right: 0.5rem
+  }
+
+  .flink-desc {
+    font-style: italic;
+  }
+
   .flink-list>a.flink-list-card {
     padding: 0;
+    border: var(--style-border);
   }
 
   .addBtn {

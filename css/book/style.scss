@@ -129,7 +129,9 @@
               color: var(--ll-fontcolor);
             }
 
+            .nationality,
             .author {
+              display: inline;
               color: var(--ll-gray);
             }
 
