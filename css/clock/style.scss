@@ -1,0 +1,67 @@
+@import url('https://cdn.jsdelivr.net/npm/qweather-icons@1.3.0/font/qweather-icons.css');
+
+@font-face {
+  font-family: LED;
+  src: url("/fonts/UniDreamLED-Regular.woff2") format('woff2');
+  font-display: swap;
+}
+
+#hexo_electric_clock {
+  font-family: LXGW WenKai Screen;
+}
+
+#card-clock-clockdate,
+#card-clock-time,
+#card-clock-dackorlight {
+  font-family: LED;
+}
+
+#hexo_electric_clock {
+  padding: 10px;
+}
+
+.card-clock {
+  padding: 0 !important;
+}
+
+.card-background {
+  color: var(--ll-card-bg);
+  height: 153px;
+  margin: 0 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.clock-row {
+  font-weight: 400;
+  color: var(--ll-fontcolor);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.card-clock-clockdate,
+.card-clock-ip {
+  text-align: left;
+}
+
+.card-clock-location,
+.card-clock-weather {
+  text-align: center;
+}
+
+.card-clock-dackorlight,
+.card-clock-humidity {
+  text-align: right;
+}
+
+.card-clock-time {
+  flex: 1;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  letter-spacing: 5px;
+  line-height: normal;
+}

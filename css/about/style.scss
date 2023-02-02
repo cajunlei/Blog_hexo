@@ -83,19 +83,6 @@ main#content-inner.layout.hide-aside {
         width: 100%;
         margin-top: 1rem;
 
-        .author-content-item-tips {
-          line-height: 1;
-          opacity: 0.6;
-          font-size: 0.9rem;
-          margin-bottom: 0.5rem;
-        }
-
-        .author-content-item-title {
-          font-size: 2.5rem;
-          font-weight: bold;
-          line-height: 1.5;
-        }
-
         .title1 {
           opacity: 0.9;
           line-height: 1.5;
@@ -108,40 +95,6 @@ main#content-inner.layout.hide-aside {
           margin: 0.5rem 0;
         }
 
-        .post-tips {
-          font-size: 14px;
-          position: absolute;
-          bottom: 1rem;
-        }
-
-        .banner-button-group {
-          position: absolute;
-          bottom: 1rem;
-          right: 2rem;
-
-          .banner-button {
-            font-size: 1rem;
-            height: 2.5rem;
-            width: 7rem;
-            border-radius: 2rem;
-            justify-content: center;
-            background: var(--ll-theme-op);
-            color: var(--ll-white) !important;
-            display: flex;
-            align-items: center;
-            border: var(--style-border);
-
-            &:hover {
-              background: var(--ll-btn-bg);
-              color: var(--ll-btn-text) !important;
-            }
-
-            i {
-              margin-right: .5rem;
-            }
-          }
-        }
-
         h2 {
           font-size: 2rem;
           font-family: Helvetica;
@@ -151,33 +104,31 @@ main#content-inner.layout.hide-aside {
         }
 
         .card-content {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
           z-index: 2;
-          display: flex;
-          flex-direction: column;
-          padding: 1rem 2rem;
-        }
-
-        .content-bottom {
-          margin-top: auto;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
         }
 
         .author-content-item {
           width: calc(100% / 2 - var(--gap-divs));
           padding: 1rem 2rem;
-          border-radius: 24px;
-          border: var(--style-border);
-          background: var(--ll-card-bg);
-          box-shadow: var(--card-box-shadow);
-          position: relative;
-          overflow: hidden;
+
+          .author-content-item-tips {
+            line-height: 1;
+            opacity: 0.6;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .author-content-item-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.5;
+          }
+
+          .post-tips {
+            font-size: 14px;
+            position: absolute;
+            bottom: 1rem;
+          }
 
           &.myInfoAndSayHello {
             display: flex;
@@ -240,6 +191,7 @@ main#content-inner.layout.hide-aside {
                   font-size: 0.9rem;
                   margin-bottom: .5rem;
                 }
+
                 &>span:nth-of-type(2) {
                   font-size: 1.5rem;
                   font-weight: bold;
@@ -332,7 +284,6 @@ main#content-inner.layout.hide-aside {
             background: $music;
             background-size: cover;
             min-height: 400px;
-
             overflow: hidden;
           }
 
@@ -393,10 +344,6 @@ main#content-inner.layout.hide-aside {
               top: 0;
               left: 0;
             }
-          }
-
-          &.single {
-            width: 100%;
           }
 
           [data-theme="dark"] &.map {
@@ -493,6 +440,10 @@ main#content-inner.layout.hide-aside {
 
           &.mapAndInfo {
             width: calc(60% - var(--gap-divs));
+
+            &>* {
+              width: 100%;
+            }
           }
         }
 
@@ -511,6 +462,10 @@ main#content-inner.layout.hide-aside {
     }
 
     #article-container {
+      p {
+        text-indent: 2em
+      }
+
       a {
         color: var(--ll-hovertext);
         padding: 0 5px;

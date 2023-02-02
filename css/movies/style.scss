@@ -3,12 +3,23 @@ $bigstar: url(https://img3.doubanio.com/f/shire/680a4bc4c384199245b080c7104da5be
 $bigstarx: url(https://img3.doubanio.com/f/shire/ee7f53d76c3f8ed4991bdbafdb9b2c90c0aedfef/pics/rating_icons/ic_rating_m@2x.png);
 
 main#content-inner {
-  max-width: 1300px;
+  padding-top: 20px;
 
   #page {
-    padding: 2rem;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+
+    h1.page-title {
+      display: none;
+    }
 
     #article-container {
+      padding: 1rem 2rem 2rem;
+      border-radius: 24px;
+      background: var(--card-bg);
+      box-shadow: var(--card-box-shadow);
+
       #movies {
         .movie_list {
           h2>i {

@@ -2,7 +2,6 @@ body {
   cursor: url(/img/mouse/normal.cur),
     default;
   background: var(--ll-global-bg) !important;
-  // background: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/662d2d9d9e93637e.jpg);
 }
 
 a,
@@ -12,7 +11,6 @@ img {
 }
 
 // 文本样式start
-
 #pagination .prev_info,
 #pagination .next_info,
 .relatedPosts-list .title,
@@ -71,7 +69,6 @@ strong {
     color: var(--ll-main);
   }
 }
-
 
 a {
   color: var(--text-highlight-color);

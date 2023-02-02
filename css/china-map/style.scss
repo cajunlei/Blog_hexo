@@ -1,95 +1,108 @@
 @charset "UTF-8";
 
 main#content-inner {
-  padding: 1rem;
+  padding-top: 20px;
 
-  h1.page-title {
-    display: none;
-  }
-}
+  #page {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
 
-#china_map {
-  max-width: 1000px;
-  margin: 0 auto;
-
-  svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
-    #地区 {
-      path {
-        fill: var(--ll-secondbg);
-        cursor: pointer;
-        pointer-events: auto;
-        fill-rule: evenodd;
-        clip-rule: evenodd;
-        stroke: #e70978;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-
-        &[level="5"] {
-          fill: #FF7E7E;
-        }
-
-        &[level="4"] {
-          fill: #FFB57E;
-        }
-
-        &[level="3"] {
-          fill: #FFE57E;
-        }
-
-        &[level="2"] {
-          fill: #A8FFBE;
-        }
-
-        &[level="1"] {
-          fill: #88AEFF;
-        }
-      }
+    h1.page-title {
+      display: none;
     }
 
-    #地名>* {
-      font-family: smmyingbi;
-      font-weight: 600;
-      font-size: 1rem;
-      fill: var(--ll-fontcolor);
-      text-anchor: middle;
-    }
+    #article-container {
+      padding: 1rem 2rem 2rem;
+      border-radius: 24px;
+      background: var(--card-bg);
+      box-shadow: var(--card-box-shadow);
 
-    #省会>* {
-      fill: rgb(90, 90, 90);
-    }
+      #china_map {
+        max-width: 1000px;
+        margin: 0 auto;
 
-    #去过>* {
-      fill: #fff;
-      stroke: #ee8e8b;
-      stroke-width: 2px;
-    }
+        svg {
+          display: block;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
 
-    #分数 {
-      fill: var(--ll-fontcolor);
-      font-size: 4rem;
-    }
+          #地区 {
+            path {
+              fill: var(--ll-secondbg);
+              cursor: pointer;
+              pointer-events: auto;
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              stroke: #e70978;
+              stroke-width: 2;
+              stroke-linecap: round;
+              stroke-linejoin: round;
 
-    #等级 {
-      .level-border {
-        fill-rule: evenodd;
-        clip-rule: evenodd;
-        fill: none;
-        stroke: #000000;
-        stroke-width: 4;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-      }
+              &[level="5"] {
+                fill: #FF7E7E;
+              }
 
-      text {
-        fill: var(--ll-black);
-        font-size: 2rem;
+              &[level="4"] {
+                fill: #FFB57E;
+              }
+
+              &[level="3"] {
+                fill: #FFE57E;
+              }
+
+              &[level="2"] {
+                fill: #A8FFBE;
+              }
+
+              &[level="1"] {
+                fill: #88AEFF;
+              }
+            }
+          }
+
+          #地名>* {
+            font-family: smmyingbi;
+            font-weight: 600;
+            font-size: 1rem;
+            fill: var(--ll-fontcolor);
+            text-anchor: middle;
+          }
+
+          #省会>* {
+            fill: rgb(90, 90, 90);
+          }
+
+          #去过>* {
+            fill: #fff;
+            stroke: #ee8e8b;
+            stroke-width: 2px;
+          }
+
+          #分数 {
+            fill: var(--ll-fontcolor);
+            font-size: 4rem;
+          }
+
+          #等级 {
+            .level-border {
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              fill: none;
+              stroke: #000000;
+              stroke-width: 4;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-miterlimit: 10;
+            }
+
+            text {
+              fill: var(--ll-black);
+              font-size: 2rem;
+            }
+          }
+        }
       }
     }
   }
