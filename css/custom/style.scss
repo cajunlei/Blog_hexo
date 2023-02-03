@@ -1,3 +1,9 @@
+@mixin mobile {
+  @media screen and (max-width:768px) {
+    @content;
+  }
+}
+
 body {
   cursor: url(/img/mouse/normal.cur),
     default;
@@ -289,6 +295,10 @@ table td {
 
       .reward-item {
         padding: 0 16px;
+
+        @include mobile {
+          padding: 0 8px;
+        }
       }
     }
   }

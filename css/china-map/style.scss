@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+@mixin mobile {
+  @media screen and (max-width:768px) {
+    @content;
+  }
+}
+
 main#content-inner {
   padding-top: 20px;
 
@@ -17,6 +23,10 @@ main#content-inner {
       border-radius: 24px;
       background: var(--card-bg);
       box-shadow: var(--card-box-shadow);
+
+      @include mobile {
+        padding: 1rem;
+      }
 
       #china_map {
         max-width: 1000px;

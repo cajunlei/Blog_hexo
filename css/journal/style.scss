@@ -1,3 +1,9 @@
+@mixin mobile {
+  @media screen and (max-width:768px) {
+    @content;
+  }
+}
+
 [data-theme=light] {
   --green: #9eea6a;
 }
@@ -9,117 +15,141 @@
 main#content-inner {
   padding: 1rem;
   max-width: 1000px;
-}
 
-#page {
-  padding-top: 1rem;
-
-  h1.page-title {
-    display: none;
-  }
-}
-
-#journal {
-  hr:before {
-    content: none !important;
+  @include mobile {
+    padding: 0;
   }
 
-  .top {
-    display: flex;
-    margin: 1rem auto;
+  #page {
+    padding-top: 1rem;
 
-    &+hr {
-      height: 1px !important;
-      margin: 0 0 2rem 0 !important;
-      border: none !important;
-      border-top: 1px dashed var(--ll-theme) !important;
+    @include mobile {
+      padding: 0 !important;
     }
 
-    p {
-      width: 8%;
-      margin-left: 0 !important;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    h1.page-title {
+      display: none;
+    }
 
-      &>i::before {
-        font-size: 1.6rem;
+    #journal {
+      hr:before {
+        content: none !important;
       }
-    }
 
-    .text {
-      width: 84%;
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+      .top {
+        display: flex;
+        margin: 1rem auto;
 
-  h2 {
-    color: var(--ll-gray);
-    font-size: .95rem;
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 1rem 0;
-  }
-
-  .box {
-    margin: 1rem;
-    display: flex;
-
-    &>img {
-      width: 40px;
-      height: 40px;
-      margin-right: 1rem !important;
-      border-radius: 4px;
-    }
-
-    .text {
-      flex: 1;
-      text-align: justify;
-      line-height: 2rem;
-      background-color: var(--green);
-      padding: .5rem 1rem;
-      display: inline-block;
-      border-radius: 4px;
-      position: relative;
-
-      p {
-        margin: 0 !important;
-        padding: .5rem 0;
-
-        &:first-child {
-          padding-top: 0;
+        @include mobile {
+          padding: 0 1rem;
         }
 
-        &:not(:only-child):last-of-type {
-          padding-bottom: 0;
+        &+hr {
+          height: 1px !important;
+          margin: 0 0 2rem 0 !important;
+          border: none !important;
+          border-top: 1px dashed var(--ll-theme) !important;
+        }
+
+        p {
+          width: 8%;
+          margin-left: 0 !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include mobile {
+            margin: 0;
+          }
+
+          &>i::before {
+            font-size: 1.6rem;
+          }
+        }
+
+        .text {
+          width: 84%;
+          font-size: 1.6rem;
+          font-weight: 600;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include mobile {
+            font-size: 1.2rem;
+          }
         }
       }
 
-      ul li p {
-        padding: 0;
+      h2 {
+        color: var(--ll-gray);
+        font-size: .95rem;
+        text-align: center;
+        font-weight: normal;
+        letter-spacing: 1px;
+        margin: 1rem 0;
+
+        @include mobile {
+          margin: 0;
+        }
       }
 
-      &:after {
-        content: '';
-        border: 8px solid var(--ll-none);
-        border-right: 8px solid var(--green);
-        position: absolute;
-        top: 12px;
-        left: -16px;
-      }
-    }
+      .box {
+        margin: 1rem;
+        display: flex;
 
-    &+hr {
-      margin: 1.6rem 0 !important;
-      height: 1px !important;
-      border: none !important;
-      border-top: 1px dashed var(--ll-black-op) !important;
+        &>img {
+          width: 40px;
+          height: 40px;
+          margin-right: 1rem !important;
+          border-radius: 4px;
+        }
+
+        .text {
+          flex: 1;
+          text-align: justify;
+          line-height: 2rem;
+          background-color: var(--green);
+          padding: .5rem 1rem;
+          display: inline-block;
+          border-radius: 4px;
+          position: relative;
+
+          p {
+            margin: 0 !important;
+            padding: .5rem 0;
+
+            &:first-child {
+              padding-top: 0;
+            }
+
+            &:not(:only-child):last-of-type {
+              padding-bottom: 0;
+            }
+          }
+
+          ul li p {
+            padding: 0;
+          }
+
+          &:after {
+            content: '';
+            border: 8px solid var(--ll-none);
+            border-right: 8px solid var(--green);
+            position: absolute;
+            top: 12px;
+            left: -16px;
+          }
+        }
+
+        &+hr {
+          margin: 1.6rem 0 !important;
+          height: 1px !important;
+          border: none !important;
+          border-top: 1px dashed var(--ll-black-op) !important;
+        }
+      }
     }
   }
 }

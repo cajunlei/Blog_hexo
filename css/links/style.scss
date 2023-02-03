@@ -1,3 +1,9 @@
+@mixin mobile {
+  @media screen and (max-width:768px) {
+    @content;
+  }
+}
+
 main#content-inner {
   padding-top: 20px;
 
@@ -15,6 +21,10 @@ main#content-inner {
       border-radius: 24px;
       background: var(--card-bg);
       box-shadow: var(--card-box-shadow);
+
+      @include mobile {
+        padding: 1rem;
+      }
 
       .links {
         .link_list {
@@ -39,6 +49,11 @@ main#content-inner {
             background-color: var(--ll-card-bg);
             box-shadow: var(--ll-shadow-main);
             transition: 0.5s;
+
+            @include mobile {
+              width: calc(50% - 5px);
+              height: 72px;
+            }
 
             .left {
               width: 56px;
@@ -67,6 +82,10 @@ main#content-inner {
               top: 50%;
               transform: translate(0%, -50%);
 
+              @include mobile {
+                margin-left: 72px;
+              }
+
               .name {
                 overflow: hidden;
                 font-weight: bolder;
@@ -75,6 +94,12 @@ main#content-inner {
                 text-overflow: ellipsis;
                 display: -webkit-box;
                 transition: all 0.3s;
+
+                @include mobile {
+                  font-size: 0.9rem;
+                  line-height: 1rem;
+                  max-height: 3.5rem;
+                }
               }
 
               .info {
@@ -87,6 +112,10 @@ main#content-inner {
                 font-size: .9rem;
                 color: var(--ll-fontcolor);
                 height: 2.5em;
+
+                @include mobile {
+                  display: none;
+                }
               }
             }
 

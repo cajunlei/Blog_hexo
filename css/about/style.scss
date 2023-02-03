@@ -4,6 +4,12 @@ $statistic: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/883252eb6b8a0411.webp
 $map_dark: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/0d63cfb3a5a72563.webp) no-repeat center;
 $map: url(https://img.cdn.tencent-qq.cn/Yize/2022/12/63d8896984f34cc6.webp) no-repeat center;
 
+@mixin mobile {
+  @media screen and (max-width:768px) {
+    @content;
+  }
+}
+
 :root {
   --gap-divs: .5rem;
 }
@@ -24,13 +30,16 @@ main#content-inner.layout.hide-aside {
       display: none;
     }
 
-    #article-container,
-    #post-comment {
+    #article-container {
       padding-top: 1rem;
       background-color: var(--ll-card-bg);
       padding: 10px 2rem;
       margin-top: 1rem;
       border-radius: 24px;
+
+      @include mobile {
+        padding: 1rem;
+      }
     }
 
     #about-page {
@@ -59,12 +68,22 @@ main#content-inner.layout.hide-aside {
           -o-transition: 1s;
           -ms-transition: 1s;
           transition: 1s;
+
+          @include mobile {
+            bottom: 10px;
+            right: 0px;
+          }
         }
 
         img {
           width: 180px;
           height: 180px;
           border-radius: 50%;
+
+          @include mobile {
+            width: 120px;
+            height: 120px;
+          }
         }
       }
 
@@ -82,6 +101,11 @@ main#content-inner.layout.hide-aside {
         justify-content: space-between;
         width: 100%;
         margin-top: 1rem;
+
+        @include mobile {
+          display: block;
+          margin-top: 0rem;
+        }
 
         .title1 {
           opacity: 0.9;
@@ -105,23 +129,37 @@ main#content-inner.layout.hide-aside {
 
         .card-content {
           z-index: 2;
+
+          @include mobile {
+            padding: 1rem;
+          }
         }
 
         .author-content-item {
           width: calc(100% / 2 - var(--gap-divs));
           padding: 1rem 2rem;
 
-          .author-content-item-tips {
+          @include mobile {
+            width: 100% !important;
+            margin-top: 1rem;
+            padding: 1rem;
+          }
+
+          &-tips {
             line-height: 1;
             opacity: 0.6;
             font-size: 0.9rem;
             margin-bottom: 0.5rem;
           }
 
-          .author-content-item-title {
+          &-title {
             font-size: 2.5rem;
             font-weight: bold;
             line-height: 1.5;
+
+            @include mobile {
+              font-size: 2rem;
+            }
           }
 
           .post-tips {
@@ -203,12 +241,20 @@ main#content-inner.layout.hide-aside {
           &.personalities {
             width: calc(40% - var(--gap-divs));
 
+            @include mobile {
+              min-height: 230px;
+            }
+
             .image {
               position: absolute;
               width: 45%;
               right: 1rem;
               bottom: -40%;
               transition: transform 2s cubic-bezier(0.13, 0.45, 0.21, 1.02);
+
+              @include mobile {
+                bottom: -20%;
+              }
 
               img {
                 transform: rotateY(0.5turn);
@@ -277,6 +323,10 @@ main#content-inner.layout.hide-aside {
             background: $technology;
             background-size: cover;
             min-height: 260px;
+
+            @include mobile {
+              min-height: 300px;
+            }
           }
 
           &.like-music {
@@ -285,6 +335,10 @@ main#content-inner.layout.hide-aside {
             background-size: cover;
             min-height: 400px;
             overflow: hidden;
+
+            @include mobile {
+              min-height: 300px;
+            }
           }
 
           &.about-statistic {
@@ -361,6 +415,10 @@ main#content-inner.layout.hide-aside {
             overflow: hidden;
             transition: 1s ease-in-out;
 
+            @include mobile {
+              margin-bottom: 0;
+            }
+
             .map-title {
               font-size: 20px;
               left: 0px;
@@ -373,6 +431,11 @@ main#content-inner.layout.hide-aside {
               backdrop-filter: saturate(180%) blur(20px);
               -webkit-backdrop-filter: blur(20px);
               transition: 1s ease-in-out;
+
+              @include mobile {
+                padding: .5rem 1rem 1rem;
+                font-size: 18px;
+              }
             }
 
             &:hover {
@@ -396,6 +459,10 @@ main#content-inner.layout.hide-aside {
             flex-wrap: wrap;
             height: -webkit-fill-available;
             height: 35%;
+
+            @include mobile {
+              height: auto;
+            }
 
             div {
               display: flex;
@@ -440,6 +507,14 @@ main#content-inner.layout.hide-aside {
 
           &.mapAndInfo {
             width: calc(60% - var(--gap-divs));
+
+            @include mobile {
+              width: 100%;
+
+              .selfInfo.single .selfInfo-content {
+                font-size: 30px;
+              }
+            }
 
             &>* {
               width: 100%;

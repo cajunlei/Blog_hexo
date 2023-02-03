@@ -15,26 +15,6 @@
   display: none !important;
 }
 
-#footer #footer-wrap {
-  justify-content: center;
-
-  .footer-wrap-group {
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-#nav {
-  .nav-group {
-
-    // 顶栏标题
-    #blog_name {
-      font-size: 1.2em !important;
-    }
-  }
-}
-
 #sidebar-menus {
   .menus_items {
     .menus_item {
@@ -98,13 +78,6 @@
   }
 }
 
-// 页脚
-#footer {
-  #footer-wrap {
-    padding: 10px 0;
-  }
-}
-
 // 页面顶部距离
 header#page-header.not-top-img+main#content-inner.layout.hide-aside {
   padding-top: 0;
@@ -138,17 +111,6 @@ header#page-header.not-top-img+main#content-inner.layout.hide-aside {
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       white-space: normal;
-    }
-  }
-}
-
-// 打赏
-.post-reward {
-  .reward-main {
-    .reward-all {
-      .reward-item {
-        padding: 0 8px;
-      }
     }
   }
 }
