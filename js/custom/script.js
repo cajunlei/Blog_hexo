@@ -31,7 +31,7 @@ function browserTC() {
     text: '浏览器版本较低，网站样式可能错乱',
     actionText: '关闭',
     duration: '6000',
-    pos: 'bottom-right'
+    pos: 'top-center'
   });
 }
 

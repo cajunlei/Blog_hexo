@@ -8766,31 +8766,45 @@ nav#pagination .pagination a.page-number:hover {
   transform: scale(1.03);
 }
 .snackbar-container {
-  border-radius: 0 !important;
+  background: var(--ll-main) !important;
+  color: var(--ll-white) !important;
+  width: 100% !important;
   max-width: none !important;
-  min-width: 100% !important;
-  margin: 0px !important;
-  left: 0px !important;
-  height: 60px !important;
-  -webkit-transform: none !important;
-  -moz-transform: none !important;
-  -o-transform: none !important;
-  -ms-transform: none !important;
-  transform: none !important;
-  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 60px;
+  border-radius: 0 !important;
+}
+.snackbar-container.top-center {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .snackbar-container p {
+  display: inline-block;
   font-weight: bold !important;
   text-align: center !important;
   font-size: 1rem !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+}
+.snackbar-container .action {
+  display: inline-block !important;
+  color: var(--ll-white) !important;
+  padding: 0.5em !important;
+  font-weight: bold;
+  border-radius: 8px !important;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid var(--ll-white) !important;
+}
+.snackbar-container .action:hover {
+  color: var(--ll-main) !important;
+  background: var(--ll-white) !important;
 }
 .snackbar-container::after {
   position: absolute;
@@ -8803,11 +8817,11 @@ nav#pagination .pagination a.page-number:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
   filter: alpha(opacity=10);
   content: '';
-  -webkit-animation: snackbar-progress 2s linear forwards;
-  -moz-animation: snackbar-progress 2s linear forwards;
-  -o-animation: snackbar-progress 2s linear forwards;
-  -ms-animation: snackbar-progress 2s linear forwards;
-  animation: snackbar-progress 2s linear forwards;
+  -webkit-animation: snackbar-progress var(--ll-snackbar-time) linear forwards;
+  -moz-animation: snackbar-progress var(--ll-snackbar-time) linear forwards;
+  -o-animation: snackbar-progress var(--ll-snackbar-time) linear forwards;
+  -ms-animation: snackbar-progress var(--ll-snackbar-time) linear forwards;
+  animation: snackbar-progress var(--ll-snackbar-time) linear forwards;
   pointer-events: none;
 }
 @-moz-keyframes snackbar-progress {

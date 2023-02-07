@@ -8,7 +8,7 @@ var ll = {
     document.head.append(link);
   },
 
-  // 作者卡片问好heo
+  // 作者卡片问好
   authorInfoSayhi: function () {
     // 获取时间
     var getTimeState = () => {
@@ -313,12 +313,12 @@ var ll = {
         var name = json.name;
         var link = json.link;
         var msg = "点击前往按钮进入随机一个友链，不保证跳转网站的安全性和可用性。本次随机到的是本站友链：「" + name + "」";
-        document.styleSheets[0].addRule(':root', '--heo-snackbar-time:' + 8000 + 'ms!important');
+        document.styleSheets[0].addRule(':root', '--ll-snackbar-time:' + 8000 + 'ms!important');
         Snackbar.show({
           text: msg,
           duration: 8000,
-          pos: 'top-center',
-          actionText: '前往',
+          pos: 'snackbar-css top-center',
+          actionText: '点击前往',
           onActionClick: function (element) {
             //Set opacity of element to 0 to close Snackbar
             $(element).css('opacity', 0);
