@@ -6,7 +6,7 @@
   <link href="https://ll.sc.cn/atom.xml" rel="self"/>
   
   <link href="https://ll.sc.cn/"/>
-  <updated>2023-02-07T00:46:31.215Z</updated>
+  <updated>2023-02-07T01:05:33.411Z</updated>
   <id>https://ll.sc.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ll.sc.cn/posts/69b2/"/>
     <id>https://ll.sc.cn/posts/69b2/</id>
     <published>2023-01-17T07:11:26.000Z</published>
-    <updated>2023-02-07T00:46:31.215Z</updated>
+    <updated>2023-02-07T01:05:33.411Z</updated>
     
     <content type="html"><![CDATA[<p><code>Win10</code> 自带微软输入法用起来还是很顺手，清爽、简洁，没有乱七八糟的广告；</p><p>但是默认只有三种双拼方案，包含微软双拼、智能ABC、自然码。</p><p>当然，我们也可以手动添加，但是手动设置非常的复杂，且浪费时间。</p><p>为了避免浪费大量时间在影射键位上，本文采用修改注册表的方式，可以快速设置。</p><h2 id="手动修改注册表"><a href="#手动修改注册表" class="headerlink" title="手动修改注册表"></a>手动修改注册表</h2><ol><li>打开运行 (快捷键 <code>Win + R</code> ) –&gt; 输入命令<code>Regedit</code>回车打开注册表；</li><li>定位到：<code>计算机 \HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS</code> 项；</li><li>右键 –&gt; 新建字符串值；</li><li>数值名称： <code>UserDefinedDoublePinyinScheme0</code></li><li>数值数据： <code>小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt</code></li><li>打开控制面板 –&gt; 微软拼音输入法设置，把 <strong>小鹤双拼</strong> 设置为双拼的默认选择即可。</li></ol><h2 id="使用注册表文件"><a href="#使用注册表文件" class="headerlink" title="使用注册表文件"></a>使用注册表文件</h2><ol><li>在桌面新建一个后缀名为<code>.txt</code>文本文档；</li><li>将以下内容复制到新建的空白文档内；<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS]</span><br><span class="line">&quot;UserDefinedDoublePinyinScheme0&quot;=&quot;小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt&quot;</span><br></pre></td></tr></table></figure></li><li>将扩展名<code>.txt</code>改成<code>.reg</code>，双击运行即可；</li></ol><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul><li><a href="https://blog.csdn.net/weixin_44878336/article/details/125095163">Win10 微软拼音开启小鹤双拼的两种方法</a></li></ul>]]></content>
     
@@ -50,7 +50,7 @@
     <link href="https://ll.sc.cn/posts/2a89/"/>
     <id>https://ll.sc.cn/posts/2a89/</id>
     <published>2023-01-15T13:22:38.000Z</published>
-    <updated>2023-02-07T00:46:31.219Z</updated>
+    <updated>2023-02-07T01:05:33.419Z</updated>
     
     <content type="html"><![CDATA[<p>移动、联通、电信 <strong>免费</strong> 关闭境外来电流程。</p><h2 id="移动用户"><a href="#移动用户" class="headerlink" title="移动用户"></a>移动用户</h2><p><strong>方法一：</strong> 拨打中国移动<code>10086</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“中国移动高频骚扰防护”微信公众号，选择左下角业务设置 –&gt; 骚扰拦截设置 –&gt; 国际及港澳台号段拦截 –&gt; 开启。</p><img src="https://cdn.chiga.ga/Posts/Record/06_2a89/01.jpg" class="" width="400"><h2 id="联通用户"><a href="#联通用户" class="headerlink" title="联通用户"></a>联通用户</h2><p><strong>方法一：</strong> 拨打中国联通<code>10010</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“智慧沃服务”微信公众号，选择底部中间位置 手机管家 –&gt; 号段拦截 –&gt; 国际电话 –&gt; 开启。</p><img src="https://cdn.chiga.ga/Posts/Record/06_2a89/02.jpg" class="" width="400"><h2 id="电信用户"><a href="#电信用户" class="headerlink" title="电信用户"></a>电信用户</h2><p><strong>方法一：</strong> 拨打中国电信<code>10000</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“天翼防骚扰”微信公众号，选择左下角业务设置 –&gt; 业务设置 –&gt; 智能拦截设置 –&gt; 国际长途电话 –&gt; 开启。</p><p>另外建议把“诈骗电话”拦截选项也勾选上。</p><img src="https://cdn.chiga.ga/Posts/Record/06_2a89/03.jpg" class="" width="400">]]></content>
     
