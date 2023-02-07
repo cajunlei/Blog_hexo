@@ -27,6 +27,15 @@ main#content-inner {
       }
 
       .links {
+        h2>i {
+          color: var(--ll-main);
+          padding-right: 0.4rem;
+        }
+
+        .link_desc {
+          font-style: italic;
+        }
+
         .link_list {
           align-content: space-between;
           display: flex;

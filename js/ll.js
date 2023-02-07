@@ -304,10 +304,34 @@ var ll = {
     }
   },
 
+  //友链随机传送
+  travelling: function () {
+    var fetchUrl = "https://friends.ll.sc.cn/randomfriend"
+    fetch(fetchUrl)
+      .then(res => res.json())
+      .then(json => {
+        var name = json.name;
+        var link = json.link;
+        var msg = "点击前往按钮进入随机一个友链，不保证跳转网站的安全性和可用性。本次随机到的是本站友链：「" + name + "」";
+        document.styleSheets[0].addRule(':root', '--heo-snackbar-time:' + 8000 + 'ms!important');
+        Snackbar.show({
+          text: msg,
+          duration: 8000,
+          pos: 'top-center',
+          actionText: '前往',
+          onActionClick: function (element) {
+            //Set opacity of element to 0 to close Snackbar
+            $(element).css('opacity', 0);
+            window.open(link, '_blank');
+          }
+        });
+      })
+  },
+
   // 快速申请友链
   linkCom: e => {
     var t = document.querySelector(".el-textarea__inner");
-    "bf" == e ? (t.value = "```yml\n", t.value += "- name: \n  link: \n  avatar: \n  descr: ", t.value += "\n```", t.setSelectionRange(15, 15)) : (t.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\nRSS地址：", t.setSelectionRange(5, 5)), t.focus()
+    "bf" == e ? (t.value = "```yml\n", t.value += "- name: \n  link: \n  avatar: \n  descr: \n  siteshot: ", t.value += "\n```", t.setSelectionRange(15, 15)) : (t.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\n站点截图：\nRSS地址：", t.setSelectionRange(5, 5)), t.focus()
   },
 
   // 旧浏览器弹窗提醒

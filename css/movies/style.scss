@@ -37,6 +37,10 @@ main#content-inner {
             color: var(--ll-theme)
           }
 
+          .movie_desc {
+            font-style: italic;
+          }
+
           .movies_items {
             align-content: space-between;
             display: flex;

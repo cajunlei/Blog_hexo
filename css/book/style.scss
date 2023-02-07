@@ -28,6 +28,15 @@ main#content-inner {
 
       #book {
         .book_list {
+          h2>i {
+            color: var(--ll-main);
+            padding-right: 0.4rem;
+          }
+
+          .book_desc {
+            font-style: italic;
+          }
+
           .book_items {
             padding-top: 1rem;
             display: flex;
@@ -109,7 +118,7 @@ main#content-inner {
 
                 .panel {
                   height: calc(100% - 4rem);
-                  color: var(--ll-fontcolor);
+                  color: var(--ll-gray);
                   text-align: left;
                   text-align: justify;
                   position: absolute;
@@ -124,6 +133,10 @@ main#content-inner {
                   &:hover {
                     opacity: .9;
                     transition: opacity .3s ease;
+
+                    &>* {
+                      opacity: 1;
+                    }
                   }
 
                   .category-type {

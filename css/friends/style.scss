@@ -4,6 +4,12 @@
   }
 }
 
+@mixin keyframes($animationName) {
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
 main#content-inner {
   padding-top: 20px;
 
@@ -14,6 +20,88 @@ main#content-inner {
 
     h1.page-title {
       display: none;
+    }
+
+    .author-content-item.single {
+      .card-content {
+        .banner-button-group {
+          display: flex;
+          top: 3rem;
+
+          @include mobile {
+            top: auto;
+          }
+
+          .banner-button.secondary {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      .tags-group-all {
+        display: flex;
+
+        &.nowrapMove {
+          transform: rotate(0);
+          margin-top: auto;
+          overflow: hidden;
+          position: absolute;
+          bottom: 1.5rem;
+          z-index: 2;
+
+          .tags-group-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            animation: rowup 120s linear infinite;
+
+            @include keyframes(rowup) {
+              0% {
+                transform: translateX(0);
+              }
+
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+
+            .tags-group-icon-pair {
+              margin-left: 1rem;
+
+              .tags-group-icon {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: white;
+                font-size: 66px;
+                font-weight: bold;
+                box-shadow: var(--ll-shadow-blackdeep);
+                overflow: hidden;
+
+                &:nth-child(even) {
+                  margin-top: 1rem;
+                  transform: translate(-60px);
+                }
+
+                &>img {
+                  font-size: 1rem;
+                  width: 60%;
+                  min-width: 100%;
+                  min-height: 100%;
+                  border-radius: 50%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
     }
 
     #article-container {
@@ -49,6 +137,10 @@ main#content-inner {
         &>li {
           position: relative;
           padding-left: 1.75rem;
+
+          a:hover {
+            border-radius: 5px;
+          }
 
           &::marker {
             content: none;
