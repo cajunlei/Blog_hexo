@@ -2,6 +2,8 @@
 function whenDOMReady() {
   // 作者卡片问好
   ll.cardInfoSayhi();
+  // 主页哔哔
+  ll.initIndexEssay();
   // 返回顶部显示网页阅读进度
   window.addEventListener('scroll', ll.percent);
   // 分类目录条、标签目录条

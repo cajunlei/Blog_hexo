@@ -334,6 +334,20 @@ var ll = {
     "bf" == e ? (t.value = "```yml\n", t.value += "- name: \n  link: \n  avatar: \n  descr: \n  siteshot: ", t.value += "\n```", t.setSelectionRange(15, 15)) : (t.value = "站点名称：\n站点地址：\n头像链接：\n站点描述：\n站点截图：\nRSS地址：", t.setSelectionRange(5, 5)), t.focus()
   },
 
+  // 首页bb
+  initIndexEssay: function() {
+    if (document.querySelector('#bber-talk')) {
+      var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical', // 垂直切换选项
+        loop: true,
+        autoplay: {
+        delay: 5000,
+        pauseOnMouseEnter: true
+      },
+      });
+    }
+  },
+
   // 旧浏览器弹窗提醒
   browserVersion: function () {
     var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串

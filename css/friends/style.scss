@@ -46,8 +46,11 @@ main#content-inner {
           margin-top: auto;
           overflow: hidden;
           position: absolute;
+          left: 2px;
           bottom: 1.5rem;
           z-index: 2;
+          width: 1265px;
+          overflow: hidden;
 
           .tags-group-wrapper {
             display: flex;
@@ -55,17 +58,17 @@ main#content-inner {
             animation: rowup 120s linear infinite;
 
             @include keyframes(rowup) {
-              0% {
+              from {
                 transform: translateX(0);
               }
 
-              100% {
+              to {
                 transform: translateX(-50%);
               }
             }
 
             .tags-group-icon-pair {
-              margin-left: 1rem;
+              margin-left: 15px;
 
               .tags-group-icon {
                 width: 100px;
