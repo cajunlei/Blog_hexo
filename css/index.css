@@ -2230,6 +2230,12 @@ div#home_top {
   max-width: 1300px;
   padding: 15px 15px 0;
 }
+@media screen and (max-width: 900px) {
+  div#home_top {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
 div#home_top+#content-inner {
   padding-top: 0;
 }
@@ -7197,8 +7203,16 @@ blockquote.pullquote.right {
     padding: 1rem;
   }
 }
-#post-comment #twikoo .tk-comments .tk-submit .tk-row .tk-col .tk-input.el-textarea textarea.el-textarea__inner {
+#post-comment #twikoo .tk-comments .tk-row .tk-col .tk-input.el-textarea textarea.el-textarea__inner {
   height: 100px !important;
+}
+#post-comment #twikoo .tk-comments .tk-extras .tk-extra {
+  font-size: 12px;
+  border: var(--style-border-always);
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-right: 4px;
+  margin-top: 6px;
 }
 #post-comment #twikoo .tk-comments .tk-comments-container .tk-comments-title .tk-icon.__comments {
   color: var(--ll-main);
