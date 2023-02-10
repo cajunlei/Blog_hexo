@@ -225,7 +225,7 @@ main#content-inner {
 
                 .bber-reply {
                   color: var(--ll-btn-bg);
-                  cursor: url(/img/mouse/link.cur), auto !important;
+                  cursor: var(--ll-link) !important;
                   position: relative;
 
                   i {

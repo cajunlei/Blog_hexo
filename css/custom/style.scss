@@ -12,8 +12,7 @@ body {
 
 a,
 img {
-  cursor: url(/img/mouse/link.cur),
-    pointer;
+  cursor: var(--ll-link);
 }
 
 // 文本样式start

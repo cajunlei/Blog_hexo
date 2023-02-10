@@ -57,7 +57,7 @@ main#content-inner {
                 position: relative;
 
                 &>* {
-                  cursor: url(/img/mouse/link.cur), pointer;
+                  cursor: var(--ll-link);
                 }
 
                 &:before {

@@ -32,8 +32,8 @@ var ll = {
       }
       return text;
     };
-    if (document.querySelector('#author-info__sayhi')) {
-      document.getElementById("author-info__sayhi").innerHTML = getTimeState() + "！我是";
+    if (document.querySelector('#author-info_sayhi')) {
+      document.getElementById("author-info_sayhi").innerHTML = getTimeState() + "！我是";
     }
   },
 
@@ -41,7 +41,7 @@ var ll = {
   cardInfoSayhi: function () {
     fetch("https://api.vvhan.com/api/visitor.info").then((n => n.json())).then((n => {
       let t = n.time.substring(11, 13), o = -1 !== n.location.indexOf("-") ? n.location.split("-") : n.location.split(" "), i = o[o.length - 1];
-      document.getElementById("author-info__sayhi").innerHTML = `<strong>${t < 5 ? "深夜了！🥱" : t < 11 ? "早上好！👋" : t < 14 ? "中午好！😄" : t < 19 ? "下午好！☕" : "晚上好！😄"} </strong><br>欢迎来自 <strong>${i}</strong> 的小伙伴。`
+      document.getElementById("author-info_sayhi").innerHTML = `<strong>${t < 5 ? "深夜了！🥱" : t < 11 ? "早上好！👋" : t < 14 ? "中午好！😄" : t < 19 ? "下午好！☕" : "晚上好！😄"} </strong><br>欢迎来自 <strong>${i}</strong> 的小伙伴。`
     })).catch((function (n) { console.log(n) }))
   },
 
@@ -85,6 +85,12 @@ var ll = {
       up.childNodes[1].style.display = 'none'
       up.childNodes[0].style.display = 'block'
     }
+  },
+
+  //滚动到指定id
+  scrollTo: function (id) {
+    var domTop = document.querySelector(id).offsetTop;
+    window.scrollTo(0, domTop - 80);
   },
 
   // 网页运行时间
@@ -335,15 +341,15 @@ var ll = {
   },
 
   // 首页bb
-  initIndexEssay: function() {
+  initIndexEssay: function () {
     if (document.querySelector('#bber-talk')) {
       var swiper = new Swiper('.swiper-container', {
         direction: 'vertical', // 垂直切换选项
         loop: true,
         autoplay: {
-        delay: 5000,
-        pauseOnMouseEnter: true
-      },
+          delay: 5000,
+          pauseOnMouseEnter: true
+        },
       });
     }
   },

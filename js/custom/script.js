@@ -1,7 +1,7 @@
 // 自定义js文件pjax适配start
 function whenDOMReady() {
   // 作者卡片问好
-  ll.cardInfoSayhi();
+  if (document.getElementById('author-info_sayhi')) ll.cardInfoSayhi();
   // 主页哔哔
   if (document.getElementById('bbTimeList')) ll.initIndexEssay();
   // 返回顶部显示网页阅读进度
@@ -16,7 +16,7 @@ function whenDOMReady() {
   ll.addFriendLinksInFooter();
   //动态标题
   ll.runtime();
-  // 如果当前页有评论就执行函数
+  // 评论表情放大
   if (document.getElementById('post-comment')) ll.owoBig();
   // 封面纯色
   if (document.getElementById('post')) ll.switchThemeColor(ll.getMainColor());

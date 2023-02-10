@@ -7,6 +7,12 @@ https://ll.sc.cn/privacy/index.html
 https://ll.sc.cn/tags/index.html
 https://ll.sc.cn/talking/index.html
 https://ll.sc.cn/timeline/index.html
+https://ll.sc.cn/posts/2a89/
+https://ll.sc.cn/posts/74b5/
+https://ll.sc.cn/about/index.html
+https://ll.sc.cn/board/index.html
+https://ll.sc.cn/book/index.html
+https://ll.sc.cn/categories/index.html
 https://ll.sc.cn/comment/index.html
 https://ll.sc.cn/cookies/index.html
 https://ll.sc.cn/echart/index.html
@@ -14,12 +20,6 @@ https://ll.sc.cn/fcircle/index.html
 https://ll.sc.cn/friends/index.html
 https://ll.sc.cn/copyright/index.html
 https://ll.sc.cn/china-map/index.html
-https://ll.sc.cn/posts/2a89/
-https://ll.sc.cn/posts/74b5/
-https://ll.sc.cn/about/index.html
-https://ll.sc.cn/board/index.html
-https://ll.sc.cn/book/index.html
-https://ll.sc.cn/categories/index.html
 https://ll.sc.cn/posts/69b2/
 https://ll.sc.cn/Gallery/index.html
 https://ll.sc.cn/Gallery/jay/index.html

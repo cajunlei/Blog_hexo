@@ -168,16 +168,22 @@ main#content-inner {
         }
       }
 
-      .flink>h2>i,
-      .flink+h2>i {
-        padding-right: 0.5rem
+      #flink {
+        h2.num {
+          display: inline;
+        }
+
+        h2>i,
+        &+h2>i {
+          padding-right: 0.5rem
+        }
       }
 
-      .flink-desc {
+      #flink.flink_list .flink-desc {
         font-style: italic;
       }
 
-      .flink-list>a.flink-list-card {
+      .flink_items>a.flink_item {
         padding: 0;
         border: var(--style-border);
       }
@@ -188,7 +194,7 @@ main#content-inner {
         flex-wrap: wrap;
 
         &>span {
-          cursor: url(/img/mouse/link.cur), auto !important;
+          cursor: var(--ll-link) !important;
           display: flex;
           align-items: center;
           margin: 5px auto;
