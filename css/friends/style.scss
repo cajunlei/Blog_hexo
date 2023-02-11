@@ -177,15 +177,15 @@ main#content-inner {
         &+h2>i {
           padding-right: 0.5rem
         }
-      }
 
-      #flink.flink_list .flink-desc {
-        font-style: italic;
-      }
+        .flink_items .flink-desc {
+          font-style: italic;
+        }
 
-      .flink_items>a.flink_item {
-        padding: 0;
-        border: var(--style-border);
+        .flink-list>a.flink-list-card {
+          padding: 0;
+          border: var(--style-border);
+        }
       }
 
       .addBtn {

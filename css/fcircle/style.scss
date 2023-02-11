@@ -4,6 +4,17 @@
   }
 }
 
+.el-popper.is-light {
+  background: var(--ll-btn-bg);
+  color: var(--ll-btn-text);
+
+  .el-popper__arrow {
+    &:before {
+      background: var(--ll-btn-bg);
+    }
+  }
+}
+
 main#content-inner {
   padding-top: 20px;
 

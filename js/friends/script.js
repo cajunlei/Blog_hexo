@@ -1,6 +1,6 @@
 Element.prototype.siblings = function () {
   let siblingElement = [];
-  let sibs = this.parentNode.querySelectorAll('.flink_item');
+  let sibs = this.parentNode.querySelectorAll('.flink-list-card');
   for (let i = 0; i < sibs.length; i++) {
     if (sibs[i] !== this) {
       siblingElement.push(sibs[i]);
