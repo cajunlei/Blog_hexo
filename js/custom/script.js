@@ -7,7 +7,7 @@ function whenDOMReady() {
   // 返回顶部显示网页阅读进度
   window.addEventListener('scroll', ll.percent);
   // 分类目录条、标签目录条
-  ll.catalogActive();
+  if (document.getElementById('catalog-list')) ll.catalogActive();
   // 页面标题
   window.addEventListener('scroll', ll.pageTitle);
   //网页运行时间

@@ -19,7 +19,6 @@ function setTime(time, timeSelector) {
   var hour = Math.abs(parseInt((d_day - currentTime) / 1000 / 3600));//计算小时
   var minutes = Math.abs(parseInt((d_day - currentTime) / 1000 / 60));//计算分钟
   var seconds = Math.abs(parseInt((d_day - currentTime) / 1000));//计算秒
-  console.log(day);
   if (day >= 365) {
     ts.text(parseInt(year) + "年" + (month - year * 12) + "个月" + (day - (year * 12 * 30 + year * 5)) + "天前").toString();
   } else if (day >= 31) {
