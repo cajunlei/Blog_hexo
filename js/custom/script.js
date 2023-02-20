@@ -22,9 +22,55 @@ function whenDOMReady() {
   if (document.getElementById('post')) ll.switchThemeColor(ll.getMainColor());
 }
 
-whenDOMReady() //打开网站之后先执行一次函数
-document.addEventListener("pjax:complete", whenDOMReady) //pjax加载完成之后执行上面函数
+(() => {
+  const task = () => {
+    // 这里写要执行的代码
+    whenDOMReady() //打开网站之后先执行一次函数
+    document.addEventListener("pjax:complete", whenDOMReady) //pjax加载完成之后执行上面函数
+  }
+  document.addEventListener('DOMContentLoaded', task)
+  document.addEventListener('pjax:success', task)
+})()
 // 自定义js文件pjax适配end
+
+//监听跳转页面输入框是否按下回车
+listenToPageInputPress();
+
+//监听跳转页面输入框是否按下回车
+function listenToPageInputPress() {
+  var input = document.getElementById("toPageText");
+  var button = document.getElementById("toPageButton");
+  if (input) {
+    input.addEventListener("keydown", (event) => {
+      if (event.keyCode === 13) {
+        // 如果按下的是回车键，则执行特定的函数
+        heo.toPage();
+        var href = button.href;
+        pjax.loadUrl(href);
+      }
+    });
+
+    // 监听输入框变化
+    input.addEventListener("input", function () {
+      // 检查输入框是否为空
+      if (input.value === "" || input.value === "0") {
+        // 如果是空的，执行您的函数
+        button.classList.remove("haveValue")
+      } else {
+        button.classList.add("haveValue")
+      }
+
+      var e = document.querySelectorAll(".page-number"),
+        t = e[e.length - 1].innerHTML,
+        n = Number(t),
+        a = document.getElementById("toPageText"),
+        o = Number(a.value);
+      if (o > n) {
+        input.value = n;
+      };
+    });
+  }
+}
 
 // 老旧浏览器弹窗提醒start
 function browserTC() {
@@ -36,7 +82,6 @@ function browserTC() {
     pos: 'top-center'
   });
 }
-
 if (ll.getCookie('browsertc') != 1) {
   ll.setCookies({
     browsertc: 1,

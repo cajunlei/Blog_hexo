@@ -87,6 +87,22 @@ var ll = {
     }
   },
 
+  //跳转到指定页面
+  toPage: function() {
+    console.log("执行跳转")
+    var e = document.querySelectorAll(".page-number"),
+    t = e[e.length - 1].innerHTML,
+    n = Number(t),
+    a = document.getElementById("toPageText"),
+    o = Number(a.value);
+    if ("" != o && !isNaN(o) && o % 1 == 0) if (1 == o) document.getElementById("toPageButton").href = "/";
+    else if (o > n) {
+      var d = "/page/" + n + "/";
+      document.getElementById("toPageButton").href = d
+    } else d = "/page/" + a.value + "/",
+    document.getElementById("toPageButton").href = d
+  },
+  
   //滚动到指定id
   scrollTo: function (id) {
     var domTop = document.querySelector(id).offsetTop;
