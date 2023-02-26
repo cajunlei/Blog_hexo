@@ -89,7 +89,6 @@ var ll = {
 
   //跳转到指定页面
   toPage: function() {
-    console.log("执行跳转")
     var e = document.querySelectorAll(".page-number"),
     t = e[e.length - 1].innerHTML,
     n = Number(t),
@@ -97,9 +96,24 @@ var ll = {
     o = Number(a.value);
     if ("" != o && !isNaN(o) && o % 1 == 0) if (1 == o) document.getElementById("toPageButton").href = "/";
     else if (o > n) {
-      var d = "/page/" + n + "/";
+      var d = "/page/" + n + "/#home_top";
       document.getElementById("toPageButton").href = d
-    } else d = "/page/" + a.value + "/",
+    } else d = "/page/" + a.value + "/#home_top",
+    document.getElementById("toPageButton").href = d
+  },
+  
+  //跳转到指定页面
+  toPageArchive: function() {
+    var e = document.querySelectorAll(".page-number"),
+    t = e[e.length - 1].innerHTML,
+    n = Number(t),
+    a = document.getElementById("toPageText"),
+    o = Number(a.value);
+    if ("" != o && !isNaN(o) && o % 1 == 0) if (1 == o) document.getElementById("toPageButton").href = "/";
+    else if (o > n) {
+      var d = "/archives/page/" + n + "/#archive";
+      document.getElementById("toPageButton").href = d
+    } else d = "/archives/page/" + a.value + "/#archive",
     document.getElementById("toPageButton").href = d
   },
   

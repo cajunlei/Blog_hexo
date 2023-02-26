@@ -8956,6 +8956,11 @@ nav#pagination .pagination>* {
   height: 2.5rem;
   line-height: 2.5rem;
 }
+@media screen and (max-width: 768px) {
+  nav#pagination .pagination>* {
+    margin: 0 0.25rem;
+  }
+}
 nav#pagination .pagination>*:not(.space) {
   width: 2.5rem;
   border-radius: 8px;
@@ -8968,6 +8973,12 @@ nav#pagination .pagination>*:not(.space) {
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  nav#pagination .pagination .space {
+    margin: 0;
+    width: 1.5rem;
+  }
 }
 nav#pagination .pagination .current {
   background: var(--ll-theme);
@@ -9001,9 +9012,6 @@ nav#pagination .pagination .extend {
 }
 @media screen and (max-width: 768px) {
   nav#pagination .pagination .extend {
-    width: 3rem;
-  }
-  nav#pagination .pagination .extend .meta-nav {
     display: none;
   }
 }
@@ -9092,6 +9100,11 @@ nav#pagination .pagination .toPageGroup input#toPageText:focus {
   -ms-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (max-width: 768px) {
+  nav#pagination .pagination .toPageGroup input#toPageText:focus {
+    width: 4rem;
+  }
+}
 nav#pagination .pagination .toPageGroup input#toPageText:focus+a#toPageButton {
   border: var(--style-border);
 }
@@ -9145,6 +9158,11 @@ nav#pagination .pagination .toPageGroup:hover input#toPageText {
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  nav#pagination .pagination .toPageGroup:hover input#toPageText {
+    width: 4rem;
+  }
 }
 nav#pagination .pagination .toPageGroup:hover a#toPageButton {
   border: var(--style-border);
