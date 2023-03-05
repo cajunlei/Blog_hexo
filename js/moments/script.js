@@ -6,6 +6,8 @@ function whenDOMReady() {
     var timeSelector = $(this).find(".time");
     setTime(t_time, timeSelector);
   })
+  // 加载更多
+  llMoments.momentsInit();
 }
 
 function setTime(time, timeSelector) {
@@ -33,6 +35,40 @@ function setTime(time, timeSelector) {
     ts.text(parseInt(minutes) + "分钟前").toString();
   } else if (seconds > 0 && seconds < 60) {
     ts.text(parseInt(seconds) + "秒前").toString();
+  }
+}
+
+var moments_content = []; //临时存储内容
+var llMoments = {
+  moments_default: 20, //默认显示个数
+  moments_loading: 10,  //每次点击按钮后加载的个数
+  momentsInit: function () {
+    var lis = $("#moments .moments_hidden .one-comment");
+    $("#moments .moments_items").html("");
+    for (var n = 0; n < llMoments.moments_default; n++) {
+      lis.eq(n).appendTo("#moments .moments_items");
+    }
+    $("#moments .moments_items").each(function () {
+      $(this).attr('src', $(this).attr('realSrc'));
+    })
+    for (var i = llMoments.moments_default; i < lis.length; i++) {
+      moments_content.push(lis.eq(i));
+    }
+    $("#moments .moments_hidden").html("");
+  },
+  momentsLoadmore: function () {
+    var mLis = $("#moments .moments_items .one-comment").length;
+    for (var i = 0; i < llMoments.moments_loading; i++) {
+      var target = moments_content.shift();
+      if (!target) {
+        $('#moments .moments_more').html("<p>没有了~真的没有了~~</p>");
+        break;
+      }
+      $("#moments .moments_items").append(target);
+      $("#moments .moments_items").eq(mLis + i).each(function () {
+        $(this).attr('src', $(this).attr('realSrc'));
+      });
+    }
   }
 }
 

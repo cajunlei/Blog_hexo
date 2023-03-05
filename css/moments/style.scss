@@ -257,6 +257,28 @@ main#content-inner {
             }
           }
         }
+
+        .moments_more {
+          display: flex;
+          justify-content: center;
+
+          &>a {
+            padding: .5rem 1rem;
+            margin: 0 .5rem;
+            color: var(--ll-fontcolor);
+            background: var(--ll-card-bg);
+            box-shadow: var(--ll-shadow-main);
+            border: var(--style-border-hover);
+            border-radius: 6px;
+            line-height: 1;
+
+            &:hover {
+              text-decoration: none;
+              color: var(--ll-btn-text);
+              background: var(--ll-btn-bg);
+            }
+          }
+        }
       }
     }
 

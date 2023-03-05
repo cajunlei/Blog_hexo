@@ -8960,6 +8960,9 @@ blockquote.pullquote.right {
   letter-spacing: 0.2em;
   font-family: var(--fonts-heiti);
 }
+#page-header #scroll-down {
+  height: 60px;
+}
 nav#pagination {
   width: 100%;
 }
