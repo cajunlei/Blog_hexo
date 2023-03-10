@@ -32,7 +32,8 @@
   --style-border-hover: 1px solid var(--ll-main);
   --style-border-hover-always: 1px solid var(--ll-main);
   --style-border-dashed: 1px dashed var(--ll-theme-op);
-  --fonts-heiti: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+  /* --fonts-heiti: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei"; */
+  --fonts-heiti: "AlimamaShuHeiTi-Bold";
   --fonts-custom: 'LXGW WenKai Screen';
   --ll-top-img: linear-gradient(to bottom, var(--ll-theme-op), var(--ll-theme));
   --ll-cover-bg: rgb(var(--r), var(--g), var(--b));

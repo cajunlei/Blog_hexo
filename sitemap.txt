@@ -1,3 +1,4 @@
+https://ll.sc.cn/journal/index.html
 https://ll.sc.cn/links/index.html
 https://ll.sc.cn/love/index.html
 https://ll.sc.cn/moments/index.html
@@ -6,7 +7,6 @@ https://ll.sc.cn/privacy/index.html
 https://ll.sc.cn/tags/index.html
 https://ll.sc.cn/talking/index.html
 https://ll.sc.cn/timeline/index.html
-https://ll.sc.cn/journal/index.html
 https://ll.sc.cn/china-map/index.html
 https://ll.sc.cn/comment/index.html
 https://ll.sc.cn/cookies/index.html
@@ -24,6 +24,7 @@ https://ll.sc.cn/posts/69b2/
 https://ll.sc.cn/Gallery/index.html
 https://ll.sc.cn/Gallery/jay/index.html
 https://ll.sc.cn/Gallery/ohmygirl/index.html
+https://ll.sc.cn/posts/3269/
 https://ll.sc.cn/posts/b1e0/
 https://ll.sc.cn/posts/2621/
 https://ll.sc.cn/posts/df1a/
@@ -173,6 +174,7 @@ https://ll.sc.cn/tags/16Personalities/
 https://ll.sc.cn/tags/%E5%A5%A5%E5%AF%86%E5%85%8B%E6%88%8E/
 https://ll.sc.cn/tags/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92/
 https://ll.sc.cn/tags/%E9%AA%9A%E6%89%B0%E6%8B%A6%E6%88%AA/
+https://ll.sc.cn/tags/%E4%BB%A5%E6%97%A7%E6%8D%A2%E6%96%B0/
 https://ll.sc.cn/tags/%E9%92%A2%E6%9D%90%E8%AE%A1%E7%AE%97/
 https://ll.sc.cn/tags/Keepass/
 https://ll.sc.cn/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/
@@ -195,8 +197,8 @@ https://ll.sc.cn/tags/Backblaze/
 https://ll.sc.cn/tags/%E5%AD%97%E4%BD%93/
 https://ll.sc.cn/tags/Sublime-Text/
 https://ll.sc.cn/categories/%E7%88%B1%E5%B7%A5%E4%BD%9C/
-https://ll.sc.cn/categories/%E6%9D%82-%E8%AE%B0/
 https://ll.sc.cn/categories/%E7%88%B1%E6%8A%98%E8%85%BE/
 https://ll.sc.cn/categories/%E8%BD%AF-%E4%BB%B6/
 https://ll.sc.cn/categories/Windows/
 https://ll.sc.cn/categories/%E7%88%B1%E5%AD%A6%E4%B9%A0/
+https://ll.sc.cn/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/

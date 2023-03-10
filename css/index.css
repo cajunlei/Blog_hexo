@@ -6125,7 +6125,7 @@ blockquote.pullquote.right {
   padding: 0.5rem;
   text-align: center;
   font-size: 14px;
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-family: var(--fonts-heiti);
 }
 #error-wrap .error-content .error-info .error_title {
   margin-top: -3rem !important;
@@ -7824,6 +7824,10 @@ blockquote.pullquote.right {
   src: url("https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/fonts/title.woff2") format('woff2');
   font-display: swap;
 }
+@font-face {
+  font-family: AlimamaShuHeiTi-Bold;
+  src: url("https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold/AlimamaShuHeiTi-Bold.eot") format('embedded-opentype'), url("https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold/AlimamaShuHeiTi-Bold.otf") format('opentype'), url("https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold/AlimamaShuHeiTi-Bold.ttf") format('TrueType'), url("https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold/AlimamaShuHeiTi-Bold.woff") format('woff'), url("https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold/AlimamaShuHeiTi-Bold.woff2") format('woff2');
+}
 .icon {
   width: 1em;
   height: 1em;
@@ -8251,6 +8255,9 @@ blockquote.pullquote.right {
   -webkit-align-items: center;
   align-items: center;
 }
+#body-wrap.post main#content-inner #post #article-container h2 {
+  font-family: var(--fonts-heiti);
+}
 #body-wrap.post main#content-inner #post #article-container ol {
   counter-reset: li 0;
   padding-left: 1rem;
@@ -8591,7 +8598,7 @@ blockquote.pullquote.right {
 }
 #page-header #nav #nav-group #page-name-mask #page-name #page-name-text {
   display: inline;
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei';
+  font-family: var(--fonts-heiti);
   font-weight: bold;
   padding: 4px 8px;
   opacity: 0;
