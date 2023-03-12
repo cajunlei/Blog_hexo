@@ -88,35 +88,35 @@ var ll = {
   },
 
   //跳转到指定页面
-  toPage: function() {
+  toPage: function () {
     var e = document.querySelectorAll(".page-number"),
-    t = e[e.length - 1].innerHTML,
-    n = Number(t),
-    a = document.getElementById("toPageText"),
-    o = Number(a.value);
+      t = e[e.length - 1].innerHTML,
+      n = Number(t),
+      a = document.getElementById("toPageText"),
+      o = Number(a.value);
     if ("" != o && !isNaN(o) && o % 1 == 0) if (1 == o) document.getElementById("toPageButton").href = "/";
     else if (o > n) {
       var d = "/page/" + n + "/#home_top";
       document.getElementById("toPageButton").href = d
     } else d = "/page/" + a.value + "/#home_top",
-    document.getElementById("toPageButton").href = d
+      document.getElementById("toPageButton").href = d
   },
-  
+
   //跳转到指定页面
-  toPageArchive: function() {
+  toPageArchive: function () {
     var e = document.querySelectorAll(".page-number"),
-    t = e[e.length - 1].innerHTML,
-    n = Number(t),
-    a = document.getElementById("toPageText"),
-    o = Number(a.value);
+      t = e[e.length - 1].innerHTML,
+      n = Number(t),
+      a = document.getElementById("toPageText"),
+      o = Number(a.value);
     if ("" != o && !isNaN(o) && o % 1 == 0) if (1 == o) document.getElementById("toPageButton").href = "/";
     else if (o > n) {
       var d = "/archives/page/" + n + "/#archive";
       document.getElementById("toPageButton").href = d
     } else d = "/archives/page/" + a.value + "/#archive",
-    document.getElementById("toPageButton").href = d
+      document.getElementById("toPageButton").href = d
   },
-  
+
   //滚动到指定id
   scrollTo: function (id) {
     var domTop = document.querySelector(id).offsetTop;
@@ -183,6 +183,42 @@ var ll = {
       }
     }
     return return_array;
+  },
+
+  //监听跳转页面输入框是否按下回车
+  listenToPageInputPress: function () {
+    var input = document.getElementById("toPageText");
+    var button = document.getElementById("toPageButton");
+    if (input) {
+      input.addEventListener("keydown", (event) => {
+        if (event.keyCode === 13) {
+          // 如果按下的是回车键，则执行特定的函数
+          heo.toPage();
+          var href = button.href;
+          pjax.loadUrl(href);
+        }
+      });
+
+      // 监听输入框变化
+      input.addEventListener("input", function () {
+        // 检查输入框是否为空
+        if (input.value === "" || input.value === "0") {
+          // 如果是空的，执行您的函数
+          button.classList.remove("haveValue")
+        } else {
+          button.classList.add("haveValue")
+        }
+
+        var e = document.querySelectorAll(".page-number"),
+          t = e[e.length - 1].innerHTML,
+          n = Number(t),
+          a = document.getElementById("toPageText"),
+          o = Number(a.value);
+        if (o > n) {
+          input.value = n;
+        };
+      });
+    }
   },
 
   // 分类目录条、标签目录条
@@ -382,6 +418,39 @@ var ll = {
         },
       });
     }
+  },
+
+  //关于页面 51LA访问统计
+  aboutStatistic51La: function () {
+    fetch('https://v6-widget.51.la/v6/Js0bWTKg5ezX8WPE/quote.js').then(res => res.text()).then((data) => {
+      let title = ['最近活跃访客', '今日人数', '今日访问', '昨日人数', '昨日访问', '本月访问', '总访问量']
+      let num = data.match(/(?<=<\/span><span>).*?(?=<\/span><\/p>)/g)
+      let order = [1, 2, 3, 4, 5] // 新增  可排序，如果需要隐藏则删除对应数字即可。
+      // 示例：[1, 3, 2, 4, 5] 显示 ['今日人数', '昨日人数', '今日访问', '昨日访问', '本月访问']，不显示 最近活跃访客(0) 和 总访问量(6)
+      for (let i = 0; i < order.length; i++) { document.querySelectorAll('#statistic')[0].innerHTML += '<div><span>' + title[order[i]] + '</span><span>' + num[order[i]] + '</span></div>' }
+    });
+  },
+
+  aboutForeverblogProgress: function () {
+    var startTime = '2022-11-4'
+    var endTime = '2032-11-4'
+    var time1 = ll.getDiffDay(startTime, endTime)
+    var time2 = ll.getDiffDay(startTime, new Date)
+    var num = (Math.ceil(time2 / time1 * 100) / 1 + "%");
+    var progressBar = document.querySelector('.progress-bar')
+    progressBar.style.width = num // 控制css进度条的进度
+    progressBar.innerHTML = num // 修改显示的进度值
+  },
+
+  getDiffDay(date_1, date_2) {
+    // 计算两个日期之间的差值
+    let totalDays, diffDate
+    let myDate_1 = Date.parse(date_1)
+    let myDate_2 = Date.parse(date_2)
+    // 将两个日期都转换为毫秒格式，然后做差
+    diffDate = Math.abs(myDate_1 - myDate_2) // 取相差毫秒数的绝对值
+    totalDays = Math.floor(diffDate / (1000 * 3600 * 24)) // 向下取整
+    return totalDays    // 相差的天数
   },
 
   // 旧浏览器弹窗提醒

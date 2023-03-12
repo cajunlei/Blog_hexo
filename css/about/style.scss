@@ -30,18 +30,6 @@ main#content-inner.layout.hide-aside {
       display: none;
     }
 
-    #article-container {
-      padding-top: 1rem;
-      background-color: var(--ll-card-bg);
-      padding: 10px 2rem;
-      margin-top: 1rem;
-      border-radius: 24px;
-
-      @include mobile {
-        padding: 1rem;
-      }
-    }
-
     #about-page {
       font-family: var(--fonts-heiti);
       display: flex;
@@ -201,6 +189,36 @@ main#content-inner.layout.hide-aside {
                 &:last-child {
                   background-image: var(--gradient-red);
                 }
+              }
+            }
+          }
+
+          &.about-foreverblog {
+            width: 100%;
+
+            .time {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .progress {
+              --height: 2.5rem;
+              width: 100%;
+              height: var(--height);
+              border-radius: calc(var(--height) / 2);
+              background-color: var(--ll-theme-op);
+              margin: var(--gap-divs) 0;
+              border: var(--style-border);
+
+              .progress-bar {
+                height: 100%;
+                text-align: right;
+                line-height: var(--height);
+                background: var(--gradient-red);
+                border-radius: calc(var(--height) / 2);
+                font-size: 14px;
+                color: var(--ll-white);
+                padding-right: 1em;
               }
             }
           }
@@ -537,6 +555,20 @@ main#content-inner.layout.hide-aside {
     }
 
     #article-container {
+      padding-top: 1rem;
+      background-color: var(--ll-card-bg);
+      padding: 10px 2rem;
+      margin-top: 1rem;
+      border-radius: 24px;
+
+      @include mobile {
+        padding: 1rem;
+      }
+
+      h2 {
+        font-family: var(--fonts-heiti);
+      }
+
       p {
         text-indent: 2em
       }
