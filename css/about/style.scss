@@ -109,7 +109,6 @@ main#content-inner.layout.hide-aside {
 
         h2 {
           font-size: 2rem;
-          font-family: Helvetica;
           line-height: 1.1;
           letter-spacing: 2px;
           margin: 0;
@@ -207,8 +206,13 @@ main#content-inner.layout.hide-aside {
               height: var(--height);
               border-radius: calc(var(--height) / 2);
               background-color: var(--ll-theme-op);
-              margin: var(--gap-divs) 0;
+              margin-top: var(--gap-divs);
               border: var(--style-border);
+
+              @include mobile {
+                --height: 2rem;
+                border-radius: 8px;
+              }
 
               .progress-bar {
                 height: 100%;

@@ -20,7 +20,7 @@ function whenDOMReady() {
   if (document.getElementById('post-comment')) ll.owoBig();
   // 封面纯色
   if (document.getElementById('post')) ll.switchThemeColor(ll.getMainColor());
-  //监听跳转页面输入框是否按下回车
+  // 监听跳转页面输入框是否按下回车
   ll.listenToPageInputPress();
 }
 
