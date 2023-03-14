@@ -413,7 +413,7 @@ var ll = {
         direction: 'vertical', // 垂直切换选项
         loop: true,
         autoplay: {
-          delay: 5000,
+          delay: 3000,
           pauseOnMouseEnter: true
         },
       });

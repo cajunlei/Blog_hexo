@@ -6295,6 +6295,24 @@ blockquote.pullquote.right {
   height: 6rem;
 }
 .article-sort .article-sort-item .article-sort-item-info {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-left: 0.5rem;
 }
 .article-sort .article-sort-item .article-sort-item-info .article-sort-item-title {
@@ -6322,6 +6340,7 @@ blockquote.pullquote.right {
 .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap {
   font-size: 1rem;
   line-height: 1.5em;
+  margin-bottom: 1rem;
 }
 .article-sort .article-sort-item .article-sort-item-info .article-meta-wrap i {
   padding-right: 0.5em;
@@ -6340,7 +6359,7 @@ blockquote.pullquote.right {
   right: 1rem;
   bottom: 0.5rem;
   font-size: inherit;
-  line-height: 1.2rem;
+  line-height: 1;
 }
 .article-sort .article-sort-item:hover {
   background-color: var(--ll-card-hover-bg);
