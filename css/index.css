@@ -9228,6 +9228,7 @@ hr:before {
 }
 #page-header #nav #nav-group #fps>span {
   font-family: LED;
+  letter-spacing: 1px;
   font-size: 18px;
   line-height: 1;
 }
@@ -10119,6 +10120,12 @@ nav#pagination .pagination a.page-number:hover {
   color: var(--ll-white);
 }
 #page-header #post-info #post-firstinfo .meta-firstline span.post-meta-tag {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
   margin-left: 1rem;
 }
 #page-header #post-info #post-firstinfo .meta-firstline span.post-meta-tag .post-meta__tags {
@@ -10150,6 +10157,11 @@ nav#pagination .pagination a.page-number:hover {
   margin-right: 2px;
 }
 #page-header #post-info #post-firstinfo .meta-firstline span.post-meta-tag .post-meta__tags:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#page-header #post-info #post-firstinfo .meta-firstline span.post-meta-tag .post-meta__tags:hover::before {
   opacity: 1;
   -ms-filter: none;
   filter: none;

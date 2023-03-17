@@ -193,7 +193,7 @@ var ll = {
       input.addEventListener("keydown", (event) => {
         if (event.keyCode === 13) {
           // 如果按下的是回车键，则执行特定的函数
-          heo.toPage();
+          ll.toPage();
           var href = button.href;
           pjax.loadUrl(href);
         }
@@ -374,6 +374,10 @@ var ll = {
     if (document.getElementById("comment-tips")) {
       document.getElementById("comment-tips").classList.add("show");
     }
+    //替换所有内容
+    function replaceAll(string, search, replace) {
+      return string.split(search).join(replace);
+    }
   },
 
   //友链随机传送
@@ -420,6 +424,81 @@ var ll = {
     }
   },
 
+  // Fps显示
+  fpsShow: function () {
+    // FPS显示begin
+    let showFPS = (function () {
+      // noinspection JSUnresolvedVariable, SpellCheckingInspection
+      let requestAnimationFrame =
+        window.requestAnimationFrame || //Chromium
+        window.webkitRequestAnimationFrame || //Webkit
+        window.mozRequestAnimationFrame || //Mozilla Geko
+        window.oRequestAnimationFrame || //Opera Presto
+        window.msRequestAnimationFrame || //IE Trident?
+        function (callback) {
+          //Fallback function
+          window.setTimeout(callback, 1000 / 60);
+        };
+
+      let dialog;
+      let container;
+
+      let fps = 0;
+      let lastTime = Date.now();
+
+      function init() {
+        dialog = document.createElement('dialog');
+        container.appendChild(dialog);
+        dialog.id = 'fps';
+      }
+
+      function calcFPS() {
+        offset = Date.now() - lastTime;
+        fps += 1;
+        if (offset >= 1000) {
+          lastTime += offset;
+          displayFPS(fps);
+          fps = 0;
+        }
+
+        requestAnimationFrame(calcFPS);
+      }
+
+      function displayFPS(fps) {
+        let kd;
+        if (fps <= 5) {
+          kd = `<div style="color:#bd0000">卡成ppt🤢</div>`;
+        } else if (fps <= 15) {
+          kd = `<div style="color:red">电竞级帧率😖</div>`;
+        } else if (fps <= 25) {
+          kd = `<div style="color:orange">有点难受😨</div>`;
+        } else if (fps < 35) {
+          kd = `<div style="color:#9338e6">不太流畅🙄</div>`;
+        } else if (fps <= 45) {
+          kd = `<div style="color:#08b7e4">还不错哦😁</div>`;
+        } else {
+          kd = `<div style="color:#39c5bb">十分流畅🤣</div>`;
+        }
+        let fpsShow = `<span>FPS：${fps}</span>`;
+        let fpsStr = `${fpsShow} ${kd}`;
+        if (!dialog) {
+          init();
+        }
+
+        if (fpsStr !== dialog.innerHTML) {
+          dialog.innerHTML = fpsStr;
+        }
+      }
+
+      return function (parent) {
+        container = parent;
+        calcFPS();
+      };
+    })();
+    // FPS显示end
+    showFPS(document.getElementById("nav-group"));
+  },
+
   //关于页面 51LA访问统计
   aboutStatistic51La: function () {
     fetch('https://v6-widget.51.la/v6/Js0bWTKg5ezX8WPE/quote.js').then(res => res.text()).then((data) => {
@@ -434,23 +513,22 @@ var ll = {
   aboutForeverblogProgress: function () {
     var startTime = '2022-11-4'
     var endTime = '2032-11-4'
-    var time1 = ll.getDiffDay(startTime, endTime)
-    var time2 = ll.getDiffDay(startTime, new Date)
+    var time1 = getDiffDay(startTime, endTime)
+    var time2 = getDiffDay(startTime, new Date)
     var num = (Math.ceil(time2 / time1 * 100) / 1 + "%");
     var progressBar = document.querySelector('.progress-bar')
     progressBar.style.width = num // 控制css进度条的进度
     progressBar.innerHTML = num // 修改显示的进度值
-  },
-
-  getDiffDay(date_1, date_2) {
-    // 计算两个日期之间的差值
-    let totalDays, diffDate
-    let myDate_1 = Date.parse(date_1)
-    let myDate_2 = Date.parse(date_2)
-    // 将两个日期都转换为毫秒格式，然后做差
-    diffDate = Math.abs(myDate_1 - myDate_2) // 取相差毫秒数的绝对值
-    totalDays = Math.floor(diffDate / (1000 * 3600 * 24)) // 向下取整
-    return totalDays    // 相差的天数
+    function getDiffDay(date_1, date_2) {
+      // 计算两个日期之间的差值
+      let totalDays, diffDate
+      let myDate_1 = Date.parse(date_1)
+      let myDate_2 = Date.parse(date_2)
+      // 将两个日期都转换为毫秒格式，然后做差
+      diffDate = Math.abs(myDate_1 - myDate_2) // 取相差毫秒数的绝对值
+      totalDays = Math.floor(diffDate / (1000 * 3600 * 24)) // 向下取整
+      return totalDays    // 相差的天数
+    }
   },
 
   // 旧浏览器弹窗提醒
@@ -482,22 +560,34 @@ var ll = {
     } else if (isSafari) {
       //不知道Safari哪个版本是该淘汰的老旧版本
     }
-  },
-  setCookies: function (obj, limitTime) {
-    let data = new Date(new Date().getTime() + limitTime * 24 * 60 * 60 * 1000).toGMTString()
-    for (let i in obj) {
-      document.cookie = i + '=' + obj[i] + ';expires=' + data
+
+    function browserTC() {
+      btf.snackbarShow("");
+      Snackbar.show({
+        text: '浏览器版本较低，网站样式可能错乱',
+        actionText: '关闭',
+        duration: '6000',
+        pos: 'top-center'
+      });
+    }
+    if (getCookie('browsertc') != 1) {
+      setCookies({
+        browsertc: 1,
+      }, 1);
+      ll.browserVersion();
+    }
+    function setCookies(obj, limitTime) {
+      let data = new Date(new Date().getTime() + limitTime * 24 * 60 * 60 * 1000).toGMTString()
+      for (let i in obj) {
+        document.cookie = i + '=' + obj[i] + ';expires=' + data
+      }
+    }
+    function getCookie(name) {
+      var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+      if (arr = document.cookie.match(reg))
+        return unescape(arr[2]);
+      else
+        return null;
     }
   },
-  getCookie: function (name) {
-    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-    if (arr = document.cookie.match(reg))
-      return unescape(arr[2]);
-    else
-      return null;
-  },
-}
-//替换所有内容
-function replaceAll(string, search, replace) {
-  return string.split(search).join(replace);
 }
