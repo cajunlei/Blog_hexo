@@ -79,7 +79,7 @@
 }
 
 // 页面顶部距离
-header#page-header.not-top-img+main#content-inner.layout.hide-aside {
+header#page-header.not-top-img + main#content-inner.layout.hide-aside {
   padding-top: 0;
 
   #page,
