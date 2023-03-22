@@ -39,6 +39,16 @@ main#content-inner.layout.hide-aside {
 
       .author-img {
         position: relative;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: url(/img/avatar.png);
+        background-size: cover;
+
+        @include mobile {
+          width: 120px;
+          height: 120px;
+        }
 
         &:before {
           content: '';
@@ -48,8 +58,8 @@ main#content-inner.layout.hide-aside {
           position: absolute;
           border-radius: 50%;
           border: 5px solid var(--ll-white);
-          bottom: 15px;
-          right: 10px;
+          bottom: 10px;
+          right: 0px;
           z-index: 2;
           -webkit-transition: 1s;
           -moz-transition: 1s;
@@ -58,21 +68,15 @@ main#content-inner.layout.hide-aside {
           transition: 1s;
 
           @include mobile {
-            bottom: 10px;
+            width: 22px;
+            height: 22px;
+            bottom: 5px;
             right: 0px;
+            border: 3px solid var(--ll-white);
           }
         }
 
-        img {
-          width: 180px;
-          height: 180px;
-          border-radius: 50%;
 
-          @include mobile {
-            width: 120px;
-            height: 120px;
-          }
-        }
       }
 
       .author-title {
