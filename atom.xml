@@ -6,7 +6,7 @@
   <link href="https://ll.sc.cn/atom.xml" rel="self"/>
   
   <link href="https://ll.sc.cn/"/>
-  <updated>2023-04-07T04:40:33.000Z</updated>
+  <updated>2023-04-08T06:56:23.000Z</updated>
   <id>https://ll.sc.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自定义修改Win11自带输入法字体样式</title>
+    <link href="https://ll.sc.cn/posts/a78e/"/>
+    <id>https://ll.sc.cn/posts/a78e/</id>
+    <published>2023-04-08T06:56:23.000Z</published>
+    <updated>2023-04-08T06:56:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不久前钉钉发布了<a href="https://page.dingtalk.com/wow/dingtalk/default/dingtalk/y-W5aF3_ZJwzulU0nceIl">钉钉进步体</a>，甚是喜欢，用来做标题之类的字体太适合了。</p><p>在使用电脑一定离不开输入法，而将输入法候选字的字体设置成喜欢的字体，岂不美滋滋。</p><img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Windows/10_a78e/2023-04-08_15-33-40.png" width="700" alt="效果展示"/><h2 id="下载并安装字体"><a href="#下载并安装字体" class="headerlink" title="下载并安装字体"></a>下载并安装字体</h2><p>打开<a href="https://page.dingtalk.com/wow/dingtalk/default/dingtalk/y-W5aF3_ZJwzulU0nceIl">钉钉进步体官方网页</a>，点击下载字体到本地 –&gt; 解压 –&gt; 安装即可。</p><p>这时候右键状态栏右下角的输入法 –&gt; 设置 –&gt; 外观，发现并不能选择自己想要的字体，只有默认的几个；</p><img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Windows/10_a78e/2023-04-08_15-03-46.webp" width="700" alt="打开输入法设置界面"/><p>问题不大，我们可以通过修改注册表的方式来实现；</p><h2 id="修改注册表"><a href="#修改注册表" class="headerlink" title="修改注册表"></a>修改注册表</h2><ol><li>按下「win键」，在开始菜单搜索「注册表」，打开「注册表编辑器」；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Windows/10_a78e/2023-04-08_15-15-26.webp" width="600" alt="打开「注册表编辑器」"/></li><li>定位到<code>计算机\HKEY_CURRENT_USER\Software\Microsoft\InputMethod\CandidateWindow\CHS\1</code>；</li><li>在右侧空白处右键鼠标 –&gt; 新建 –&gt; 字符串值；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Windows/10_a78e/2023-04-08_15-16-32.webp" width="600" alt="新建字符串"/></li><li>输入数值名称：<code>FontStyleTSF3</code>；</li><li>双击新建名为<code>FontStyleTSF3</code>的字符串；</li><li>在数值数据输入：<code>16.00pt;Regular;;钉钉进步体</code>；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Windows/10_a78e/2023-04-08_15-17-09.png" width="400" alt="输入数值数据"/></li><li>点击确定，就大工告成了。</li></ol><div class="note warning flat"><p>需要<strong>重启</strong>电脑才能生效，不需要再到输入法设置里面进行设置。</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;不久前钉钉发布了&lt;a href=&quot;https://page.dingtalk.com/wow/dingtalk/default/dingta</summary>
+      
+    
+    
+    
+    <category term="Windows" scheme="https://ll.sc.cn/categories/Windows/"/>
+    
+    
+    <category term="输入法" scheme="https://ll.sc.cn/tags/%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>【butterfly】隐藏部分文章不在首页显示</title>
@@ -150,7 +174,7 @@
     <link href="https://ll.sc.cn/posts/74b5/"/>
     <id>https://ll.sc.cn/posts/74b5/</id>
     <published>2023-02-08T02:45:24.000Z</published>
-    <updated>2023-04-07T05:11:20.292Z</updated>
+    <updated>2023-04-08T09:59:49.877Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自从银行短信通知开始收费起，就关闭了交易提醒。只是不想为了那有限的余额铺张浪费；</p><p>但是没有交易提醒也实在不方便，需要想起来的时候手动打开银行APP查询，现在基本上银行都有了自己的微信公众号，且绑定后支持交易提醒；</p><p>银行为啥要做这个公众号呢？本来收费的交易提醒还免费了；</p><p>我猜是为了给你发一堆广告文章，想让你不停的参加它们的活动；</p><p>这就与我关注银行公众号的初衷相悖，我是单纯的想白嫖交易提醒；</p><p>在经历了长时间的广告活动文章轰炸后，有一天我不想忍了，结果给我发现了“小而美”的微信总算做了件人事；</p><p>接下来我们开始操作；</p><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ol><li>打开某银行公众号：</li><li>点击右上角人头图标，进入公众号详情页面；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Software/06_74b5/Screenshot_01.webp" width="400" /></li><li>点击右上角 <strong>…</strong> 图标，打开菜单；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Software/06_74b5/Screenshot_02.webp" width="400" /></li><li>点击设置；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Software/06_74b5/Screenshot_03.webp" width="400" /></li><li>将接收文章推送项关闭；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Software/06_74b5/Screenshot_04.webp" width="400" /></li></ol><p>至此，操作完成。这样我们在享受白嫖的交易提醒时，也没了广告推文的打扰。</p>]]></content>
     
@@ -177,7 +201,7 @@
     <link href="https://ll.sc.cn/posts/69b2/"/>
     <id>https://ll.sc.cn/posts/69b2/</id>
     <published>2023-01-17T07:11:26.000Z</published>
-    <updated>2023-04-07T05:11:20.284Z</updated>
+    <updated>2023-04-08T09:59:49.869Z</updated>
     
     <content type="html"><![CDATA[<p><code>Win10</code> 自带微软输入法用起来还是很顺手，清爽、简洁，没有乱七八糟的广告；</p><p>但是默认只有三种双拼方案，包含微软双拼、智能ABC、自然码。</p><p>当然，我们也可以手动添加，但是手动设置非常的复杂，且浪费时间。</p><p>为了避免浪费大量时间在影射键位上，本文采用修改注册表的方式，可以快速设置。</p><h2 id="手动修改注册表"><a href="#手动修改注册表" class="headerlink" title="手动修改注册表"></a>手动修改注册表</h2><ol><li>打开运行 (快捷键 <code>Win + R</code> ) –&gt; 输入命令<code>Regedit</code>回车打开注册表；</li><li>定位到：<code>计算机 \HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS</code> 项；</li><li>右键 –&gt; 新建字符串值；</li><li>数值名称： <code>UserDefinedDoublePinyinScheme0</code></li><li>数值数据： <code>小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt</code></li><li>打开控制面板 –&gt; 微软拼音输入法设置，把 <strong>小鹤双拼</strong> 设置为双拼的默认选择即可。</li></ol><h2 id="使用注册表文件"><a href="#使用注册表文件" class="headerlink" title="使用注册表文件"></a>使用注册表文件</h2><ol><li>在桌面新建一个后缀名为<code>.txt</code>文本文档；</li><li>将以下内容复制到新建的空白文档内；<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS]</span><br><span class="line">&quot;UserDefinedDoublePinyinScheme0&quot;=&quot;小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt&quot;</span><br></pre></td></tr></table></figure></li><li>将扩展名<code>.txt</code>改成<code>.reg</code>，双击运行即可；</li></ol><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul><li><a href="https://blog.csdn.net/weixin_44878336/article/details/125095163">Win10 微软拼音开启小鹤双拼的两种方法</a></li></ul>]]></content>
     
@@ -206,7 +230,7 @@
     <link href="https://ll.sc.cn/posts/2a89/"/>
     <id>https://ll.sc.cn/posts/2a89/</id>
     <published>2023-01-15T13:22:38.000Z</published>
-    <updated>2023-04-07T05:11:20.288Z</updated>
+    <updated>2023-04-08T09:59:49.877Z</updated>
     
     <content type="html"><![CDATA[<p>移动、联通、电信 <strong>免费</strong> 关闭境外来电流程。</p><h2 id="移动用户"><a href="#移动用户" class="headerlink" title="移动用户"></a>移动用户</h2><p><strong>方法一：</strong> 拨打中国移动<code>10086</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“中国移动高频骚扰防护”微信公众号，选择左下角业务设置 –&gt; 骚扰拦截设置 –&gt; 国际及港澳台号段拦截 –&gt; 开启。</p><img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Record/06_2a89/01.jpg" width="400" /><h2 id="联通用户"><a href="#联通用户" class="headerlink" title="联通用户"></a>联通用户</h2><p><strong>方法一：</strong> 拨打中国联通<code>10010</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“智慧沃服务”微信公众号，选择底部中间位置 手机管家 –&gt; 号段拦截 –&gt; 国际电话 –&gt; 开启。</p><img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Record/06_2a89/02.jpg" width="400" /><h2 id="电信用户"><a href="#电信用户" class="headerlink" title="电信用户"></a>电信用户</h2><p><strong>方法一：</strong> 拨打中国电信<code>10000</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“天翼防骚扰”微信公众号，选择左下角业务设置 –&gt; 业务设置 –&gt; 智能拦截设置 –&gt; 国际长途电话 –&gt; 开启。</p><p>另外建议把“诈骗电话”拦截选项也勾选上。</p><img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Record/06_2a89/03.jpg" width="400" />]]></content>
     
@@ -537,32 +561,6 @@
     <category term="主题" scheme="https://ll.sc.cn/tags/%E4%B8%BB%E9%A2%98/"/>
     
     <category term="butterfly魔改" scheme="https://ll.sc.cn/tags/butterfly%E9%AD%94%E6%94%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Twikoo评论的MongoDB数据修改</title>
-    <link href="https://ll.sc.cn/posts/e6ac/"/>
-    <id>https://ll.sc.cn/posts/e6ac/</id>
-    <published>2022-11-12T03:55:21.000Z</published>
-    <updated>2022-11-12T07:01:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note warning flat"><p>本文基于<a href="https://twikoo.js.org/">Twikoo</a>评论系统，采用 <a href="https://twikoo.js.org/quick-start.html#vercel-%E9%83%A8%E7%BD%B2">Vercel 部署</a>。</p></div><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为从<code>Hugo</code>换到了<code>Hexo</code>，是用了<code>abbrlink</code>，导致了文章地址变了，导致一些评论不能正常显示，而本就不多的评论，不想丢弃。</p><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ol><li>登录<a href="https://cloud.mongodb.com/v2">MongoDB</a>；</li><li>依次选择<code>ORGANIZATION</code> –&gt; <code>Projects</code> –&gt; 选择部署Twikoo时创建的 <code>Project</code>；</li><li>依次选择<code>DEPLOYMENT</code> –&gt; <code>Database</code> –&gt; <code>Browse Collections</code>；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Z-Turn/09_MongoDB/2022-11-12_12-47-39.webp" width="auto" /></li><li>依次选择<code>Collections</code> –&gt; <code>myFirstDatabase</code> –&gt; <code>comment</code> 右侧就可以看到评论数据；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Z-Turn/09_MongoDB/2022-11-12_12-48-23.webp" width="auto" /></li><li>找到需要修改的点击右侧<strong>编辑按钮</strong>，编辑其中的<code>url</code>和<code>href</code>项即可；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Z-Turn/09_MongoDB/2022-11-12_12-57-28.webp" width="600" /></li><li>若回复评论需要修改，则编辑<code>href</code>项中#号后面的值需要改成被回复评论的<code>_id</code>值，同时对应修改<code>pid</code>和<code>rid</code>值；</li><li>修改完成后点击右下角的<code>UPDATE</code>按钮生效。<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Z-Turn/09_MongoDB/2022-11-12_14-25-25.webp" width="600" /></li></ol><div class="note info flat"><p>如果评论量较大建议导出数据，修改完成后再导入；<br>因为小破站浏览量太低，评论者更是少之又少，故直接编辑了。</p></div><h2 id="参数解释"><a href="#参数解释" class="headerlink" title="参数解释"></a>参数解释</h2><table><thead><tr><th align="center">参数</th><th align="left"><div style="text-align: center">解释</div></th></tr></thead><tbody><tr><td align="center">_id</td><td align="left">自动生成的评论id值</td></tr><tr><td align="center">nick</td><td align="left">评论者昵称</td></tr><tr><td align="center">mail</td><td align="left">评论者邮箱地址</td></tr><tr><td align="center">mailMd5</td><td align="left">邮箱MD5加密</td></tr><tr><td align="center">link</td><td align="left">评论者网址</td></tr><tr><td align="center">ua</td><td align="left">评论者评论时的浏览器UA</td></tr><tr><td align="center">ip</td><td align="left">评论者评论是的ip地址</td></tr><tr><td align="center">url</td><td align="left">评论所在的页面</td></tr><tr><td align="center">href</td><td align="left">在评论后台点击查看跳转的地址</td></tr><tr><td align="center">comment</td><td align="left">评论内容正文</td></tr><tr><td align="center">pid</td><td align="left">被回复评论的id值</td></tr><tr><td align="center">rid</td><td align="left">被回复评论的id值</td></tr></tbody></table>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;note warning flat&quot;&gt;&lt;p&gt;本文基于&lt;a href=&quot;https://twikoo.js.org/&quot;&gt;Twikoo&lt;/a&gt;评论系统，采用 &lt;a href=&quot;https://twikoo.js.org/quick-start.html#ver</summary>
-      
-    
-    
-    
-    <category term="爱折腾" scheme="https://ll.sc.cn/categories/%E7%88%B1%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="MongoDB" scheme="https://ll.sc.cn/tags/MongoDB/"/>
-    
-    <category term="Twikoo评论" scheme="https://ll.sc.cn/tags/Twikoo%E8%AF%84%E8%AE%BA/"/>
     
   </entry>
   
