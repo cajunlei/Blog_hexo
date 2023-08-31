@@ -7965,6 +7965,14 @@ table td {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
+#recent-posts {
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -o-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
 #recent-posts>.recent-post-item {
   height: 16em;
   position: relative;
