@@ -200,7 +200,7 @@ main#content-inner.layout.hide-aside {
             width: 100%;
 
             .time {
-              font-size: 20px;
+              font-size: 14px;
               display: flex;
               justify-content: space-between;
             }
@@ -212,6 +212,7 @@ main#content-inner.layout.hide-aside {
               border-radius: calc(var(--height) / 2);
               background-color: var(--ll-theme-op);
               margin-top: var(--gap-divs);
+              margin-bottom: var(--gap-divs);
               border: var(--style-border);
 
               @include mobile {
@@ -225,7 +226,7 @@ main#content-inner.layout.hide-aside {
                 line-height: var(--height);
                 background: var(--gradient-red);
                 border-radius: calc(var(--height) / 2);
-                font-size: 14px;
+                font-size: 1rem;
                 color: var(--ll-white);
                 padding-right: 1em;
               }

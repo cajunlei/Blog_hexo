@@ -199,7 +199,7 @@
     <link href="https://ll.sc.cn/posts/74b5/"/>
     <id>https://ll.sc.cn/posts/74b5/</id>
     <published>2023-02-08T02:45:24.000Z</published>
-    <updated>2023-08-31T13:09:05.379Z</updated>
+    <updated>2023-10-05T09:07:45.616Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自从银行短信通知开始收费起，就关闭了交易提醒。只是不想为了那有限的余额铺张浪费；</p><p>但是没有交易提醒也实在不方便，需要想起来的时候手动打开银行APP查询，现在基本上银行都有了自己的微信公众号，且绑定后支持交易提醒；</p><p>银行为啥要做这个公众号呢？本来收费的交易提醒还免费了；</p><p>我猜是为了给你发一堆广告文章，想让你不停的参加它们的活动；</p><p>这就与我关注银行公众号的初衷相悖，我是单纯的想白嫖交易提醒；</p><p>在经历了长时间的广告活动文章轰炸后，有一天我不想忍了，结果给我发现了“小而美”的微信总算做了件人事；</p><p>接下来我们开始操作；</p><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ol><li>打开某银行公众号：</li><li>点击右上角人头图标，进入公众号详情页面；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Software/06_74b5/Screenshot_01.webp" width="400" /></li><li>点击右上角 <strong>…</strong> 图标，打开菜单；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Software/06_74b5/Screenshot_02.webp" width="400" /></li><li>点击设置；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Software/06_74b5/Screenshot_03.webp" width="400" /></li><li>将接收文章推送项关闭；<img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Software/06_74b5/Screenshot_04.webp" width="400" /></li></ol><p>至此，操作完成。这样我们在享受白嫖的交易提醒时，也没了广告推文的打扰。</p>]]></content>
     
@@ -226,7 +226,7 @@
     <link href="https://ll.sc.cn/posts/69b2/"/>
     <id>https://ll.sc.cn/posts/69b2/</id>
     <published>2023-01-17T07:11:26.000Z</published>
-    <updated>2023-08-31T13:09:05.375Z</updated>
+    <updated>2023-10-05T09:07:45.608Z</updated>
     
     <content type="html"><![CDATA[<p><code>Win10</code> 自带微软输入法用起来还是很顺手，清爽、简洁，没有乱七八糟的广告；</p><p>但是默认只有三种双拼方案，包含微软双拼、智能ABC、自然码。</p><p>当然，我们也可以手动添加，但是手动设置非常的复杂，且浪费时间。</p><p>为了避免浪费大量时间在影射键位上，本文采用修改注册表的方式，可以快速设置。</p><h2 id="手动修改注册表"><a href="#手动修改注册表" class="headerlink" title="手动修改注册表"></a>手动修改注册表</h2><ol><li>打开运行 (快捷键 <code>Win + R</code> ) –&gt; 输入命令<code>Regedit</code>回车打开注册表；</li><li>定位到：<code>计算机 \HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS</code> 项；</li><li>右键 –&gt; 新建字符串值；</li><li>数值名称： <code>UserDefinedDoublePinyinScheme0</code></li><li>数值数据： <code>小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt</code></li><li>打开控制面板 –&gt; 微软拼音输入法设置，把 <strong>小鹤双拼</strong> 设置为双拼的默认选择即可。</li></ol><h2 id="使用注册表文件"><a href="#使用注册表文件" class="headerlink" title="使用注册表文件"></a>使用注册表文件</h2><ol><li>在桌面新建一个后缀名为<code>.txt</code>文本文档；</li><li>将以下内容复制到新建的空白文档内；<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS]</span><br><span class="line">&quot;UserDefinedDoublePinyinScheme0&quot;=&quot;小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt&quot;</span><br></pre></td></tr></table></figure></li><li>将扩展名<code>.txt</code>改成<code>.reg</code>，双击运行即可；</li></ol><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul><li><a href="https://blog.csdn.net/weixin_44878336/article/details/125095163">Win10 微软拼音开启小鹤双拼的两种方法</a></li></ul>]]></content>
     
@@ -255,7 +255,7 @@
     <link href="https://ll.sc.cn/posts/2a89/"/>
     <id>https://ll.sc.cn/posts/2a89/</id>
     <published>2023-01-15T13:22:38.000Z</published>
-    <updated>2023-08-31T13:09:05.379Z</updated>
+    <updated>2023-10-05T09:07:45.616Z</updated>
     
     <content type="html"><![CDATA[<p>移动、联通、电信 <strong>免费</strong> 关闭境外来电流程。</p><h2 id="移动用户"><a href="#移动用户" class="headerlink" title="移动用户"></a>移动用户</h2><p><strong>方法一：</strong> 拨打中国移动<code>10086</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“中国移动高频骚扰防护”微信公众号，选择左下角业务设置 –&gt; 骚扰拦截设置 –&gt; 国际及港澳台号段拦截 –&gt; 开启。</p><img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Record/06_2a89/01.jpg" width="400" /><h2 id="联通用户"><a href="#联通用户" class="headerlink" title="联通用户"></a>联通用户</h2><p><strong>方法一：</strong> 拨打中国联通<code>10010</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“智慧沃服务”微信公众号，选择底部中间位置 手机管家 –&gt; 号段拦截 –&gt; 国际电话 –&gt; 开启。</p><img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Record/06_2a89/02.jpg" width="400" /><h2 id="电信用户"><a href="#电信用户" class="headerlink" title="电信用户"></a>电信用户</h2><p><strong>方法一：</strong> 拨打中国电信<code>10000</code>客户服务热线，转人工服务办理。</p><p><strong>方法二：</strong> 关注“天翼防骚扰”微信公众号，选择左下角业务设置 –&gt; 业务设置 –&gt; 智能拦截设置 –&gt; 国际长途电话 –&gt; 开启。</p><p>另外建议把“诈骗电话”拦截选项也勾选上。</p><img src="https://jsd.onmicrosoft.cn/gh/cajunlei/ImageBed/Posts/Record/06_2a89/03.jpg" width="400" />]]></content>
     
