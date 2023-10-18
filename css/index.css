@@ -8336,6 +8336,9 @@ hr:before {
 #footer>div {
   color: var(--ll-fontcolor);
 }
+#footer div#ll-footer-bar {
+  display: none;
+}
 #footer #footer-menu {
   display: -webkit-box;
   display: -moz-box;
@@ -8636,6 +8639,48 @@ hr:before {
 }
 [data-theme='dark'] #footer:before {
   content: none;
+}
+.post #footer div#ll-footer-bar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.post #footer div#ll-footer-bar .footer-logo {
+  font-size: 50px;
+  line-height: 0;
+}
+.post #footer div#ll-footer-bar .footer-bar-description {
+  margin: 0.5em 0;
+  color: var(--ll-secondtext);
+  font-weight: 700;
+}
+.post #footer div#ll-footer-bar a.footer-bar-link {
+  padding: 2px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: var(--style-border);
+}
+.post #footer div#ll-footer-bar a.footer-bar-link:hover {
+  background: var(--ll-main) !important;
+  color: var(--ll-white);
+  border-color: var(--ll-main) !important;
 }
 .link_card {
   display: -webkit-box;
