@@ -1,7 +1,7 @@
 // 自定义js文件pjax适配begin
 function whenDOMReady() {
   // 作者卡片问好
-  if (document.getElementById('author-info_sayhi')) ll.cardInfoSayhi();
+  if (document.getElementById('author-info_sayhi')) ll.authorInfoSayhi();
   // 主页哔哔
   if (document.getElementById('bbTimeList')) ll.initIndexEssay();
   // 返回顶部显示网页阅读进度
@@ -22,7 +22,7 @@ function whenDOMReady() {
   if (document.getElementById('post-comment')) ll.owoBig();
   // 封面纯色
   if (document.getElementById('post')) ll.switchThemeColor(ll.getMainColor());
-  // 监听跳转页面输入框是否按下回车
+    // 监听跳转页面输入框是否按下回车
   ll.listenToPageInputPress();
 }
 

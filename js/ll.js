@@ -20,21 +20,25 @@ var ll = {
       var text = ``;
       // 判断当前时间段
       if (hours >= 0 && hours <= 5) {
-        text = `晚安`;
+        text = `深夜了！🥱`;
       } else if (hours > 5 && hours <= 10) {
-        text = `早上好`;
+        text = `早上好！👋`;
       } else if (hours > 10 && hours <= 14) {
-        text = `中午好`;
+        text = `中午好！😄`;
       } else if (hours > 14 && hours <= 18) {
-        text = `下午好`;
+        text = `下午好！☕`;
       } else if (hours > 18 && hours <= 24) {
-        text = `晚上好`;
+        text = `晚上好！😄`;
       }
       return text;
     };
     if (document.querySelector('#author-info_sayhi')) {
-      document.getElementById("author-info_sayhi").innerHTML = getTimeState() + "！我是";
+      document.getElementById("author-info_sayhi").innerHTML = "<strong>" + getTimeState() + "</strong>" + "<br>欢迎来自 <strong id='userAgentCity'></strong> 的小伙伴。";
+    };
+    fetch("https://api.qjqq.cn/api/Local").then(res => res.json()).then(json => {
+      document.getElementById("userAgentCity").innerHTML = json.data.city;
     }
+    );
   },
 
   // 作者卡片问好
