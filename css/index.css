@@ -6267,10 +6267,9 @@ blockquote.pullquote.right {
 }
 #aside-content.aside-content .card-widget#alipay-red-envelope .item-content #alipay-red-envelope-main p {
   position: absolute;
-  font-size: 14px;
-  width: 14em;
+  font-size: 18px;
   color: #ff0;
-  top: 0.5em;
+  top: 3px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
