@@ -10114,6 +10114,55 @@ nav#pagination .pagination a.page-number:hover {
   -ms-transform: scale(1.03);
   transform: scale(1.03);
 }
+#sim-card {
+  padding: 0 !important;
+}
+#sim-card .item-headline {
+  display: none;
+}
+#sim-card #sim-card-main {
+  line-height: 0;
+  position: relative;
+}
+#sim-card #sim-card-main #flip-wrapper:hover #flip-content {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+#sim-card #sim-card-main #flip-wrapper #flip-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: cubic-bezier(0, 0, 0, 1.29) 0.3s;
+  -moz-transition: cubic-bezier(0, 0, 0, 1.29) 0.3s;
+  -o-transition: cubic-bezier(0, 0, 0, 1.29) 0.3s;
+  -ms-transition: cubic-bezier(0, 0, 0, 1.29) 0.3s;
+  transition: cubic-bezier(0, 0, 0, 1.29) 0.3s;
+}
+#sim-card #sim-card-main #flip-wrapper #flip-content img {
+  width: 100%;
+  line-height: 0;
+}
+#sim-card #sim-card-main #flip-wrapper #flip-content .face {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#sim-card #sim-card-main #flip-wrapper #flip-content .back.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
 .snackbar-container {
   background: var(--ll-main) !important;
   color: var(--ll-white) !important;
